@@ -103,7 +103,23 @@ CSS propose aussi de préciser des relations entre les balises afin d'être plus
 
 La [norme CSS](https://www.w3schools.com/cssref/css_selectors.asp) précise toutes les constructions possibles, et surtout expliquer les priorités d'application des styles (quoi faire quand deux styles différents s'appliquent sur un même éléments ?)
 
-
 ## pagination
 
+Lors de l'affichache d'une page HML à chaque élément est associé une boîte pour sa visualisation. La taille de la boite dépend de l'élément et de son contenu.
+
+CSS propose de multiples propriétés pour changer le style des boites dans lesquels sont affichés les éléments. C'est ce qu'on appelle le [padding](https://developer.mozilla.org/fr/docs/Web/CSS/padding)
+
+Les boite qui ne sont pas imbriquée les unes dans les autres sont affichées comme du texte au kilomètre : les unes derrières les autres, comme dans un flot.
+
+Pour autant CSS propose différentes propriétés pour changer la façon dont les boites sont affichées, c'est ce qu'on appelle la [position des boîtes](https://www.w3schools.com/css/css_positioning.asp)
+
+Pour faciliter la dispostion des éléments dans une page HTML, plusieurs projets proposent des styles CSS prêt à utiliser. Ils proposent différents style prêt à emploi pour positionner des éléments dans une grille et faciliter le déplacement des éléments quand la taille de la fenêtre change. L'un des plus connu est [bootstrap](https://getbootstrap.com/).
+
 ## Et bien plus encore
+
+CSS offre de nombreuses propriétés qui permettent de rendre les pages web très dynamique.
+
+Il est par exemple possible d'ajouter des [animations](https://developer.mozilla.org/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS) pour faire apparaître ou disparaitre des éléments
+
+
+## Mise en pratique
