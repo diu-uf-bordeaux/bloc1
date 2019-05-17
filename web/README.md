@@ -40,4 +40,4 @@ Toutes ces notions seront présentées sur un exemple fil rouge : le jeu de Blac
 
 ## 6-Service Web
 
-[Comment n'échanger que des données et plus du HTML](./6-Service-Web)
+[Comment échanger des données (et pas du HTML)](./6-Service-Web)
