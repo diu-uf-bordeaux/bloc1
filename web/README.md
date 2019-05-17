@@ -20,7 +20,7 @@ Toutes ces notions seront présentées sur un exemple fil rouge : le jeu de Blac
 
 Présentation du langage HTML (notion de base et pointeurs vers des notions avancées).
 
-[Détails du cours](./web)
+[Détails du cours](./1-HTML)
 
 # 2-CSS
 
