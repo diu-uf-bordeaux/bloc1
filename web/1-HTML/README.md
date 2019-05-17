@@ -63,10 +63,3 @@ Tous les navigateurs ont la même structure interne lorsqu'ils affichent une pag
 
 ### Les balises div et span
 
-
-
-
-**Changez le titre et le contenu dans l'éditeur et rechargez la page dans le navigateur**
-
-**Supprimez la balise html et observez ce qu'il se passe
-
