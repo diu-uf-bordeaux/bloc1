@@ -121,5 +121,10 @@ CSS offre de nombreuses propriétés qui permettent de rendre les pages web trè
 
 Il est par exemple possible d'ajouter des [animations](https://developer.mozilla.org/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS) pour faire apparaître ou disparaitre des éléments
 
-
 ## Mise en pratique
+
+**changez le style CSS de l'exemple black-jack pour faire en sorte que la couleur de fond ne soit plus en noir**
+
+**ajoutez un style pour faire en sorte que les montants du joueurs et de la banque (balise span) soit dans une police plus grosse**
+
+**utilisez les outils de développement de Chrome pour changer observer les styles mis en oeuvre lors de l'affichage de la page, et changez les dynamiquement (par exemple en ajoutant un style qui modifie le padding)**
