@@ -22,15 +22,15 @@ Une page HTML minimaliste contient le texte suivant :
 
 La première ligne est le prologue. Il précise que le reste du texte est du HTML.
 
-Le texte contient ensuite des balises ouvrantes (**<html>** ou **<title>**), des balises fermantes (**</html>** et **</title>**.
+Le texte contient ensuite des balises ouvrantes (`<html>` ou `<title>`), des balises fermantes (`</html>` et `</title>`.
 
 Ces balises ouvrantes et fermantes constituent un arbre (qui est marqué ici par l'indentation du texte mais ce n'est pas obligatoire).
 
 Notre exemple contient les balises suivantes : 
-* **html** : Représente la racine de l'arbre HTML.
-* **head** : Cette balise contient les informations (méta-données) de la page HTML.
-* **title** : Cette balise permet de donner un titre à la page. Ce titre sera affiché par le navigateur dans l'onglet.
-* **body** : Cette balise représente le contenu de la page. Ce contenu sera affiché par le navigateur.
+* `<html>` : Représente la racine de l'arbre HTML.
+* `<head>` : Cette balise contient les informations (méta-données) de la page HTML.
+* `<title>` : Cette balise permet de donner un titre à la page. Ce titre sera affiché par le navigateur dans l'onglet.
+* `<body>` : Cette balise représente le contenu de la page. Ce contenu sera affiché par le navigateur.
 
 **A l'aide de Chrome ouvrez la page index.html dans un navigateur**
 
