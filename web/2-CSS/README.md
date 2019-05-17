@@ -128,3 +128,5 @@ Il est par exemple possible d'ajouter des [animations](https://developer.mozilla
 **ajoutez un style pour faire en sorte que les montants du joueurs et de la banque (balise span) soit dans une police plus grosse**
 
 **utilisez les outils de développement de Chrome pour changer observer les styles mis en oeuvre lors de l'affichage de la page, et changez les dynamiquement (par exemple en ajoutant un style qui modifie le padding)**
+
+**Ouvrez une page Youtube ou Facebook changez là pour modifier son style et son contenu** 
