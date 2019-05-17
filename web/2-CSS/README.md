@@ -50,13 +50,13 @@ Par exemple la propriétés `background-color` défini la couleur de fond. Un st
 Le langage CSS défini un grand nombre de propriétée et précise les valeurs possibles pour chacune d'entre elles.
 
 
-## selecteur CSS
+## sélecteur CSS
 
 Un style CSS s'attache à certains éléments d'une page HTML.
 
-Lorsqu'on défini un style CSS, il faut alors préciser à quels éléments il s'attache.
+Lorsqu'on défini un style CSS, il faut alors préciser à quels éléments il s'attache (on parle de selecteur).
 
-Cela peut se faire de trois façon.
+Cela peut se faire de trois façons.
 
 ### Un style attaché à une balise
 Un style peut s'attacher à tous les éléments d'une certaine balise HTML
@@ -67,7 +67,7 @@ h1 {
   color: blue;
 }
 ```
-s'attache à tous les éléments `<h1></h1>`
+s'attache à tous les éléments `<h1></h1>` où qu'ils soient dans la page.
 
 ### Un style attaché à une balise
 Un style peut s'attacher à une classe.
@@ -79,7 +79,7 @@ Par exemple ce style :
 }
 ```
 
-s'attache à tous les éléments dont la classe est `beau`.
+Défini la classe `beau` et précise qu'il s'attache à tous les éléments qui ont cette classe.
 
 Ajouter une classe à un élément se fait dans la balise `<h1 class=beau> Mon beau titre </h1>`
 
@@ -98,7 +98,6 @@ s'attache à l'élément dont l'identifiant est `principal`.
 Préciser l'identifiant d'un élément se fait dans la balise `<h1 id='principal'> Mon beau titre </h1>`
 
 ### Et encore
-
 
 CSS propose aussi de préciser des relations entre les balises afin d'être plus précis. 
 

@@ -32,7 +32,6 @@ Chaque balise a une signification. Notre exemple contient les balises suivantes 
 * `<title>` : Cette balise permet de donner un titre à la page. Ce titre sera affiché par le navigateur dans l'onglet.
 * `<body>` : Cette balise représente le contenu de la page. Ce contenu sera affiché par le navigateur.
 
-**A l'aide de Chrome ouvrez la page index.html dans un navigateur**
 
 ## Page HTML et arbre DOM
 
@@ -42,14 +41,9 @@ Tous les navigateurs ont la même structure interne lorsqu'ils affichent une pag
 
 Cette structure est arborescente. Chaque balise HTML est représenté par un élément (DOM Element).
 
-**Ouvrez les outils de développement de Chrome (appuyez sur F12) et, dans l'onglet element vous pouvez visualiser le DOM**
-
 Un navigateur web (ex. Chrome) affiche une page HTML.
 
 Tous les navigateurs ont la même structure interne lorsqu'ils affichent une page HTML : c'est ce qu'on appelle le 
-
-**A l'aide d'un éditeur de code ouvrez la page index.html et modifiez la pour voir les effets de vos modifications (essayez de supprimer la balise html, et de ne pas fermer certaines balise, vous verrez que Chrome est relativement indulgent)**
-
 
 ## Quelques balises HTML intéressantes
 
@@ -99,6 +93,14 @@ Ces balises permettent de faire d'afficher des tableaux:
 
 Ces balises sont extrêment utiles car elles délimitent des parties de la page HTML qui pourront être identifiées par  [CSS](../2-CSS) ou par [JavaScript](../3-JS).
 
-## Exemple avec le BlackJack
+## Mise en pratique
+
+**A l'aide de Chrome ouvrez la page index.html dans un navigateur**
+
+**Ouvrez les outils de développement de Chrome (appuyez sur F12) et, dans l'onglet element vous pouvez visualiser le DOM**
+
+**A l'aide d'un éditeur de code ouvrez la page index.html et modifiez la pour voir les effets de vos modifications (essayez de supprimer la balise html, et de ne pas fermer certaines balise, vous verrez que Chrome est relativement indulgent)**
 
 **Avec Chrome, ouvrez la page index.html du répertoire bj et modifiez la pour changer les cartes**
+
+**Ajoutez dans la page index.html un lien qui point vers la page bj/index.html**
