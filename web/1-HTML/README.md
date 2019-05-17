@@ -20,9 +20,5 @@ Au minimum une page HTML contient le texte suivant :
 </html>
 ```
 
-## Prologue 
-
-Toute les pages HTML doivent commencer par le texte suivant :
-
-    <!doctype html>
+    Construisez votre premère page HTML en créant un fichier (index.html) et en 
 
