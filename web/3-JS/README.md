@@ -2,7 +2,7 @@
 
 ## HTML et JS
 
-Tous les navigateurs embarquent un moteur [JavaScript](./JavaScript.md) qui permet d'exécuter du code sur le DOM.
+Tous les navigateurs web peuvent exécuter du code [JavaScript](./JavaScript.md) qui permet d'interagir avec le DOM.
 
 L'objectif est de rendre la page dynamique, qu'elle réponde aux interactions de l'utilisateur.
 
@@ -41,16 +41,14 @@ L'élément racine du DOM est le **document** qui propose une [API plus riche](h
 En utilisant la console dans les outils de développement de Chrome, il est possible d'accéder au **document** juste.
 On peut alors le manipuler dynamiquement et observer le résultat dans le navigateur.
 
-Par exemple, si on écrit ``document.body.innerHTML = "VIDE";`` dans la console, 
+Par exemple, si on écrit ``document.body.innerHTML = "VIDE";`` dans la console, le body de la page web sera dynamiquement modifié et contiendra la chaîne de caractère : "VIDE".
 
+L'API des éléments DOM offre de nombreuses opérations pour visiter l'arbre et pour effectuer des modifications. Le code suivant retrouve l'élement HTML dont l'id est "mondId" et remplace le contenu HTML par "Bravo".
 
-On peut alors retrouver l'intégralité du DOM.
-
-
-
-
-
-Jouer avec la console Chrome pour accéder aux objets DOM et les modifier
+```javascript
+var target = document.getElementById("monId");
+target.innerHTML = "Bravo";
+```
 
 ## DOM Event
 Présenter le concept de DOM Event
