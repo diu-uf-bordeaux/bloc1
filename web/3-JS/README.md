@@ -4,11 +4,11 @@
 
 Tous les navigateurs web peuvent exécuter du code [JavaScript](./JavaScript.md) qui permet d'interagir avec le DOM.
 
-L'objectif est de rendre la page dynamique, qu'elle réponde aux interactions de l'utilisateur.
+L'objectif est de rendre la page dynamique, afin qu'elle réponde aux interactions de l'utilisateur.
 
 Le code JavaScript s'exécute sur le DOM, mais pour cela il faut le charger dans le navigateur.
 
-Pour ce faire, il est possible d'ajouter le code JavaScript dans la page HTML.
+Pour ce faire, il est possible d'ajouter le code JavaScript dans la page HTML à l'intérieur d'une balise :
 
 ```html
 <script>
@@ -18,13 +18,13 @@ window.addEventListener('load', function () {
 </script>
 ```
 
-ou bien de mettre le code JavaScript dans un fichier (.js) et de pointer ce fichier depuis le HTML.
+ou bien de mettre le code JavaScript dans un fichier externe (.js) et de pointer ce fichier depuis le HTML :
 
 ```html
 <script src="./script.js"></script>
 ```
 
-avec script.js :
+avec `script.js` :
 
 ```javascript
 console.log('Cette fonction est exécutée une fois quand la page est chargée.');

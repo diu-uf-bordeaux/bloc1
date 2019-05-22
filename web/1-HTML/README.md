@@ -1,4 +1,4 @@
-# 1-HTML
+# 1 - HTML
 
 Tous les sites web sont composés de pages HTML.
 
@@ -35,17 +35,21 @@ Chaque balise a une signification. Notre exemple contient les balises suivantes 
 
 ## Quelques balises HTML intéressantes
 
-### La base a
+### Les balises `h1`, `h2`, `h3`
+
+Les balises `<h1></h1>`, `<h2></h2>`, `<h3></h3>`, `<h4></h4>` et `<h5></h5>` représentent des titres de section à différents niveau (1 à 5).
+
+### La balise `a`
 
 La balise `<a href='autrePage.hml'> lien vers une autre page </a>` permet de créer un lien entre deux pages HTML.
 
 L'utilisateur pourra alors cliquer sur ce lien et le navigateur affichera la page ciblé par l'attribut `href`.
 
-### Les balises h1, h2, h3
+Elle peut également être utilisée pour créer un lien interne à la page, à l'aide d'une ancre nommée. 
 
-Les balises `<h1></h1>`, `<h2></h2>`, `<h3></h3>`, `<h4></h4>` et `<h5></h5>` représentent des titres de section à différents niveau (1 à 5).
+Sa création s'effectue en deux temps. Tout d'abord l'ancre nommée est ajoutée à une balise existante via son attribut `id`, par exemple : `<h2 id="monAncre">Titre</h2>`. Celle-ci peut alors être la cible d'un lien en préfixant son nom par le caractère `#` : `<a href="#monAncre">lien vers le titre</a>`.
 
-### Les balises ul et li
+### Les balises `ul` et `li`
 Les balises `<ul></ul>` et `<ll></li>` permettent de faire des listes d'items.
 
 Par exemple:
@@ -58,7 +62,7 @@ Par exemple:
 </ul>
 ```
 
-### Les balises table, th, tr, td
+### Les balises `table`, `th`, `tr`, `td`
 Ces balises permettent de faire d'afficher des tableaux:
 
 ```html
@@ -77,32 +81,34 @@ Ces balises permettent de faire d'afficher des tableaux:
 </table>
 ```
 
-### Les balises div et span
+### La balise `img`
 
-Ces balises sont extrêment utiles car elles délimitent des parties de la page HTML qui pourront être identifiées par  [CSS](../2-CSS) ou par [JavaScript](../3-JS).
+La balise `img` permet d'insérer une image dans la page : `<img src="monImage.jpg" alt="Mon image"/>`. L'attribut `src` premier permet d'indiquer le chemin du fichier image à insérer. L'attribut `alt` sert à afficher un texte alternatif au cas où l'image ne s'afficherait pas (problème de connexion) ou ne pourrait pas être vue (par les robots d'indexation et les logiciels lecteur d'écran pour les personnes mal-voyantes notamment).
+
+### Les balises `div` et `span`
+
+Ces balises sont extrêmement utiles car elles délimitent des parties de la page HTML qui pourront être identifiées par  [CSS](../2-CSS) ou par [JavaScript](../3-JS).
 
 ## Page HTML et arbre DOM
 
-Un navigateur web (ex. Chrome) affiche une page HTML.
+Un navigateur web (Chrome, par exemple) affiche une page HTML.
  
 Tous les navigateurs ont la même structure interne lorsqu'ils affichent une page HTML : c'est ce qu'on appelle le DOM (Document Object Model).
 
-Cette structure est arborescente. Chaque balise HTML est représenté par un élément (DOM Element).
+Cette structure est arborescente. Chaque balise HTML est représentée par un élément (DOM Element).
 
-Un navigateur web (ex. Chrome) affiche une page HTML.
-
-Tous les navigateurs ont la même structure interne lorsqu'ils affichent une page HTML : c'est ce qu'on appelle le DOM (Document Object Model)
+C'est cette structure qui pourra être manipulée en [JavaScript](../3-JS) pour créer des pages dynamiques.
 
 ## Mise en pratique
 
-**A l'aide de Chrome ouvrez la page index.html dans un navigateur**
+**À l'aide de Chrome, ouvrez la page `index.html` dans un navigateur.**
 
-**A l'aide d'un éditeur de code ouvrez la page index.html et modifiez la pour voir les effets de vos modifications (essayez de supprimer la balise html, et de ne pas fermer certaines balise, vous verrez que Chrome est relativement indulgent)**
+**À l'aide d'un éditeur de code, ouvrez la page `index.html` et modifiez-la pour voir les effets de vos modifications (essayez de supprimer la balise `html`, et de ne pas fermer certaines balise, vous verrez que Chrome est relativement indulgent).**
 
-**Ouvrez les outils de développement de Chrome (appuyez sur F12) et, dans l'onglet element vous pouvez visualiser le DOM**
+**Ouvrez les outils de développement de Chrome (appuyez sur F12). Dans l'onglet _Elements_ vous pouvez visualiser le DOM.**
 
-**Changer le DOM avec les outils de développement de Chrome (changer le contenu par exemple), vous voyez que la fichier index.html n'est pas modifié (c'est très pratique pour tester en live)**
+**Changez le DOM avec les outils de développement de Chrome (changer le contenu par exemple). Vous constaterez que le fichier `index.html` n'est pas modifié (c'est très pratique pour tester en live).**
 
-**Avec Chrome, ouvrez la page index.html du répertoire bj puis modifiez la avec votre éditeur de code pour changer les cartes**
+**Avec Chrome, ouvrez la page `index.html` du répertoire `bj` puis modifiez-la avec votre éditeur de code pour changer les images de cartes affichées.**
 
-**Toujour avec votre éditeur de code ajoutez dans la page index.html un lien qui point vers la page bj/index.html**
+**Toujours avec votre éditeur de code, ajoutez dans la page `index.html` un lien qui pointe vers la page `bj/index.html`**
