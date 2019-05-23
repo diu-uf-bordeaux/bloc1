@@ -29,6 +29,8 @@ avec `script.js` :
 ```javascript
 console.log('Cette fonction est exécutée une fois quand la page est chargée.');
 ```
+Notons cependant que le code JavaScript sera exécuté dès que le navigateur chargera le script (ou peu de temps après). Il se peut que le code soit exécuté avant que le navigateur n'ait chargé toute la page. Si on veut que toute la page soit chargée avant d'exécuter le code, il faut alors exploiter les événements DOM (voir plus bas dans cette section).
+
 
 ## DOM Element
 
@@ -38,19 +40,37 @@ Les éléments DOM sont des objets JavaScript qui proposent une [API](https://ww
 
 L'élément racine du DOM est le **document** qui propose une [API plus riche](https://www.w3schools.com/jsref/dom_obj_document.asp).
 
-En utilisant la console dans les outils de développement de Chrome, il est possible d'accéder au **document** juste.
+En utilisant la console dans les outils de développement de Chrome, il est possible d'accéder au **document**.
 On peut alors le manipuler dynamiquement et observer le résultat dans le navigateur.
 
 Par exemple, si on écrit ``document.body.innerHTML = "VIDE";`` dans la console, le body de la page web sera dynamiquement modifié et contiendra la chaîne de caractère : "VIDE".
 
-L'API des éléments DOM offre de nombreuses opérations pour visiter l'arbre et pour effectuer des modifications. Le code suivant retrouve l'élement HTML dont l'id est "mondId" et remplace le contenu HTML par "Bravo".
+L'API des éléments DOM offre de nombreuses opérations pour visiter l'arbre et pour effectuer des modifications. Le code suivant retrouve l'élement HTML dont l'id est "mondId" et ajoute l'image "02.BMP" dedans.
 
 ```javascript
 var target = document.getElementById("monId");
-target.innerHTML = "Bravo";
+var img= document.createElement('img');
+img.src= './img/02.BMP';
+target.appendChild(img);
 ```
 
 ## DOM Event
-Présenter le concept de DOM Event
+
+Le DOM emet des événement (DOM Event) lorsque ses éléments (DOM Element) subissent des interactions.
+
+Par exemple, un évènement de type **onClick** est émit à chaque fois que l'utilisateur clique sur l'élément.
+
+Grâce à JavaScript on peut ajouter des traitements qui seront exécuté lorsqu'un événement sera émi.
+Le code suivant ajoute la carte '01.BMP' à chaque fois qu'on clique sur le bouton dont l'id est "ajout-carte".
+
+```javascript
+clickAjoutCarte() {
+    let img = document.createElement('img');
+    img.src = './img/01.BMP';
+    document.getElementById("mes-cartes").appendChild(img)
+}
+
+document.getElementById("ajout-carte").onclick(clickAjoutCarte);
+```
 
 Ajouter un listener et lui faire ajouter qqc 
