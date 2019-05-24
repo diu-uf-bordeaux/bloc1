@@ -99,3 +99,6 @@ Cette structure est arborescente. Chaque balise HTML est représentée par un é
 
 C'est cette structure qui pourra être manipulée en [JavaScript](../3-JS) pour créer des pages dynamiques.
 
+## Mise en pratique
+
+Continuez vers [la mise en pratique](./exo.md) 
