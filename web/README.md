@@ -6,13 +6,6 @@ L'objet de ce module est de voir les notions suivantes:
 * JS
 * Client / Serveur 
 * Identification Client
-* Service Web
-
-Selon l'avancement il sera possible de voir les notions suivantes
-* Crawling
-* SSO
-* Fingerprinting
-* Oauth
 
 Toutes ces notions seront présentées sur un exemple fil rouge : le jeu de Black Jack.
 
@@ -38,6 +31,3 @@ Toutes ces notions seront présentées sur un exemple fil rouge : le jeu de Blac
 
 [Présentation des différentes façons d'identifier et/ou authentifier un utilisateur d'un site web](./5-Identification)
 
-## 6-Service Web
-
-[Comment échanger des données (et pas du HTML)](./6-Service-Web)
