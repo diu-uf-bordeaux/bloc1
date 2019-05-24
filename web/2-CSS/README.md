@@ -125,10 +125,4 @@ Il est par exemple possible d'ajouter des [animations](https://developer.mozilla
 
 ## Mise en pratique
 
-**Changez le style CSS de l'exemple black-jack pour faire en sorte que la couleur de fond ne soit plus en noir.**
-
-**Ajoutez un style pour faire en sorte que les gains du joueurs et de la banque (balise `span`) soient dans une police plus grosse.**
-
-**Utilisez les outils de développement de Chrome pour observer les styles mis en oeuvre lors de l'affichage de la page, et changez les dynamiquement (par exemple en ajoutant un style qui modifie le _padding_).**
-
-**Ouvrez une page _Youtube_ ou _Facebook_. Modifiez-la dynamiquement pour changer son style et son contenu.** 
+Continuez vers [la mise en pratique](./exo.md) 
