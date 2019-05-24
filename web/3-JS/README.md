@@ -73,4 +73,7 @@ clickAjoutCarte() {
 document.getElementById("ajout-carte").onclick(clickAjoutCarte);
 ```
 
-Ajouter un listener et lui faire ajouter qqc 
+
+## Mise en pratique
+
+Continuez vers [la mise en pratique](./exo.md) 
