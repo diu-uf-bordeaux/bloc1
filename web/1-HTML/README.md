@@ -1,8 +1,14 @@
 # 1 - HTML
 
+[lien slide](./html.pdf)
+
+## Principes
+
 Tous les sites web sont composés de pages HTML.
 
 Une page HTML c'est du texte qui commence par un prologue et qui est ensuite structuré par des balises.
+
+Le langage HTML est le langage qui permet d'éditer (fond et forme) les pages web.
 
 ## Contenu d'une page HTML minimaliste
 
