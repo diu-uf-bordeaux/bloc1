@@ -3,8 +3,20 @@
 
 ## Front
 
+GET => A
+
+POST => FORM
+
+Sinon, JS (fetch())
+
 
 ## Back
+
+expressJS
+
+app.get(``,() => {})
+
+
 
 ## Mise en pratique
 
