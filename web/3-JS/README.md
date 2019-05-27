@@ -29,7 +29,7 @@ avec `script.js` :
 ```javascript
 console.log('Cette fonction est exécutée une fois quand la page est chargée.');
 ```
-Notons cependant que le code JavaScript sera exécuté dès que le navigateur chargera le script (ou peu de temps après). Il se peut que le code soit exécuté avant que le navigateur n'ait chargé toute la page. Si on veut que toute la page soit chargée avant d'exécuter le code, il faut alors exploiter les événements DOM (voir plus bas dans cette section).
+Notons cependant que le code JavaScript sera exécuté dès que le navigateur chargera le script (ou peu de temps après). Il se peut que le code soit exécuté avant que le navigateur n'ait chargé toute la page. Si on veut que toute la page soit chargée avant d'exécuter le code, il faut alors exploiter les [événements DOM](#DOM-Event).
 
 
 ## DOM Element
@@ -43,9 +43,9 @@ L'élément racine du DOM est le **document** qui propose une [API plus riche](h
 En utilisant la console dans les outils de développement de Chrome, il est possible d'accéder au **document**.
 On peut alors le manipuler dynamiquement et observer le résultat dans le navigateur.
 
-Par exemple, si on écrit ``document.body.innerHTML = "VIDE";`` dans la console, le body de la page web sera dynamiquement modifié et contiendra la chaîne de caractère : "VIDE".
+Par exemple, si on écrit ``document.body.innerHTML = "VIDE";`` dans la console, le _body_ de la page web sera dynamiquement modifié et contiendra la chaîne de caractère : "VIDE".
 
-L'API des éléments DOM offre de nombreuses opérations pour visiter l'arbre et pour effectuer des modifications. Le code suivant retrouve l'élement HTML dont l'id est "mondId" et ajoute l'image "02.BMP" dedans.
+L'API des éléments DOM offre de nombreuses opérations pour parcourir l'arbre DOM et pour effectuer des modifications. Le code suivant retrouve l'élement HTML dont l'id est `"mondId"` et ajoute une balise `<img>` contenant l'image "02.BMP".
 
 ```javascript
 var target = document.getElementById("monId");
@@ -56,12 +56,12 @@ target.appendChild(img);
 
 ## DOM Event
 
-Le DOM emet des événement (DOM Event) lorsque ses éléments (DOM Element) subissent des interactions.
+Le DOM émet des événements (DOM Event) lorsque ses éléments (DOM Element) subissent des interactions.
 
-Par exemple, un évènement de type **onClick** est émit à chaque fois que l'utilisateur clique sur l'élément.
+Par exemple, un évènement de type **onClick** est émis à chaque fois que l'utilisateur clique sur l'élément.
 
-Grâce à JavaScript on peut ajouter des traitements qui seront exécuté lorsqu'un événement sera émi.
-Le code suivant ajoute la carte '01.BMP' à chaque fois qu'on clique sur le bouton dont l'id est "ajout-carte".
+Grâce à JavaScript, on peut ajouter des traitements (fonctions) qui seront exécutés lorsqu'un événement sera émis.
+Le code suivant ajoute par exemple la carte "01.BMP" dans l'élément d'id `"mes-cartes"` à chaque fois que l'on clique sur le bouton dont l'id est `"ajout-carte"`.
 
 ```javascript
 clickAjoutCarte() {
