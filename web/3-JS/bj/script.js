@@ -17,7 +17,7 @@ function clickOnAjouterCarte() {
     //TODO-3: ajouter une carte
 }
 
-function addButtonListerner(event) {
+function addButtonListener() {
     let ajouterCarteButton = document.getElementById("boutton-ajout-carte");
     ajouterCarteButton.onclick = clickOnAjouterCarte;
 }
