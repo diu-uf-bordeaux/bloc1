@@ -19,23 +19,23 @@ app.listen(PORT, function () {
 
 function generateHTML(nom) {
     return `<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title> lackJack </title>
-        <link rel="stylesheet" href="styles.css"/>
-        <script src="./script.js"></script>
-    </head>
-
-    <body>
-        <h1>Bonjour, voici vos cartes</h1>
-        Votre nom: <span>${nom}</span>
-        
-        <h2>Vos cartes</h2>
-        <div id="mes-cartes">
-        </div>
-        <button id="boutton-ajout-carte">Nouvelle carte !</button>
-    </body>
-
-</html>`;
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title> BlackJack </title>
+            <link rel="stylesheet" href="styles.css"/>
+            <script src="./script.js"></script>
+        </head>
+    
+        <body>
+            <h2>${nom}</h2>
+            Score : <span id="score">0</span>
+            
+            <h2>Vos cartes</h2>
+            <div id="mes-cartes">
+            </div>
+            <button id="boutton-ajout-carte">Nouvelle carte !</button>
+        </body>
+    
+    </html>`;
 }
