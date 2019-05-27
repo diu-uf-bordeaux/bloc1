@@ -1,17 +1,74 @@
 # 4-Client-Server
 
 ## Le protocol HTTP
-GET et POST
 
-## Serveur de fichiers
-Montrer qu'un serveur web peut se réduire à n'être qu'un serveur de fichier.
+Les fichiers qui composent un site web sont stockés sur un serveur : **le serveur web**
 
-## Générateur de fichier
-Montrer qu'un serveur web est bien souvent un générateur de page HTML.
+Souvent ces fichiers n'existent pas réellement et sont construits dynamiquement par le serveur web.
 
-On peut alors s'amuser à lire les paramètres de la requête HTTP pour générer des pages différentes
+Qu'ils soient générés ou construits, ils sont envoyés par le serveur web lorsque le navigateur web en fait la requête.
 
-## Générateur de données
-On peut aller plus loin en faisant en sorte que le serveur web ne soit qu'un générateur de données. Ces données sont alors utilisées par le JS du navigateur pour être affichées (cas des sites actuels)
+C'est le [protocol HTTP](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol) qui défini la façon dont sont réalisés les échanges web sur internet.
 
-Montrer l'importance de l'asynchronisme de JS.
+HTTP date de 1990 et la version 2.0 est sortie en 2015.
+
+HTTP est un protocole **question / réponse** : le client (le navigateur web) pose une question et le serveur (serveur web) y répond.
+
+### La question
+
+Pour poser une question, le client doit avoir l'adresse IP sur serveur et lui envoyer un message qui est constitué ainsi :
+* Ligne de commande (Commande, URL, Version de protocole)
+* En-tête de requête
+* [Ligne vide]
+* Corps de requête
+
+La ligne de commande précise :
+1. le verbe HTTP 
+2. l'URL cible
+3. la version du protocole
+
+Le verbe HTTP précise l'intention du client, les principaux verbes sont les suivants :
+* GET : Le client veut obtenir une ressource (lire page web)
+* POST : Le client veut ajouter une information concernant une ressource (poster un formulaire)
+
+Mais il en existe bien d'autres : 
+* PUT : Le client veut ajouter une ressource (déposer un fichier)
+* DELETE : Le client veut supprimer une ressource (cette commande est souvent interdite)
+* PATCH : Le client veut modifier une ressource existante
+  
+L'en tête de la commande es composé de plusieurs champs (clé / valeur) tels que :
+* host : le nom du site web, ce qui est nécessaire quand le serveur web héberge plusieurs sites web différents (ce qui n'est pas rare)
+* User-Agent : le nom du navigateur web (ce qui permet d'envoyer du contenu adapté au navigateur)
+* Referer : l'URL d'où vient le client
+* Content-Type : le type MIME de la ressource contenue dans le message 
+* Content-Length : la taille de la ressource contenue dans le message
+
+### La réponse
+
+La réponse est envoyée par le serveur vers le client et est constituée ainsi :
+* La ligne de statut (Version HTTP, Code , message explicatif)
+* En-tête de la réponse
+* [Ligne vide]
+* Corps de la réponse
+
+HTTP défini plusieurs code pour la réponse dont le fameux code **404** qui signifie que la ressource ciblée n'a pas été trouvé :
+* 1xx : la requête est en cours de traitement
+* 2xx : la requête est traitée : succès (200), créé (201), etc.
+* 3xx : la requête a été transférée vers un autre serveur : (301) déplacée définitivement sur un autre serveur, (304) pas modifiée donc le cache est à jours, etc.
+* 4xx : il y a une erreur qui vient du client : (401) pas autorisé, (403) interdit, (404) pas trouvé, etc.
+* 5xx : il y a une erreur qui vient du serveur : (501) pas implanté, (503) service down, etc.
+
+## Différents types de serveur web
+
+On dit qu'un serveur web est **statique** s'il se contente de répondre aux requêtes GET (lorsque le client veut lire une page web) et retourne toujours les mêmes pages web (celles-ci ne varient pas en fonction de la demande du client).
+De tels seveurs stockent les pages web sous forme de fichier et retournent ces fichiers en fonction des requêtes qu'ils reçoivent.
+
+On dit qu'un serveur web est **dynamique** si les pages web qu'il retourne varient en fonction des demandes qu'il reçoit.
+De tels serveurs emabarquent un moteur de génération des pages web (moteur PHP par exemple) et sont souvent liés à une base de données.
+
+Enfin, on dit qu'un serveur web est propose des **web services** ou encore expose des **ressources web** s'il retourne des données (souvent encodées en JSON) qui seront utilisées par le client pour changer dynamiquement les pages web. Les sites web modernes sont souvent basés sur cette architecture.
+
+
+## Mise en pratique
+
+Continuez vers [la mise en pratique](./exo.md) 
