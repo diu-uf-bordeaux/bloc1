@@ -19,4 +19,4 @@ Modifications à apporter dans le fichier `script.js`.
 
 ## Ajouter du hasard
 
-1. Modifier le script pour que les cartes soient choisies au hasard.
+1. Modifier le script pour que les cartes soient choisies au hasard. L'objet natif `Math` ([doc](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math)) et la fonction `String.padStrat()` ([doc](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/padStart)) vous seront utiles.
