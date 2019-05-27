@@ -22,6 +22,17 @@ Commencez à saisir une recherche google et faites les observations suivantes :
 
 ## Serveur Statique
 
+Nous avons développé un serveur web statique très simpliste (voir répertoire static)
+
+Pour démarrer ce serveur vous devez exécuter les lignes suivantes
+
+    npm install
+    node index.js
+
+
+Vous pourrez alors vérifier que votre navigateur peut charger la page web contenue dans le répertoire **public** en allant à cette URL : [http://localhost](http://localhost)
+
+Vous pouvez déplacer tous les fichiers que vous avez réalisés pour coder [l'exercice 3](../3-JS/exo.md)
 
 
 ## Serveur dynamique
