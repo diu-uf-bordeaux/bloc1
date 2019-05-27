@@ -11,23 +11,27 @@ Toutes ces notions seront présentées sur un exemple fil rouge : le jeu de Blac
 
 ## 1-HTML
 
-[Présentation du langage HTML](./1-HTML)
+[Le langage HTML](./1-HTML)
 
 ## 2-CSS
 
-[Présentation du langage CSS](./2-CSS)
+[Le langage CSS](./2-CSS)
 
 
 ## 3-JS
 
-[Présentation du langage JavaScript](./3-JS)
+[JavaScript pour le Web](./3-JS)
 
 
 ## 4-Client-Server
 
-[Présentation de l'architecture Client / Server pour les pages HTML](./4-Client-Server)
+[Architecture Client / Server et protocole HTTP](./4-Client-Server)
 
-## 5-Identification
+## 5-Développement
 
-[Présentation des différentes façons d'identifier et/ou authentifier un utilisateur d'un site web](./5-Identification)
+[Développement Front et Back](./5-Developpement)
+
+## 6-Identification
+
+[Identification ou authentification](./6-Identification)
 

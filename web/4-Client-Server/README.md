@@ -58,15 +58,19 @@ HTTP défini plusieurs [codes pour la réponse](https://fr.wikipedia.org/wiki/Li
 * 4xx : il y a une erreur qui vient du client : (401) pas autorisé, (403) interdit, (404) pas trouvé, etc.
 * 5xx : il y a une erreur qui vient du serveur : (501) pas implanté, (503) service down, etc.
 
-## Différents types de serveur web
+## Différents types page web
 
-On dit qu'un serveur web est **statique** s'il se contente de répondre aux requêtes **GET** (lorsque le client veut lire une page web) et retourne toujours les mêmes pages web (celles-ci ne varient pas en fonction de la demande du client).
-De tels serveurs stockent les pages web sous forme de fichier et retournent ces fichiers en fonction des requêtes qu'ils reçoivent.
+On dit qu'une page web est **statique** lorsque son HTML est figé et qu'elle est renvoyée telle qu'elle. 
+Les pages statiques sont stockées par le serveur web sous forme de fichiers.
 
-On dit qu'un serveur web est **dynamique** si les pages web qu'il retourne varient en fonction des demandes qu'il reçoit.
-De tels serveurs embarquent un moteur de génération des pages web (moteur [PHP](https://fr.wikipedia.org/wiki/PHP) par exemple) et sont souvent liés à une base de données.
+Une page web est **dynamique** lorsque son HTML est généré par le serveur.
+Le serveur renvoit différentes versions du HTML en fonction des demandes qu'il reçoit.
+Pour générer une page dynamique, le serveur utilise un moteur de généraiton (moteur [PHP](https://fr.wikipedia.org/wiki/PHP) par exemple).
 
-Enfin, on dit qu'un serveur web propose des **web services** ou encore expose des **ressources web** s'il retourne des données (souvent encodées en JSON) qui seront utilisées par le client pour changer dynamiquement les pages web. Les sites web modernes sont souvent basés sur cette architecture.
+Une page web est une **Single Page Application (SPA)** lorsque son HTML est modifié par le navigateur en démandant au serveur de nouvelles données (du JSON).
+
+De fait, un serveur web peut servir des pages statiques et/ou des pages dynamiques.
+Il peut même offrir des services qui retournent des données (services web ou ressources web).
 
 
 ## Mise en pratique
