@@ -1,8 +1,8 @@
 //Cette fonction sera exécutée dès que le DOM sera chargé
 function initialization() {
-    //TODO-11 ajouter 1 carte dès le début
+    //TODO-1: ajouter 1 carte dès le début
 
-    //TODO-2: ajouter le listener sur le boutton
+    //TODO-2: ajouter le listener sur le bouton
 }
 
 function ajouterCarte(src) {
