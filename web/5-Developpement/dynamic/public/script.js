@@ -31,7 +31,7 @@ function nouvellePartie() {
 	for (let i = 1; i < 53; i++) { 
 	    cartes[i] = 0;
 	}
-};
+}
 function nouvelleCarte() {
 	let i = Math.floor((Math.random()*52)+1);
     while (cartes[i] != 0) {
@@ -42,8 +42,7 @@ function nouvelleCarte() {
     } else {
         return `${i}`;
     }
-	return i;
-};
+}
 
 
 
