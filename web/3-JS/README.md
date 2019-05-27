@@ -58,9 +58,9 @@ target.appendChild(img);
 
 Le DOM émet des événements (DOM Event) lorsque ses éléments (DOM Element) subissent des interactions.
 
-Par exemple, un évènement de type **onClick** est émis à chaque fois que l'utilisateur clique sur l'élément.
+Par exemple, un évènement de type `onClick` est émis à chaque fois que l'utilisateur clique sur l'élément.
 
-Grâce à JavaScript, on peut ajouter des traitements (fonctions) qui seront exécutés lorsqu'un événement sera émis.
+Grâce à JavaScript, on peut ajouter des traitements (fonctions _callbacks_) qui seront exécutés lorsqu'un événement sera émis.
 Le code suivant ajoute par exemple la carte "01.BMP" dans l'élément d'id `"mes-cartes"` à chaque fois que l'on clique sur le bouton dont l'id est `"ajout-carte"`.
 
 ```javascript
@@ -72,6 +72,18 @@ clickAjoutCarte() {
 
 document.getElementById("ajout-carte").onclick(clickAjoutCarte);
 ```
+
+### Glisser-Déposer (_Drag and Drop_)
+
+Depuis la version 5 d'HTML, tout élément peut devenir déplaçable en mettant son attribut `draggable` à `true`. 
+
+Il est ensuite nécessaire de spécifier trois _callbacks_ pour trois évènements différents :
+
+* `ondragstart` : émis lorsque l'utilisateur clique sur l'élément à déplacer ; la _callback_ associée spécifie la donnée à déplacer en appelant la fonction `dataTransfer.setData()`, typiquement l'id de l'élément à déplacer.
+* `ondragover` : émis lorsque l'élément déplacé survole un autre éléments ; pour autoriser le dépôt (interdit par défaut), la _callback_ associée appelle la fonction `event.preventDefault()`.
+* `ondrop` : émis lorsque l'élément déplacé est déposé sur un autre élément ; la _callback_ associée utilise la fonction `dataTransfer.getData()` pour récupérer l'id de l'élément déplacé et modifie effectivement le DOM.
+
+Un exemple minimal est présenté sur [cette page](https://www.w3schools.com/html/html5_draganddrop.asp).
 
 
 ## Mise en pratique

@@ -8,7 +8,8 @@ function initialization() {
 function ajouterCarte(src) {
     let img = document.createElement('img');
     img.src = src;
-    document.getElementById("mes-cartes").appendChild(img)
+    img.id = Math.random().toString(36).substring(2, 15);
+    document.getElementById("mes-cartes").appendChild(img);
 }
 
 function clickOnAjouterCarte() {
