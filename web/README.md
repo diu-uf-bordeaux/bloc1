@@ -18,20 +18,16 @@ Toutes ces notions seront présentées sur un exemple fil rouge : le jeu de Blac
 [Le langage CSS](./2-CSS)
 
 
-## 3-JS
+## 3-Client-Server
 
-[JavaScript pour le Web](./3-JS)
+[Architecture Client / Server et protocole HTTP](./3-Client-Server)
 
+## 4-JS
 
-## 4-Client-Server
-
-[Architecture Client / Server et protocole HTTP](./4-Client-Server)
+[JavaScript pour le Web](./4-JS)
 
 ## 5-Développement
 
 [Développement Front et Back](./5-Developpement)
 
-## 6-Identification
-
-[Identification ou authentification](./6-Identification)
 
