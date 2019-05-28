@@ -21,24 +21,3 @@ Commencez à saisir une recherche Google et faites les observations suivantes :
 1. Ces requêtes sont des **GET**.
 1. Ces requêtes sont toutes traitées avec succès par le serveur mais celui-ci ne retourne pas de HTML (regardez la réponse).
 
-## Serveur Statique
-
-Nous avons développé un serveur web statique très simpliste (voir répertoire `static`).
-
-Pour démarrer ce serveur, exécutez les lignes suivantes depuis un terminal à l'intérieur du répertoire `static` :
-
-    npm install
-    node index.js
-
-
-Vous pourrez alors vérifier que votre navigateur peut charger la page web contenue dans le répertoire `public` en allant à cette URL : [http://localhost](http://localhost)
-
-Copiez dans le répertoire `public` tous les fichiers que vous avez réalisés pour coder [l'exercice 3](../3-JS/exo.md)
-
-
-## Serveur dynamique
-
-
-
-## Serveur de web service ou de ressources REST
-
