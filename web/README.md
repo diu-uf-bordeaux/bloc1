@@ -15,11 +15,11 @@ Toutes ces notions seront présentées sur un exemple fil rouge : le jeu de Blac
 
 ## 2-HTML
 
-[Le langage HTML](./1-HTML)
+[Le langage HTML](./2-HTML)
 
 ## 3-CSS
 
-[Le langage CSS](./2-CSS)
+[Le langage CSS](./3-CSS)
 
 
 
