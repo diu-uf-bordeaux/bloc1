@@ -1,6 +1,4 @@
-# 4-Client-Server
-
-## Le protocol HTTP
+# 1 - HTTP
 
 Les fichiers qui composent un site web sont stockés sur un serveur : **le serveur web**
 
@@ -14,7 +12,7 @@ HTTP date de 1990 et la version 2.0 est sortie en 2015.
 
 HTTP est un protocole **question / réponse** : le client (le navigateur web) pose une question et le serveur (serveur web) y répond.
 
-### La question
+## La question
 
 Pour poser une question, le client doit connaître l'adresse IP sur serveur et lui envoyer un message qui est constitué ainsi :
 * Ligne de commande (Commande, URL, Version de protocole)
@@ -43,7 +41,7 @@ L'en-tête de la commande est composée de plusieurs champs (clé / valeur) tels
 * `Content-Type` : le [type MIME](https://fr.wikipedia.org/wiki/Type_de_médias) de la ressource contenue dans le message ,
 * `Content-Length` : la taille de la ressource contenue dans le message.
 
-### La réponse
+## La réponse
 
 La réponse est envoyée par le serveur vers le client et est constituée ainsi :
 * La ligne de statut (Version HTTP, Code, message explicatif)
@@ -57,20 +55,6 @@ HTTP défini plusieurs [codes pour la réponse](https://fr.wikipedia.org/wiki/Li
 * 3xx : la requête a été transférée vers un autre serveur : (301) déplacée définitivement sur un autre serveur, (304) pas modifiée donc le cache est à jours, etc.
 * 4xx : il y a une erreur qui vient du client : (401) pas autorisé, (403) interdit, (404) pas trouvé, etc.
 * 5xx : il y a une erreur qui vient du serveur : (501) pas implanté, (503) service down, etc.
-
-## Différents types page web
-
-On dit qu'une page web est **statique** lorsque son HTML est figé et qu'elle est renvoyée telle qu'elle. 
-Les pages statiques sont stockées par le serveur web sous forme de fichiers.
-
-Une page web est **dynamique** lorsque son HTML est généré par le serveur.
-Le serveur renvoit différentes versions du HTML en fonction des demandes qu'il reçoit.
-Pour générer une page dynamique, le serveur utilise un moteur de généraiton (moteur [PHP](https://fr.wikipedia.org/wiki/PHP) par exemple).
-
-Une page web est une **Single Page Application (SPA)** lorsque son HTML est modifié par le navigateur en démandant au serveur de nouvelles données (du JSON).
-
-De fait, un serveur web peut servir des pages statiques et/ou des pages dynamiques.
-Il peut même offrir des services qui retournent des données (services web ou ressources web).
 
 
 ## Mise en pratique
