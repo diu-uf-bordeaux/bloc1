@@ -68,25 +68,6 @@ Par exemple:
 </ul>
 ```
 
-### Les balises `table`, `th`, `tr`, `td`
-Ces balises permettent de faire d'afficher des tableaux:
-
-```html
-<table>
-    <thead>
-        <tr>
-            <th colspan="2">The table header</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>The table body</td>
-            <td>with two columns</td>
-        </tr>
-    </tbody>
-</table>
-```
-
 ### La balise `img`
 
 La balise `img` permet d'insérer une image dans la page : `<img src="monImage.jpg" alt="Mon image"/>`. L'attribut `src` premier permet d'indiquer le chemin du fichier image à insérer. L'attribut `alt` sert à afficher un texte alternatif au cas où l'image ne s'afficherait pas (problème de connexion) ou ne pourrait pas être vue (par les robots d'indexation et les logiciels lecteur d'écran pour les personnes mal-voyantes notamment).
@@ -94,6 +75,12 @@ La balise `img` permet d'insérer une image dans la page : `<img src="monImage.j
 ### Les balises `div` et `span`
 
 Ces balises sont extrêmement utiles car elles délimitent des parties de la page HTML qui pourront être identifiées par  [CSS](../2-CSS) ou par [JavaScript](../3-JS).
+
+
+### Les balises `form`, `input`, `button`
+
+Ces balises sont extrêmement utiles car elles servent à créer des formulaires.
+
 
 ## Page HTML et arbre DOM
 
