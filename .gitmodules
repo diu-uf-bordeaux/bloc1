@@ -1,6 +1,6 @@
 [submodule "prog/reveal.js"]
 	path = prog/reveal.js
-	url = https://github.com/hakimel/reveal.js.git
+	url = https://github.com/diu-uf-bordeaux/reveal.js.git
 [submodule "prog/reveal-menu"]
 	path = prog/reveal-menu
 	url = https://github.com/denehyg/reveal.js-menu.git
