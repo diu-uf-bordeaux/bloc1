@@ -13,6 +13,10 @@ Un dessin de pile qui n'est pas une pile
 nom_variable = expression
 ```
 
+- Déclaration
+
+- Initialisation
+
 --
 
 ```python
@@ -23,6 +27,6 @@ length = 123.456
 isPositive = x > 0
 name = 'Dupont'
 adress = "123 rue de Gaulle"
-L = [1, 2, 3]
-L[0] = 10
+someList = [1, 2, 3]
+someList[0] = 10
 ```
