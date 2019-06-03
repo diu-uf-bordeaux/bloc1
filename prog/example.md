@@ -9,13 +9,13 @@ x = 3
 - conditionnelle
 ```python
 if x == 2:
-	x = x-1
+	x = x - 1
 ```
 
 - boucles
 ```python
 while x > 0 :
-	x = x-1
+	x = x - 1
 ```
 
 
@@ -39,10 +39,10 @@ x = 3
 y = x + 2
 x = 4
 length = 123.456
-isPositive = x>0
+isPositive = x > 0
 name = 'Dupont'
 adress = "123 rue de Gaulle"
-L = [1,2,3]
+L = [1, 2, 3]
 L[0] = 10
 ```
 
@@ -68,22 +68,22 @@ if condition :
 ```
 
 ```python
-if condition : 
+if condition :
 	branche_Vrai
 else :
 	branche_Faux
 ```
 
 ```python
-if condition_A : 
+if condition_A :
 	branche_A
-elif condition_B : 
+elif condition_B :
 	branche_B
 else :
 	branche_défault
 ```
 
-*condition* : une expression booléenne 
+*condition* : une expression booléenne
 
 and, or, not, comparaisons, in
 
@@ -97,7 +97,9 @@ while condition :
 	instructions
 ```
 
-- que fait le code ?
+<div class='float2'>
+
+que fait le code ?  <!-- .element: class="title" -->
 ```python
 s = 0
 n = 2019
@@ -106,7 +108,10 @@ while n > 0 :
 	n = n // 2
 ```
 
-- et si on faisait ?
+</div>
+<div class='float2'>
+
+et si on faisait ?  <!-- .element: class="title fragment" data-fragment-index="1" -->
 ```python
 s = 0
 n = 2019
@@ -114,6 +119,9 @@ while n >= 0 :
 	s = s + 1
 	n = n // 2
 ```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+</div>
 
 
 ---

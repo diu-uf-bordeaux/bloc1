@@ -1,0 +1,20 @@
+pre.float2 { float: left; width: 45%; margin: 5px; }
+table.float2 { float: left; width: 45%; margin: 5px; }
+ul.float2 { float: left; width: 45%; margin: 5px; }
+p.float2 { float: left; width: 45%; margin: 5px; }
+div.float2 { float: left; width: 45%; margin: 5px; }
+pre.floatr2 { float: right; width: 45%; margin: 5px; }
+table.floatr2 { float: right; width: 45%; margin: 5px; }
+ul.floatr2 { float: right; width: 45%; margin: 5px; }
+p.floatr2 { float: right; width: 45%; margin: 5px; }
+div.floatr2 { float: right; width: 45%; margin: 5px; }
+pre.float4 { float: left; width: 25%; margin: 5px; }
+pre.float3 { float: left; width: 32%; margin: 5px; }
+
+p.title {
+  text-align: left; background-color: #c0c0c0; color: black;
+  margin-bottom: -20px;
+  margin-left: 21px;
+  margin-right: 21px;
+  padding-left: 10px;
+}
