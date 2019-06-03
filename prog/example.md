@@ -149,13 +149,12 @@ def nom_fonction(paramètres) :
 
 
 ```python
-# étant donné un entier naturel n
-# la fonction retourne le produit de 1 à n
 def factorial(n) :
-	if n <= 1:
-		return 1
-	else:
-		return n * factorial(n-1)
+  """Retourne le produit des entiers de 1 à n"""
+  if n <= 1:
+    return 1
+  else:
+    return n * factorial(n-1)
 ```
 
 --
