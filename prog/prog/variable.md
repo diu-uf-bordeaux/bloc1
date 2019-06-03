@@ -1,6 +1,6 @@
 ### Variable
 
-- Reference
+- Référence
 - Allocation
 
 --

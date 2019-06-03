@@ -18,3 +18,22 @@ p.title {
   margin-right: 21px;
   padding-left: 10px;
 }
+
+/* Paragraphs aligned on the left */
+.reveal ul {
+  display: block;
+}
+.reveal ol {
+  display: block;
+}
+
+/* Adjust font sizes */
+.reveal {
+    font-size: 36px !important;
+}
+
+/* Special highlighting class */
+.strong {
+    color:#ffaa00;
+    font-weight: bold;
+}
