@@ -11,8 +11,17 @@ div.floatr2 { float: right; width: 45%; margin: 5px; }
 pre.float4 { float: left; width: 25%; margin: 5px; }
 pre.float3 { float: left; width: 32%; margin: 5px; }
 
+.half { margin-top: -10px; display: inline-block; width: 49%; }
+.label {
+  color:#ff8855;
+  background-color: #770000;
+  font-size: 20px !important;
+  padding: 1px 4px 1px 4px;
+  border-radius: 4px;
+}
+
 p.title {
-  text-align: left; background-color: #c0c0c0; color: black;
+  text-align: left; background-color: #ffccc0; color: black;
   margin-bottom: -20px;
   margin-left: 21px;
   margin-right: 21px;
@@ -34,6 +43,6 @@ p.title {
 
 /* Special highlighting class */
 .strong {
-    color:#ffaa00;
+    color:#ff6600;
     font-weight: bold;
 }
