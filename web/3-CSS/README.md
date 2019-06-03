@@ -1,4 +1,4 @@
-# 2  -CSS
+# 3 - CSS
 
 Si les balises HTML permettent de structurer une page HTML (structuration du fond), c'est le langage CSS qui permet d'affiner la forme visuelle d'une page.
 

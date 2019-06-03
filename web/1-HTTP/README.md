@@ -1,6 +1,4 @@
-# 4-HTTP
-
-## Le protocol HTTP
+# 1 - HTTP
 
 Les fichiers qui composent un site web sont stockés sur un serveur : **le serveur web**
 
@@ -14,7 +12,7 @@ HTTP date de 1990 et la version 2.0 est sortie en 2015.
 
 HTTP est un protocole **question / réponse** : le client (le navigateur web) pose une question et le serveur (serveur web) y répond.
 
-### La question
+## La question
 
 Pour poser une question, le client doit connaître l'adresse IP sur serveur et lui envoyer un message qui est constitué ainsi :
 * Ligne de commande (Commande, URL, Version de protocole)
@@ -43,7 +41,7 @@ L'en-tête de la commande est composée de plusieurs champs (clé / valeur) tels
 * `Content-Type` : le [type MIME](https://fr.wikipedia.org/wiki/Type_de_médias) de la ressource contenue dans le message ,
 * `Content-Length` : la taille de la ressource contenue dans le message.
 
-### La réponse
+## La réponse
 
 La réponse est envoyée par le serveur vers le client et est constituée ainsi :
 * La ligne de statut (Version HTTP, Code, message explicatif)
