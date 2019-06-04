@@ -101,7 +101,7 @@ join(["a","b","c"], " and ") # -> "a and b and c"
 --
 
 - En suivant [des conventions de
-  nommage](https://numpydoc.readthedocs.io/en/latest/format.html)&nbsp;:
+  nommage](https://numpydoc.readthedocs.io/en/latest/format.html) ...
 
 ```python
 def join(lst, sep):
@@ -122,7 +122,7 @@ def join(lst, sep):
 
 ```
 
-- Les types aident à la **vérification** et la **documentation**.
+- ... les types aident à la **vérification** et la **documentation**.
 
 - <span class="label">Python $\geq$ 3.5</span>&nbsp; Possibilité d'ajouter
   des annotations de type :
@@ -155,8 +155,16 @@ def join(lst: list, sep: str) -> str:
 
 --
 
+### Fonctions : exercice
+
+- Écrire une fonction prenant un couple `(h,m)` représentant une heure
+  de la journée, et renvoyant le même couple auquel on a ajouté une
+  minute.
+
 ```python
 def uneMinuteEnPlus (h, m):
+    """Ajoute une minute au couple (h,m) représentant
+       une heure de la journée et renvoie ce nouveau couple."""
     if m < 59:
         return (h, m+1)
     elif h < 23:
@@ -164,19 +172,7 @@ def uneMinuteEnPlus (h, m):
     else:
         return (0, 0)
 ```
-
-```python
-def uneMinuteEnPlus (h, m):
-    m = (m + 1)%60
-    if m == 0:
-        h = (h + 1)%24
-    return h, m
-```
-
-```python
-def uneMinuteEnPlus(h,m):
-    return(h+(m+1)//60)%24, (m+1)%60
-```
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 
 ---
@@ -191,6 +187,7 @@ Règle d'évaluation
 ### Variable locale
 
 - affiche-t-il 2 ou 3 ?
+
 ```python
 k = 2
 def test():
@@ -204,6 +201,7 @@ test()
 ### Variable locale
 
 - affiche-t-il 2 ou 3 ?
+
 ```python
 k = 2
 def test():
@@ -217,6 +215,7 @@ test()
 ### Variable locale
 
 - affiche-t-il 2 ou 3 ?
+
 ```python
 k = 2
 def test():
@@ -231,6 +230,7 @@ test()
 
 
 - affiche-t-il 2 ou 3 ?
+
 ```python
 k = 2
 def test():
@@ -246,6 +246,7 @@ print(k)
 
 
 - affiche-t-il 2 ou 3 ?
+
 ```python
 k = 2
 def test(k):
@@ -260,6 +261,7 @@ print(k)
 
 
 - affiche-t-il 2 ou 3 ?
+
 ```python
 k = 2
 def test(k):
@@ -274,6 +276,7 @@ print(k)
 ### Variable locale
 
 - qu'affiche-t-il ?
+
 ```python
 L = [1,2,3]
 def test(L):
@@ -283,6 +286,7 @@ print(L)
 ```
 
 - qu'affiche-t-il ?
+
 ```python
 L = [1,2,3]
 def test(L):

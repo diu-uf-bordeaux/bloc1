@@ -209,17 +209,16 @@ for (int i=0; i<10; i++)
 
 ### Pourquoi ces instructions ?
 
-- Les boucles et les conditionnelles constituent un ensemble minimal
-  d'instructions capables d'exprimer n'importe quel programme.
+- Boucles et conditionnelles forment un ensemble **minimal**
+  d'instructions pour exprimer **n'importe quel** programme.
 
 (ça vaut donc le coup d'en parler)
 
-- De nombreuses autres instructions sont construites à partir de ces
-  éléments de base.
+- D'autres constructions syntaxiques peuvent être élaborées à partir
+  de cette base (e.g. les compréhensions de listes)
 
-- Suivant les langages, il existe d'autres types d'instructions ne
-  s'exprimant pas avec : programmation logique, programmation
-  parallèle, programmation stochastique, programmation quantique ...
+- D'autres formes de programmations s'expriment différemment :
+  **logique**, **parallèle**, **quantique** ...
 
 
 --
