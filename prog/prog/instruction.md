@@ -156,7 +156,7 @@ while not found:
 
 en C  <!-- .element: class="title" -->
 ```c
-found = 0; // false
+int found = 0; // false
 while (!found)
     found = search_more();
 ```

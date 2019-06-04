@@ -37,10 +37,10 @@ en C  <!-- .element: class="title" -->
 ```c
 // Retourne le produit des entiers
 int factorial(int n) {
-  if (n <= 1)
-    return 1;
-  else:
-    return n * factorial(n-1);
+  int f;
+  for (f = 1; n > 1; n --)
+    f *= n;
+  return f;
 }
 ```
 
@@ -54,9 +54,7 @@ en Scheme  <!-- .element: class="title" -->
 (define (factorial n)
   (if (<= n 0)
       1
-      (* n (factorial (- n 1)))
-  )
-)
+      (* n (factorial (- n 1)))))
 ```
 
 </div>
