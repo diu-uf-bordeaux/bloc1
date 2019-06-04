@@ -47,6 +47,10 @@ p.title {
     font-size: 36px !important;
 }
 
+.small {
+    font-size: 28px !important;
+}
+
 /* Special highlighting class */
 .strong {
     color:#ff6600;
@@ -61,4 +65,8 @@ p.title {
 
 .no-border {
   border: 0px;
+}
+
+code {
+  color: #aa2222;
 }

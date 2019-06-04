@@ -62,9 +62,17 @@ Tout n'est pas incompatible ... cf java/python/...
 
 --
 
-### Aide
+### Aide/Ressources
 
-Parler de la doc
-de stackoverflow
-et de comment-ca-marche, le doctisimmo de l'info
-Ne pas avoir peur de l'anglais
+- Seule la [documentation officielle] fait foi
+  - Même si elle est en anglais
+  - (Trop) précise
+
+- Utiliser la doc. embarquée
+> `help(uneExpression)`
+
+[Documentation officielle]: https://docs.python.org/3/reference/
+
+Note:
+Les *bonnes* ressources sont en anglais : stackoverflow
+Attention au français : comment-ca-marche, le doctisimmo de l'info
