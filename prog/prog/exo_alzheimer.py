@@ -40,7 +40,8 @@ def sort(data, feature):
 
 def extractFeature(data, feature):
     """ extrait la colonne d'indice feature d'une liste de liste vue comme un tableau 2D, 1er indice = ligne, 2eme indice = colonne """
-    return[data[i][feature] for i in range(len(data))]
+    #return[data[i][feature] for i in range(len(data))]
+    return[l[feature] for l in data]
     
 def meanFeature(data, feature, rawBeginIndex, rawEndIndex):
     """ calcule la moyenne d'une colonne entre les lignes d'indices rawBeginIndex, rawEndIndex """
