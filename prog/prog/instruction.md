@@ -109,7 +109,7 @@ en Python  <!-- .element: class="title" -->
 if chaperon == rouge:
     open_door()
 else:
-    ask_again()
+    call_for_hunter()
 ```
 
 </div>
@@ -119,8 +119,7 @@ en Scheme  <!-- .element: class="title" -->
 ```scheme
 (if (= chaperon rouge)
     (open_door)
-    (ask_again)
-)
+    (call_for_hunter))
 ```
 
 </div>

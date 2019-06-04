@@ -11,7 +11,11 @@ div.floatr2 { float: right; width: 45%; margin: 5px; }
 pre.float4 { float: left; width: 25%; margin: 5px; }
 pre.float3 { float: left; width: 32%; margin: 5px; }
 
-.half { margin-top: -10px; display: inline-block; width: 49%; }
+.half {
+  margin-top: -10px;
+  vertical-align: top;
+  display: inline-block;
+  width: 49%; }
 .label {
   color:#ff8855;
   background-color: #770000;
