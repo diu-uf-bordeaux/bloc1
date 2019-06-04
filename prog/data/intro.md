@@ -1,10 +1,11 @@
 ## Introduction
 
-Pourquoi c'est aussi compliqué
+-  Pourquoi c'est aussi compliqué
 
-> Juste un tas de zéro et de un
+> Juste un tas de zéros et de uns
+> et il y a tant de choses à en faire
 
-- Besoin d'organisation
+- Besoin d'organisation pour communiquer
 
 --
 
