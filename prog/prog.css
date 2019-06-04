@@ -54,3 +54,11 @@ p.title {
 }
 
 .alert { color: red; font-weight: bold; }
+
+.reveal section img {
+  border: 0px;
+}
+
+.no-border {
+  border: 0px;
+}

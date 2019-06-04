@@ -22,13 +22,11 @@ Les instructions c'est pas dans ts les langages mais le concept de forme spécia
 ### Un monde (d')Objet
 #### Typage dynamique
 
-liste de types :
-- entiers, flottants, booléens, caractères, chaînes de caractères
+- entiers, flottants, booléens, caractères
 - fonctions
-- types composés : listes, dictionnaires, t-uples, etc.
+- types composés : chaînes de caractères, listes, dictionnaires, t-uples, etc.
 
 Note:
-
 Parler de la construction et de l'envoi de message mais botter en touche (le
 premier sera vu plus tard).
 On peut faire ressentir le graphe d'objet sous-jacent
@@ -39,8 +37,8 @@ On peut faire ressentir le graphe d'objet sous-jacent
 
 - Purement syntaxique => un envoi de message
 
-- Ordre d'évaluation / [Précédence]
-- Associativité
+- Ordre d'évaluation
+- Associativité / [Précédence]
 
 [Syntaxe]: https://docs.python.org/3/reference/expressions.html
 [Précédence]: https://docs.python.org/3/reference/expressions.html#operator-precedence
