@@ -1,7 +1,7 @@
 ### Introduction
 
 
-![Tiobe'18](prog/images/tiobe2018.png) <!-- .element: class="stretch" style="max-width: 70%;" -->
+![Tiobe'18](images/tiobe2018.png) <!-- .element: class="stretch" style="max-width: 70%;" -->
 
 [Merge sort sur Rosetta Code](http://rosettacode.org/wiki/Sorting_algorithms/Merge_sort)
 

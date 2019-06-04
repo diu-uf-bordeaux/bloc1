@@ -39,5 +39,8 @@ On peut faire ressentir le graphe d'objet sous-jacent
 
 - Purement syntaxique => un envoi de message
 
-- Ordre d'évaluation / Précédence
+- Ordre d'évaluation / [Précédence]
 - Associativité
+
+[Syntaxe]: https://docs.python.org/3/reference/expressions.html
+[Précédence]: https://docs.python.org/3/reference/expressions.html#operator-precedence
