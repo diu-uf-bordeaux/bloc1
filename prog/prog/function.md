@@ -1,17 +1,26 @@
 ### Fonction
 
-Déclaration/définition/syntaxe
+- Une <span class='strong'>fonction</span> est un bloc d'instructions
+  paramétré renvoyant éventuellement une valeur&nbsp;:
 
 ```python
-def doubleDeX(x):
-    return 2 * x
-```
-
-```python
-def nom_fonction(paramètres) :
+def function(parameters):
+    """documentation"""     # not compulsory but strongly recommended
     instructions
+    return expression       # not compulsory
 ```
 
+- Le bloc d'instructions est le <span class='strong'>corps</span> de la fonction.
+
+- Les paramètres forment une liste de noms réutilisables dans le
+  corps de la fonction.
+
+- L'instruction `return` indique la valeur renvoyée.
+
+
+--
+
+### Exemple de fonction
 
 ```python
 def factorial(n) :
@@ -22,8 +31,92 @@ def factorial(n) :
     return n * factorial(n-1)
 ```
 
+<div class="half">
+
+en C  <!-- .element: class="title" -->
+```c
+// Retourne le produit des entiers
+int factorial(int n) {
+  if (n <= 1)
+    return 1;
+  else:
+    return n * factorial(n-1);
+}
+```
+
+</div>
+
+<div class="half">
+
+en Scheme  <!-- .element: class="title" -->
+```scheme
+;; Retourne le produit des entiers
+(define (factorial n)
+  (if (<= n 0)
+      1
+      (* n (factorial (- n 1)))
+  )
+)
+```
+
+</div>
+
 --
 
+### Fonctions : principes
+
+- Une fonction est un bloc de code <span
+  class='strong'>réutilisable</span>. Sa vocation première est de
+  factoriser du code.
+
+- Un programme se découpe naturellement en un ensemble de fonctions
+  qui forment une couche d'abstraction au dessus des instructions
+  élémentaires.
+
+- Il s'agit d'un premier exemple de <span
+  class='strong'>modularité</span>.
+
+--
+
+### Fonctions : types
+
+
+- Il est naturel d'associer un <span
+  class='strong'>type</span> à une fonction&nbsp;:
+
+```java
+function  : domain -> image
+factorial : int -> int                // takes 1 int, return int
+plus      : int x int -> int          // takes 2 arguments, return int
+```
+
+- Les types aident à vérifier la composition des fonctions.
+
+- Il est désirable qu'une fonction s'applique au plus grand nombre de
+  valeurs possible, e.g. qu'elle soit <span
+  class='strong'>générique</span>.
+
+```java
+merge  : List<T> x List<T> -> List<T>   // T is an arbitrary type
+```
+
+- Il arrive fréquemment qu'une fonction modifie ses paramètres sans
+  renvoyer de résultat.
+
+```java
+sort  : List<T> -> Void                 // T is an arbitrary type
+```
+
+
+--
+
+### Fonctions : remarques
+
+- <span class="label">Python</span> Une fonction sans instruction `return`
+  renvoie `None`.
+
+
+--
 
 ```python
 def uneMinuteEnPlus (h, m):

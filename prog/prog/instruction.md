@@ -46,14 +46,16 @@ Note: Python redéfinit la notion de bloc, qui n'est pas la même puisqu'elle ne
 - La <span class='strong'>portée</span> d'une variable est la zone du
   programme depuis laquelle elle est accessible.
 
+- L'accessibilité contient typiquement la lecture et l'écriture.
+
 - Une variable définie dans un bloc est accessible depuis ce bloc et
   les blocs imbriqués.
 
 ```python
 i = 3                 # variable defined in outer block
-def decrease():
+if i > 0:
     while i != 0:
-    	  i = i - 1   # and used inside a sub-block
+          i = i - 1   # and used inside a sub-block
 ```
 
 --
@@ -74,10 +76,10 @@ prrrint("an important message")
   une référence externe à une fonction, un module ou une classe.
 
 ```python
-i = 0
-def func():
-    i = i - 1 # modify external variable
-func()
+i = 0            # define variable in external block
+def decrease():
+    i = i - 1    # modify same variable inside function block
+decrease()
 # UnboundLocalError: local variable 'i' referenced before assignment
 ```
 
