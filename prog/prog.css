@@ -46,3 +46,5 @@ p.title {
     color:#ff6600;
     font-weight: bold;
 }
+
+.alert { color: red; font-weight: bold; }
