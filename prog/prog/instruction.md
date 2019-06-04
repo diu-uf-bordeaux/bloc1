@@ -1,6 +1,6 @@
 ### Blocs d'instructions
 
-- Un <span class='strong'>bloc</span> est une séquence d'instructions :
+- Un **bloc** est une séquence d'instructions :
 
 ```python
 instruction            #   |a block
@@ -43,7 +43,7 @@ Note: Python redéfinit la notion de bloc, qui n'est pas la même puisqu'elle ne
 
 ### Portée
 
-- La <span class='strong'>portée</span> d'une variable est la zone du
+- La **portée** d'une variable est la zone du
   programme depuis laquelle elle est accessible.
 
 - L'accessibilité contient typiquement la lecture et l'écriture.
@@ -73,14 +73,15 @@ prrrint("an important message")
 ```
 
 - <span class="label">Python</span> Il n'est pas possible de modifier
-  une référence externe à une fonction, un module ou une classe.
+  une liaison externe à une fonction, un module ou une classe.
 
 ```python
-i = 0            # define variable in external block
-def decrease():
-    i = i - 1    # modify same variable inside function block
-decrease()
-# UnboundLocalError: local variable 'i' referenced before assignment
+str = "a"            # define variable in external block
+def update_str():
+    str.capitalize() # ok
+    str += "b"       # error, modifies the binding
+update_str()
+# UnboundLocalError: local variable 'str' referenced before assignment
 ```
 
 - <span class="label">Python</span> Un bloc ne peut pas être vide
@@ -90,7 +91,7 @@ decrease()
 
 ### Conditionnelle
 
-- L'instruction de branchement s'écrit <span class='strong'>if .. else</span> :
+- L'instruction de branchement s'écrit `if` .. `else`&nbsp;:
 
 ```python
 if condition:
@@ -99,7 +100,7 @@ else:
     block_false
 ```
 
-- Ici, `condition` est une expression booléenne (and, or, not,
+- Ici, `condition` est une expression booléenne (`and`, `or`, `not`,
 comparaisons ...)
 
 <div class='half'>
@@ -129,7 +130,7 @@ en Scheme  <!-- .element: class="title" -->
 ### Boucle "Tant Que"
 
 - Répéter un bloc en spécifiant une condition d'arrêt se fait dans une
-  boucle <span class='strong'>while</span>&nbsp;:
+  boucle `while`&nbsp;:
 
 ```python
 while condition:
@@ -140,7 +141,8 @@ while condition:
 - La boucle est répétée tant que la condition est valide.
 (attention : engendre facilement des boucles infinies)
 
-- Peut prendre de nombreuses formes selon le langage (loop, repeat .. until, do .. while, ...)
+- Peut prendre de nombreuses formes selon le langage (`loop`, `repeat`
+  .. `until`, `do` .. `while`, ...)
 
 <div class='half'>
 
@@ -169,7 +171,7 @@ while (!found)
 ### Boucle "Pour"
 
 - Répéter un bloc en paramétrant chaque tour de boucle se fait à
-  l'aide d'une boucle <span class='strong'>for</span>&nbsp;:
+  l'aide d'une boucle `for`&nbsp;:
 
 ```python
 for variable in iterable:

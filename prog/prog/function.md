@@ -1,6 +1,6 @@
 ### Fonction
 
-- Une <span class='strong'>fonction</span> est un bloc d'instructions
+- Une **fonction** est un bloc d'instructions
   paramétré renvoyant éventuellement une valeur&nbsp;:
 
 ```python
@@ -10,7 +10,7 @@ def function(parameters):
     return expression       # not compulsory
 ```
 
-- Le bloc d'instructions est le <span class='strong'>corps</span> de la fonction.
+- Le bloc d'instructions est le **corps** de la fonction.
 
 - Les paramètres forment une liste de noms réutilisables dans le
   corps de la fonction.
@@ -63,47 +63,32 @@ en Scheme  <!-- .element: class="title" -->
 
 ### Fonctions : principes
 
-- Une fonction est un bloc de code <span
-  class='strong'>réutilisable</span>. Sa vocation première est de
-  factoriser du code.
+- Une fonction est un bloc de code **réutilisable**. Sa vocation
+  première est de factoriser du code.
 
 - Un programme se découpe naturellement en un ensemble de fonctions
-  qui forment une couche d'abstraction au dessus des instructions
-  élémentaires.
+  qui forment une couche d'**abstraction** au
+  dessus des instructions élémentaires.
 
-- Il s'agit d'un premier exemple de <span
-  class='strong'>modularité</span>.
+- Il s'agit d'un premier exemple de **modularité**.
 
 --
 
 ### Fonctions : types
 
 
-- Il est naturel d'associer un <span
-  class='strong'>type</span> à une fonction&nbsp;:
+- Il est naturel d'associer un **type** à une fonction&nbsp;:
 
-```java
-function  : domain -> image
-factorial : int -> int                // takes 1 int, return int
-plus      : int x int -> int          // takes 2 arguments, return int
-```
 
 - Les types aident à vérifier la composition des fonctions.
 
 - Il est désirable qu'une fonction s'applique au plus grand nombre de
-  valeurs possible, e.g. qu'elle soit <span
-  class='strong'>générique</span>.
+  valeurs possible, e.g. qu'elle soit **générique**.
 
-```java
-merge  : List<T> x List<T> -> List<T>   // T is an arbitrary type
-```
 
 - Il arrive fréquemment qu'une fonction modifie ses paramètres sans
   renvoyer de résultat.
 
-```java
-sort  : List<T> -> Void                 // T is an arbitrary type
-```
 
 
 --

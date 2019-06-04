@@ -1,17 +1,17 @@
 ### La trilogie
 
-- **Type**
+- **Valeur / Type**
   - Toute valeur à un type
-  - Forme/taille de la case mémoire\
-    (cf. Représentation des données)
+  - Forme/taille de la [représentation mémoire](http://)
+  - Exemple : `42` de type **int**, `"abc"` de type **str**
 
 - **Expression**
-  - Évaluable (produit une valeur) => type
+  - Produit une valeur, possède un type
+  - Exemple : `6 * 7`, `"abc"[1]`
 
-- **Instruction**
-  - (Pour les languages impératifs) <!-- .element class="small" -->
-  - Exécutable => pas de type (même si `None`)
-  - Formes spéciales
+- **Instruction** &nbsp;<span class="label">languages impératifs</span>
+  - Ne produit pas de valeur (même si `None`)
+  - Exemple : structures de contrôle (`if`, `for`, `return` ...)
 
 Note:
 Même si non explicite il y'a des types partout
@@ -21,14 +21,17 @@ Les instructions c'est pas dans ts les langages mais le concept de forme spécia
 
 --
 
-### Un monde (d')Objet
+### Un monde de valeurs
 #### Littéraux
 
-- Types simples: \
-  entiers (`42`), flottants (`42.0`), booléens (`True`), caractères (`'a'`)
+- Types simples : \
+  entiers (`42`), flottants (`42.0`), booléens (`True`), \
+  chaînes de caractères (`"Hello"`)
+
 - Types structurés : \
-  chaînes de caractères (`"Hello"`),listes (`[]`), dictionnaires (`{}`), t-uples (`(,)`)
-- Fonctions (`fact`, notez l'absence de parenthèse)
+  listes (`[]`), dictionnaires (`{:}`), t-uples (`(,)`), ensemble (`{}`)
+
+- Fonctions (`lambda`)
 
 > Exercice: Regarder avec `type` le resultat. Profitez en pour essayer `help`
 

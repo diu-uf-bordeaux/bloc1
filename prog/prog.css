@@ -16,6 +16,7 @@ pre.float3 { float: left; width: 32%; margin: 5px; }
   vertical-align: top;
   display: inline-block;
   width: 49%; }
+
 .label {
   color:#ff8855;
   background-color: #770000;
@@ -48,11 +49,11 @@ p.title {
 }
 
 .small {
-    font-size: 28px !important;
+  font-size: 28px !important;
 }
 
 /* Special highlighting class */
-.strong {
+.reveal strong {
     color:#ff6600;
     font-weight: bold;
 }
@@ -69,4 +70,9 @@ p.title {
 
 code {
   color: #aa2222;
+}
+
+ul code {
+  font-size: 32px;
+  font-weight: bold;
 }

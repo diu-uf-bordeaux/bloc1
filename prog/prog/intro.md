@@ -16,12 +16,12 @@ Note:
 
 ### Caractéristiques de python
 
-- Haut niveau
-- Typage dynamique  (*Duck typing*)
+- Langage de haut niveau
+- Typage dynamique  (*duck typing*)
 - Langage interprété (même s'il compile)
-- language objet à classe et héritage multiple
-- Gestion de la mémoire implicite (GC)
-- Écosystème de blibliothèque riche
+- Langage objet à classe et héritage multiple
+- Gestion de la mémoire implicite (*garbage collector*)
+- Écosystème de bibliothèques riche
 
 Note:
 Pour le C / pas de surcoût à l’exécution
@@ -49,8 +49,8 @@ Tout n'est pas incompatible ... cf java/python/...
 
 - Utilisez un VRAI éditeur de texte
   - Utilisez l’indentation automatique
-  - Mettez de la couleur
-  - Utilisez la complètion automatique
+  - Profitez de la couleur
+  - Utilisez la complétion automatique
 - Restez cohérent (convention de codage)
 - Utilisez des noms évocateurs \
   plus c'est global plus c'est long.
