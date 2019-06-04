@@ -74,22 +74,76 @@ en Scheme  <!-- .element: class="title" -->
 
 --
 
-### Fonctions : types
+### Fonctions et types
+
+- Même si les types ne sont pas apparents, il est bon de penser
+  l'écriture des fonctions en les ayant en tête.
+
+```python
+def join(lst, sep):
+    """Concatène les éléments d'une liste avec un séparateur"""
+    result = lst.pop(0)
+    for l in lst:
+        result = result + sep + l
+    return result
+```
+- Dans cette fonction &nbsp;:
+    -  `lst` est manifestement une liste
+    -  `sep` est additionné aux élements de la liste
+    - le retour de `join` est le résultat de cette addition
+
+```python
+join([1,2,3], 0)             # -> 6 (= 1 + 2 + 3)
+join(["a","b","c"], " and ") # -> "a and b and c"
+```
 
 
-- Il est naturel d'associer un **type** à une fonction&nbsp;:
+--
 
+- En suivant [des conventions de
+  nommage](https://numpydoc.readthedocs.io/en/latest/format.html)&nbsp;:
 
-- Les types aident à vérifier la composition des fonctions.
+```python
+def join(lst, sep):
+    """Concatène les éléments d'une liste.
 
-- Il est désirable qu'une fonction s'applique au plus grand nombre de
-  valeurs possible, e.g. qu'elle soit **générique**.
+       Parameters
+       ----------
+       lst : list
+           une liste de chaînes de caractères
+       sep : string
+           un séparateur
 
+       Yields
+       ------
+       str
+           la chaîne résultant de la concaténation des élément
+           de `lst`, séparés chacun par `sep`."""
 
-- Il arrive fréquemment qu'une fonction modifie ses paramètres sans
-  renvoyer de résultat.
+```
 
+- Les types aident à la **vérification** et la **documentation**.
 
+- <span class="label">Python $\geq$ 3.5</span>&nbsp; Possibilité d'ajouter
+  des annotations de type :
+
+```python
+def join(lst: list, sep: str) -> str:
+```
+
+--
+
+- Dans des langages aux systèmes de types plus perfectionnés, les
+  types permettent aussi de :
+
+    - prévenir des erreurs avant l'exécution du code;
+
+    - optimiser du code suivant sa représentation.
+
+- Néanmoins, ils peuvent être un frein au développement en
+  contraignant les possibilités des programmeurs.
+
+    Ainsi, `join` s'applique aussi à des listes de nombres.
 
 --
 
