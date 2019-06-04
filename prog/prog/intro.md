@@ -32,8 +32,7 @@ La reussite dépend plus des bibliothèques et/ou main mise sur une niche
 
 ### Caractèrisation des programmes
 
-![Vérification](prog/images/verification.png) <!-- .element: class="stretch" style="max-width: 70%;" -->
-![programs](prog/images/programs.svg) <!-- .element: "no-border"-->
+![Vérification](prog/images/verification.svg) <!-- .element: class="stretch" style="max-width: 70%;" -->
 
 --
 
