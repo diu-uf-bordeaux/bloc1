@@ -1,7 +1,7 @@
 ### Fonction
 
-- Une **fonction** est un bloc d'instructions
-  paramétré par des arguments renvoyant une valeur&nbsp;:
+- Une **fonction** est un bloc d'instructions paramétré par des
+  arguments et renvoyant une valeur&nbsp;:
 
 ```python
 def function(parameters):
@@ -16,7 +16,7 @@ def function(parameters):
   corps de la fonction.
 
 - L'instruction `return` indique la valeur renvoyée \
-  `None` en cas d'absence.
+  (`None` en cas d'absence).
 
 Note:
 Les parametres sont des variables dont la valeur initiale est determinée par
@@ -27,12 +27,12 @@ l'appel de fonction
 ### Fonction : exemple simple
 
 ```python
-def is_palindrom(lst):
-    """Teste si la chaîne lst est symétrique"""
-    n = len(lst)
+def is_palindrom(s):
+    """Teste si la chaîne `s` est symétrique."""
+    n = len(s)
     for i in range(n//2):
-      if lst[i] != lst[n-i-1]:
-          return False
+        if s[i] != s[n-i-1]:
+            return False
     return True
 ```
 
@@ -47,8 +47,9 @@ def is_palindrom(lst):
   - Exécution
   - Retour
 
-- La valeur de l'expression correspondant à l'appel est la valeur de
-  l'expression retournée lors de l'exécution
+- L'expression `f(x)` s'évalue comme l'expression retournée lors de
+  l'exécution de `f` dans laquelle le paramètre a été initialisé à la
+  valeur de `x`.
 
 Note:
 A propos du passage par valeur/référence, ici pas de soucis tout est reference.
@@ -71,6 +72,7 @@ z = factorial(2)  # Permet de voir les empilements d'appels
 
 ```python
 def pgcd(a, b):
+    """Retourne le PGCD des entiers `a` et `b`."""
      while b > 0:
           tmp = a
           a = b
@@ -78,7 +80,36 @@ def pgcd(a, b):
      return a
 ```
 
-Ajouter exemples en C et Scheme
+<div class="half">
+
+en C  <!-- .element: class="title" -->
+```c
+// Retourne le pgcd de 2 entiers
+int pgcd(int a, int b) {
+  int r;
+  while (b != 0) {
+      r = a%b;
+      a = b;
+      b = r;
+    }
+  return a;
+}
+```
+
+</div>
+
+<div class="half">
+
+en Scheme  <!-- .element: class="title" -->
+```scheme
+;; Retourne le pgcd de 2 entiers
+(define (pgcd n p)
+   (cond [(< n p) (pgcd p n)]
+       [(zero? (rem n p)) p]
+       [else (pgcd p (rem n p))]))
+```
+
+</div>
 
 
 Note:

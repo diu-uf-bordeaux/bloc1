@@ -54,8 +54,8 @@ else:
     block_false
 ```
 
-- Ici, `condition` est une expression booléenne (`and`, `or`, `not`,
-comparaisons ...)
+- Ici, `condition` est une expression booléenne \
+(`and`, `or`, `not`, comparaisons ...)
 
 <div class='half'>
 
@@ -89,7 +89,7 @@ en Scheme  <!-- .element: class="title" -->
 ```python
 while condition:
     instructions
-    condition = expression    # not compulsory
+    condition = expression    # pas obligatoire
 ```
 
 - La boucle est répétée tant que la condition est valide.
@@ -133,7 +133,7 @@ for variable in iterable:
 ```
 
 - La boucle est répétée autant de fois qu'il y a d'éléments dans
-  l'**itérable**.
+  l'**itérable**, un objet que l'on peut énumérer
 
 - Exemples d'itérables : éléments d'une liste, tuple, dictionnaire,
   chaîne de caractères ...
