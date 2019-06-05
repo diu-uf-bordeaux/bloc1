@@ -1,32 +1,32 @@
 ### Variable
 
-- Référence
-- Allocation
+- Un espace mémoire nommé qui **référence** une valeur
+- Déclaration implicite en python
+- Affectation stocke la **valeur** du membre droit. \
+  `foo = 2 * 3`
+- Son évaluation est la valeur actuellement référencée. \
+  `36 + foo`
 
 --
 
-Un dessin de pile qui n'est pas une pile
-
-- Affectation
-
-```python
-nom_variable = expression
-```
-
-- Déclaration
-
-- Initialisation
-
---
+### Exemples
 
 ```python
 x = 3
 y = x + 2
-x = 4
+x = 5
+
+isPositive = x > 0   # True
+areSame = x == y     # True
+
 length = 123.456
-isPositive = x > 0
 name = 'Dupont'
 adress = "123 rue de Gaulle"
-someList = [1, 2, 3]
-someList[0] = 10
+
+someList = [x, y, 3] # [ 5, 5, 3 ]
+someList[1] = 10
+stillSame = x == y   # True
+
+x = "Une bien mauvaise idée"
 ```
+> Limitez au maximum son utilisation polymorphe

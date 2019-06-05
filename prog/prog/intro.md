@@ -71,6 +71,8 @@ Tout n'est pas incompatible ... cf java/python/...
 - Utiliser la doc. embarquée
 > `help(uneExpression)`
 
+> `dir(uneExpression)`
+
 [Documentation officielle]: https://docs.python.org/3/reference/
 
 Note:

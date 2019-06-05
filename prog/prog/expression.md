@@ -42,12 +42,23 @@ On peut faire ressentir le graphe d'objet sous-jacent
 
 --
 
+## Un monde objet
+### Envoi de message
+
+### Instanciation
+
+- Construction + initialisation (appel à `__init__`)
+- `list()`
+- `str()`
+
+--
+
 ### Opérateurs
 
 - En Python, les [opérateurs](https://docs.python.org/3.8/library/operator.html)
   sont des fonctions incarnées à travers une syntaxe particulière.
 
-- Exemple : `+`, `*`, `/`, `**`, `in`, `is`, `&`, `^`, `~`, `|`, `[]`,  ...
+- Exemple : `+`, `*`, `/`, `**`, `in`, `is`, `&`, `^`, `~`, `|`, `[]`, `len`, `del`, ...
 
 
 ```python

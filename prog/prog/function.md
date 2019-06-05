@@ -15,8 +15,8 @@ def function(parameters):
 - Les paramètres forment une liste de noms réutilisables dans le
   corps de la fonction.
 
-- L'instruction `return` indique la valeur renvoyée.
-
+- L'instruction `return` indique la valeur renvoyée \
+  `None` en cas d'absence.
 
 --
 
@@ -59,6 +59,26 @@ en Scheme  <!-- .element: class="title" -->
 
 </div>
 
+Note:
+Factorial est pas un bon exemple ca fait un appel de fonction avant `l'appel de fonction`
+
+--
+### L'appel de fonction
+
+- Une fonction à vocation à être appellée
+- Decomposition de l'appel de fonction
+  - Préparation
+  - Activation
+  - Execution
+  - Retour (?)
+- Sa valeur est celle retournée par l'execution
+
+- Afficher n'est pas retourner (poil au pied)
+
+Note:
+A propos du passage par valeur/référence, ici pas de soucis tout est reference.
+Mais quand même, il y'a des (rares) objets immutables, les autres le sont !!!
+
 --
 
 ### Fonctions : principes
@@ -93,8 +113,8 @@ def join(lst, sep):
     - le retour de `join` est le résultat de cette addition
 
 ```python
-join([1,2,3], 0)             # -> 6 (= 1 + 2 + 3)
-join(["a","b","c"], " and ") # -> "a and b and c"
+join([1, 2, 3], 0)             # -> 6 (= 1 + 2 + 3)
+join(["a", "b", "c"], " and ") # -> "a and b and c"
 ```
 
 
@@ -118,7 +138,8 @@ def join(lst, sep):
        ------
        str
            la chaîne résultant de la concaténation des élément
-           de `lst`, séparés chacun par `sep`."""
+           de `lst`, séparés chacun par `sep`.
+    """
 
 ```
 
@@ -147,14 +168,6 @@ def join(lst: list, sep: str) -> str:
 
 --
 
-### Fonctions : remarques
-
-- <span class="label">Python</span> Une fonction sans instruction `return`
-  renvoie `None`.
-
-
---
-
 ### Fonctions : exercice
 
 - Écrire une fonction prenant un couple `(h,m)` représentant une heure
@@ -176,12 +189,6 @@ def uneMinuteEnPlus (h, m):
 
 
 ---
-
-### L'appel de fonction
-
-(La vrai pile d'appel)
-Règle d'évaluation
-
 
 --
 ### Variable locale
@@ -278,7 +285,7 @@ print(k)
 - qu'affiche-t-il ?
 
 ```python
-L = [1,2,3]
+L = [1, 2, 3]
 def test(L):
     L = L + [4]
 test(L)
@@ -288,25 +295,9 @@ print(L)
 - qu'affiche-t-il ?
 
 ```python
-L = [1,2,3]
+L = [1, 2, 3]
 def test(L):
     L.append(4)
 test(L)
 print(L)
 ```
-
---
-
-
-### Formes spéciales
-
---
-
-Passage par valeur/référence
-
---
-
-### Retour
-
-Afficher n'est pas retourner
-(poil au pied)
