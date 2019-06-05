@@ -47,6 +47,8 @@ Tout n'est pas incompatible ... cf java/python/...
 
 ### Conseils
 
+> Parlez le code
+
 - Utilisez un VRAI éditeur de texte
   - Utilisez l’indentation automatique
   - Profitez de la couleur
@@ -70,8 +72,6 @@ Tout n'est pas incompatible ... cf java/python/...
 
 - Utiliser la doc. embarquée
 > `help(uneExpression)`
-
-> `dir(uneExpression)`
 
 [Documentation officielle]: https://docs.python.org/3/reference/
 

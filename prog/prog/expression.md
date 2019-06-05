@@ -42,17 +42,6 @@ On peut faire ressentir le graphe d'objet sous-jacent
 
 --
 
-## Un monde objet
-### Envoi de message
-
-### Instanciation
-
-- Construction + initialisation (appel à `__init__`)
-- `list()`
-- `str()`
-
---
-
 ### Opérateurs
 
 - En Python, les [opérateurs](https://docs.python.org/3.8/library/operator.html)
@@ -82,3 +71,4 @@ Note: C'est syntaxique, ça se transforme en un envoi de message
       Associativité et précédence sont décrits au même endroit de la doc
       Précédence, pour des opérateurs précédents
       Associativité pour un même opérateur (gauche à droite pour tout le monde, sauf l'exponentiation)
+

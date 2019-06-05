@@ -1,7 +1,7 @@
 ### Fonction
 
 - Une **fonction** est un bloc d'instructions
-  paramétré renvoyant éventuellement une valeur&nbsp;:
+  paramétré renvoyant une valeur&nbsp;:
 
 ```python
 def function(parameters):
@@ -12,11 +12,15 @@ def function(parameters):
 
 - Le bloc d'instructions est le **corps** de la fonction.
 
-- Les paramètres forment une liste de noms réutilisables dans le
+- Les paramètres sont des variables normales utilisables dans le
   corps de la fonction.
 
 - L'instruction `return` indique la valeur renvoyée \
   `None` en cas d'absence.
+
+Note:
+Les parametres sont des variables dont la valeur initiale est determinée par
+l'appel de fonction
 
 --
 
@@ -63,10 +67,10 @@ Note:
 Factorial est pas un bon exemple ca fait un appel de fonction avant `l'appel de fonction`
 
 --
+
 ### L'appel de fonction
 
-- Une fonction à vocation à être appellée
-- Decomposition de l'appel de fonction
+- Évaluation d'un appel de fonction
   - Préparation
   - Activation
   - Execution
@@ -78,6 +82,8 @@ Factorial est pas un bon exemple ca fait un appel de fonction avant `l'appel de 
 Note:
 A propos du passage par valeur/référence, ici pas de soucis tout est reference.
 Mais quand même, il y'a des (rares) objets immutables, les autres le sont !!!
+Dans l'activation, on peut faire remarquer que c'est la que les parametres
+nommés son matchés et les valeurs par défaut prises
 
 --
 
@@ -91,6 +97,20 @@ Mais quand même, il y'a des (rares) objets immutables, les autres le sont !!!
   dessus des instructions élémentaires.
 
 - Il s'agit d'un premier exemple de **modularité**.
+
+--
+
+### Conseils
+
+- Son nom (réfléchissez ; n'ayez pas peur de renommer)
+- Préférez les fonctions courtes
+- Peu de paramètres
+- Creez une fonction si vous êtes tentés de :
+  - Copier/coller
+  - Commenter (par exemple, un calcul, une condition)
+  - Rajouter un niveau d'indentation (pluriel/singulier)
+- Si la doc est plus longue que la fonction, il y'a probablement plusieurs fonctions.
+- Ne mélangez jamais les calcul et l'affichage
 
 --
 
@@ -301,3 +321,20 @@ def test(L):
 test(L)
 print(L)
 ```
+
+--
+
+### Un monde objet
+#### Envoi de message
+
+- Appelle une fonction dépendante du type de la valeur et l'applique à elle même.
+ `"CALM DOWN".lower()`
+- Ce premier paramètre est appelle **receveur** et nommé `self`
+
+> Regarder que peut faire une valeur : `dir(uneExpression)`
+
+#### Instanciation
+
+- Allocation + initialisation (appel à `__init__`)
+- `list()`
+- `str()`
