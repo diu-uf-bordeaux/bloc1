@@ -45,13 +45,15 @@ def extractFeature(data, feature):
         d'enregistrements vue comme un tableau 2D
         (1er indice = ligne, 2eme indice = colonne) """
     # return[data[i][feature] for i in range(len(data))]
-    return[l[feature] for l in data]
+    return [l[feature] for l in data]
 
 
 def meanFeature(data, feature, rawBeginIndex, rawEndIndex):
     """ Calcule la moyenne d'une colonne entre les lignes
         d'indices rawBeginIndex et rawEndIndex de la liste `data`."""
-    assert(rawEndIndex != rawBeginIndex)
+    assert((rawBeginIndex >= 0) and
+           (rawEndIndex >= rawBeginIndex) and
+           (rawEndIndex < len(data)))
     featureData = extractFeature(data, feature)
     sum = featureData[rawBeginIndex]
     for i in range(rawBeginIndex + 1, rawEndIndex + 1):
@@ -140,7 +142,7 @@ def splitList(l, nb):
 ################################################################
 if __name__ == '__main__':
 
-    data = importAlzheimerData("Alzheimer.2.csv")
+    data = importAlzheimerData("Alzheimer.csv")
     n = len(data)
 
     # Extraction d'une colonne
