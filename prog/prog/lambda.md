@@ -102,3 +102,42 @@ for i in FilterEven(Countdown(20)):
 ~~~
 
 </div>
+
+
+---
+
+### Générateur
+
+- Utiliser `yield` dans le corps d'une fonction, transforme la fonction en générateur.
+
+- Le resultat de l'appel de fonction est un itérable, i.e., compatible avec `for`
+- Chaque appel à l'operateur `next`, reprend l'execution du corps jusqu'au `yield` -- qui retourne la valeur
+- `return` ou la fin de fonction termine l'execution
+
+--
+
+<div class="half">
+
+~~~python
+def countdown(value):
+    while value > 0:
+        value = value - 1
+        yield value
+~~~
+
+</div>
+<div class="half">
+
+~~~python
+def filterEven(iterable):
+    iterator = iter(iterable)
+    while True:
+        try:
+            value = next(iterator)
+        except StopIteration:
+            return
+        if value % 2 == 0:
+            yield value
+~~~
+
+</div>
