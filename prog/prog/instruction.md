@@ -37,55 +37,9 @@ def function(args):
 - <span class="label">Python</span> Les instructions d'un bloc doivent
   être au même niveau d'indentation (ou plus profond si sous-blocs).
 
-Note: Python redéfinit la notion de bloc, qui n'est pas la même puisqu'elle ne considère comme bloc que les modules, fonctions et classes.
-
---
-
-### Portée
-
-- La **portée** d'une variable est la zone du
-  programme depuis laquelle elle est accessible.
-
-- L'accessibilité contient typiquement la lecture et l'écriture.
-
-- Une variable définie dans un bloc est accessible depuis ce bloc et
-  les blocs imbriqués.
-
-```python
-i = 3                 # variable defined in outer block
-if i > 0:
-    while i != 0:
-          i = i - 1   # and used inside a sub-block
-```
-
---
-
-### Portée : remarques
-
-- Accéder à une variable non initialisée (ou autrement inaccessible)
-  engendre une erreur.
-
-```python
-unk = unk + 1
-# NameError: name 'unk' is not defined
-prrrint("an important message")
-# NameError: name 'prrrint' is not defined
-```
-
-- <span class="label">Python</span> Il n'est pas possible de modifier
-  une liaison externe à une fonction, un module ou une classe.
-
-```python
-str = "a"            # define variable in external block
-def update_str():
-    str.capitalize() # ok
-    str += "b"       # error, modifies the binding
-update_str()
-# UnboundLocalError: local variable 'str' referenced before assignment
-```
-
-- <span class="label">Python</span> Un bloc ne peut pas être vide
-  (cf. instruction `pass`)
+Note: Python redéfinit la notion de bloc, qui n'est pas la même
+puisqu'elle ne considère comme bloc que les modules, fonctions et
+classes.
 
 --
 
@@ -179,7 +133,7 @@ for variable in iterable:
 ```
 
 - La boucle est répétée autant de fois qu'il y a d'éléments dans
-  l'itérable.
+  l'**itérable**.
 
 - Exemples d'itérables : éléments d'une liste, tuple, dictionnaire,
   chaîne de caractères ...

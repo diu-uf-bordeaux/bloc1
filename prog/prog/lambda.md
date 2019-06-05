@@ -1,3 +1,26 @@
+### Compréhensions de listes
+
+- Syntaxe
+
+- Map, filter
+
+- Facilite les transformations sur les itérables
+
+--
+
+### Compréhensions : exemples
+
+- map sur square
+
+- filter sur even
+
+--
+
+### Exceptions
+
+- parler des exceptions
+
+--
 ### Lambda
 
 - Fonction anonyme, construite à la demande
@@ -6,22 +29,21 @@
 lambda params_without_parentheses: expression
 ```
 
+- Exemples d'utilisation :
+
 ```python
-(lambda a, b: a + b)(1, 2)                       # -> 3
-list(filter(lambda x: x % 2 == 0, range(10)))   # -> [0, 2, 4, 6, 8]
+plus = lambda a,b: a + b
+plus(1,2)                                      # -> 3
+list(filter(lambda x: x % 2 == 0, range(10)))  # -> [0 2 4 6 8]
+utiliser any
+sorted(range(8), key=lambda x: abs(4-x))       # -> [4 3 5 2 6 1 7 0]
 ```
 
-- Facilite les techniques de programmation fonctionnelle
+- Facilite les techniques de programmation fonctionnelle :
+
+    contrôle de l'évaluation / paresse
 
 --
-
-### Compréhensions de listes
-
-- Syntaxe
-
-- Map, reduce, filter
-
----
 
 ### Itération
 
@@ -104,7 +126,7 @@ for i in FilterEven(Countdown(20)):
 </div>
 
 
----
+--
 
 ### Générateur
 

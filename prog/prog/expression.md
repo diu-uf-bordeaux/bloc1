@@ -24,16 +24,16 @@ Les instructions c'est pas dans ts les langages mais le concept de forme spécia
 ### Un monde de valeurs
 #### Littéraux
 
-- Types simples : \
+- Types **simples** (immutables) : \
   entiers (`42`), flottants (`42.0`), booléens (`True`), \
   chaînes de caractères (`"Hello"`)
 
-- Types structurés : \
+- Types **structurés** (mutables) : \
   listes (`[]`), dictionnaires (`{:}`), t-uples (`(,)`), ensemble (`{}`)
 
-- Fonctions (`lambda`)
+- Fonctions : `lambda`
 
-> Exercice: Regarder avec `type` le resultat. Profitez en pour essayer `help`
+> Exercice: regarder avec `type` les littéraux. Profitez en pour essayer `help`
 
 Note:
 Parler de la construction et de l'envoi de message mais botter en touche (le
@@ -71,4 +71,3 @@ Note: C'est syntaxique, ça se transforme en un envoi de message
       Associativité et précédence sont décrits au même endroit de la doc
       Précédence, pour des opérateurs précédents
       Associativité pour un même opérateur (gauche à droite pour tout le monde, sauf l'exponentiation)
-

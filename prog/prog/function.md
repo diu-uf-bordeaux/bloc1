@@ -1,18 +1,18 @@
 ### Fonction
 
 - Une **fonction** est un bloc d'instructions
-  paramétré renvoyant une valeur&nbsp;:
+  paramétré par des arguments renvoyant une valeur&nbsp;:
 
 ```python
 def function(parameters):
-    """documentation"""     # not compulsory but strongly recommended
+    """documentation"""     # fortement recommandé
     instructions
-    return expression       # not compulsory
+    return expression       # pour renvoyer une valeur
 ```
 
 - Le bloc d'instructions est le **corps** de la fonction.
 
-- Les paramètres sont des variables normales utilisables dans le
+- Les paramètres sont des variables classiques utilisables dans le
   corps de la fonction.
 
 - L'instruction `return` indique la valeur renvoyée \
@@ -24,7 +24,69 @@ l'appel de fonction
 
 --
 
-### Exemple de fonction
+### Fonction : exemple simple
+
+```python
+def is_palindrom(lst):
+    """Teste si la chaîne lst est symétrique"""
+    n = len(lst)
+    for i in range(n//2):
+      if lst[i] != lst[n-i-1]:
+          return False
+    return True
+```
+
+--
+
+### L'appel de fonction
+
+- Évaluation d'un appel de fonction
+
+  - Préparation
+  - Activation
+  - Exécution
+  - Retour
+
+- La valeur de l'expression correspondant à l'appel est la valeur de
+  l'expression retournée lors de l'exécution
+
+Note:
+A propos du passage par valeur/référence, ici pas de soucis tout est reference.
+Mais quand même, certaines valeurs sont immutables, d'autres sont mutables !!!
+Dans l'activation, on peut faire remarquer que c'est la que les parametres
+nommés son matchés et les valeurs par défaut prises
+
+Exemples possibles :
+
+def plus(a, b):   # Permet de voir les renommages
+    return a + b
+c = plus(3*a, a)
+
+def factorial ...
+z = factorial(2)  # Permet de voir les empilements d'appels
+
+--
+
+### Fonction : exemple itératif
+
+```python
+def pgcd(a, b):
+     while b > 0:
+          tmp = a
+          a = b
+          b = tmp % b
+     return a
+```
+
+Ajouter exemples en C et Scheme
+
+
+Note:
+    pgcd(4,6)
+
+--
+
+### Fonction : exemple récursif
 
 ```python
 def factorial(n) :
@@ -63,27 +125,55 @@ en Scheme  <!-- .element: class="title" -->
 
 </div>
 
-Note:
-Factorial est pas un bon exemple ca fait un appel de fonction avant `l'appel de fonction`
 
 --
 
-### L'appel de fonction
+### Portée
 
-- Évaluation d'un appel de fonction
-  - Préparation
-  - Activation
-  - Execution
-  - Retour (?)
-- Sa valeur est celle retournée par l'execution
+- La **portée** d'une variable est la zone du
+  programme depuis laquelle elle est accessible.
 
-- Afficher n'est pas retourner (poil au pied)
+- L'accessibilité contient typiquement la lecture et l'écriture.
 
-Note:
-A propos du passage par valeur/référence, ici pas de soucis tout est reference.
-Mais quand même, il y'a des (rares) objets immutables, les autres le sont !!!
-Dans l'activation, on peut faire remarquer que c'est la que les parametres
-nommés son matchés et les valeurs par défaut prises
+- Une variable définie dans une fonction est accessible dans la
+  fonction à partir du moment où elle a été initialisée.
+
+```python
+i = 3                 # variable définie dans le module
+def update_int():
+    j = i + 1         # ok, i est visible depuis la fonction
+print(j)              # erreur, j est inaccessible hors de la fonction
+# NameError: name 'j' is not defined
+```
+
+--
+
+### Portée : remarques
+
+- Accéder à une variable non initialisée (ou autrement inaccessible)
+  engendre une erreur.
+
+```python
+unk = unk + 1
+# NameError: name 'unk' is not defined
+prrrint("an important message")
+# NameError: name 'prrrint' is not defined
+```
+
+- <span class="label">Python</span> Il n'est pas possible de modifier
+  une liaison externe à une fonction, un module ou une classe.
+
+```python
+str = "a"            # variable définie dans le module
+def update_str():
+    str += "b"       # erreur, modifie la liaison
+update_str()
+# UnboundLocalError: local variable 'str' referenced before assignment
+```
+
+- <span class="label">Python</span> Un bloc ne peut pas être vide
+  (cf. instruction `pass`)
+
 
 --
 
@@ -100,17 +190,17 @@ nommés son matchés et les valeurs par défaut prises
 
 --
 
-### Conseils
+### Fonctions : conseils
 
-- Son nom (réfléchissez ; n'ayez pas peur de renommer)
+- Réfléchissez aux noms ; n'ayez pas peur de renommer
 - Préférez les fonctions courtes
-- Peu de paramètres
-- Creez une fonction si vous êtes tentés de :
+- Limitez le nombre de paramètres
+- Créez une fonction si vous êtes tentés de :
   - Copier/coller
   - Commenter (par exemple, un calcul, une condition)
   - Rajouter un niveau d'indentation (pluriel/singulier)
-- Si la doc est plus longue que la fonction, il y'a probablement plusieurs fonctions.
-- Ne mélangez jamais les calcul et l'affichage
+- Si la doc est plus longue que la fonction, il y a probablement moyen de subdiviser.
+- Ne mélangez **jamais** les calculs et l'affichage
 
 --
 
@@ -154,8 +244,8 @@ def join(lst, sep):
        sep : string
            un séparateur
 
-       Yields
-       ------
+       Returns
+       -------
        str
            la chaîne résultant de la concaténation des élément
            de `lst`, séparés chacun par `sep`.
@@ -208,10 +298,9 @@ def uneMinuteEnPlus (h, m):
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
 
----
-
 --
-### Variable locale
+
+### Variables : exercice
 
 - affiche-t-il 2 ou 3 ?
 
@@ -223,10 +312,6 @@ def test():
 test()
 ```
 
---
-
-### Variable locale
-
 - affiche-t-il 2 ou 3 ?
 
 ```python
@@ -237,10 +322,6 @@ k = 3
 test()
 ```
 
---
-
-### Variable locale
-
 - affiche-t-il 2 ou 3 ?
 
 ```python
@@ -251,11 +332,6 @@ def test():
 test()
 ```
 
---
-
-### Variable locale
-
-
 - affiche-t-il 2 ou 3 ?
 
 ```python
@@ -265,13 +341,6 @@ def test():
 test()
 print(k)
 ```
-
---
-
-
-### Variable locale
-
-
 - affiche-t-il 2 ou 3 ?
 
 ```python
@@ -281,10 +350,6 @@ def test(k):
 test(k)
 print(k)
 ```
-
---
-
-### Variable locale
 
 
 - affiche-t-il 2 ou 3 ?
@@ -296,11 +361,6 @@ def test(k):
 k = test(k)
 print(k)
 ```
-
---
-
-
-### Variable locale
 
 - qu'affiche-t-il ?
 
@@ -321,20 +381,3 @@ def test(L):
 test(L)
 print(L)
 ```
-
---
-
-### Un monde objet
-#### Envoi de message
-
-- Appelle une fonction dépendante du type de la valeur et l'applique à elle même.
- `"CALM DOWN".lower()`
-- Ce premier paramètre est appelle **receveur** et nommé `self`
-
-> Regarder que peut faire une valeur : `dir(uneExpression)`
-
-#### Instanciation
-
-- Allocation + initialisation (appel à `__init__`)
-- `list()`
-- `str()`
