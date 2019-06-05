@@ -219,26 +219,30 @@ update_str()
 
 - Il s'agit d'un premier exemple de **modularité**.
 
+- Les fonctions sont les éléments de base des techniques de
+  programmation fonctionnelle.
+
 --
 
 ### Fonctions : conseils
 
-- Réfléchissez aux noms ; n'ayez pas peur de renommer
-- Préférez les fonctions courtes
-- Limitez le nombre de paramètres
+- Réfléchissez aux noms, n'ayez pas peur de renommer.
+- Préférez les fonctions courtes.
+- Limitez le nombre de paramètres.
 - Créez une fonction si vous êtes tentés de :
-  - Copier/coller
-  - Commenter (par exemple, un calcul, une condition)
-  - Rajouter un niveau d'indentation (pluriel/singulier)
-- Si la doc est plus longue que la fonction, il y a probablement moyen de subdiviser.
-- Ne mélangez **jamais** les calculs et l'affichage
+  - Copier/coller,
+  - Commenter (par exemple, un calcul, une condition),
+  - Rajouter un niveau d'indentation (pluriel/singulier).
+- Si la doc est plus longue que la fonction, il y a probablement
+  moyen de subdiviser.
+- Ne mélangez **jamais** les calculs et l'affichage.
 
 --
 
-### Fonctions et types
+### Fonctions et spécification
 
-- Même si les types ne sont pas apparents, il est bon de penser
-  l'écriture des fonctions en les ayant en tête.
+- Il est bon de penser l'écriture des fonctions en ayant en tête la
+  **spécification** de son fonctionnement
 
 ```python
 def join(lst, sep):
@@ -271,41 +275,22 @@ def join(lst, sep):
        Parameters
        ----------
        lst : list
-           une liste de chaînes de caractères
-       sep : string
+           une liste
+       sep
            un séparateur
 
        Returns
        -------
        str
-           la chaîne résultant de la concaténation des élément
+           le résultat de la concaténation des éléments
            de `lst`, séparés chacun par `sep`.
     """
 
 ```
 
-- ... les types aident à la **vérification** et la **documentation**.
+- ... les spécifications aident à la structuration du code.
 
-- <span class="label">Python $\geq$ 3.5</span>&nbsp; Possibilité d'ajouter
-  des annotations de type :
-
-```python
-def join(lst: list, sep: str) -> str:
-```
-
---
-
-- Dans des langages aux systèmes de types plus perfectionnés, les
-  types permettent aussi de :
-
-    - prévenir des erreurs avant l'exécution du code;
-
-    - optimiser du code suivant sa représentation.
-
-- Néanmoins, ils peuvent être un frein au développement en
-  contraignant les possibilités des programmeurs.
-
-    Ainsi, `join` s'applique aussi à des listes de nombres.
+- Exemple : en terme de **vérification** et de **documentation**.
 
 --
 
