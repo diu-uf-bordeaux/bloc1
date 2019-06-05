@@ -13,7 +13,7 @@ Lancez ce serveur en allant dans repertoire **static** et en executant les deux 
 
 Vous devriez pouvoir cibler ce serveur depuis votre navigateur en allant sur l'URL : [http://localhost](http://localhost)
 
-Vous pouvez changer les pages HTML qui se trouve dans le répertoire **public** du serveur et les charger avec votre navigateur.
+Copiez / Collez les pages HTML du BlackJacj dans le répertoire **public** du serveur et chargez les avec votre navigateur.
 
 ## Serveur de pages dynamiques
 
@@ -25,5 +25,5 @@ Lancez ce serveur en allant dans le repertoire **dynamic** et en executant les d
 
     node index.js
 
-Modifiez la page **index.html** et le script **script.js** afin que le formulaire envoie un message POST vers l'URL **/cartes** avec une donnée **nom** contenant le nom du joueur.
+Modifiez la page **index.html** afin que le formulaire envoie un message POST vers l'URL **/cartes** avec une donnée **nom** contenant le nom saisie par le joueur.
 
