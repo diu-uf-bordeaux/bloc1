@@ -9,27 +9,31 @@ L'objet de ce module est de voir les notions suivantes:
 
 Toutes ces notions seront présentées sur un exemple fil rouge : le jeu de Black Jack.
 
-## 1-HTTP
+## Architecture Client / Server et protocole HTTP
 
-[Architecture Client / Server et protocole HTTP](./1-HTTP)
+- [Cours](./1-HTTP/http.pdf)
+- [Exercices](./1-HTTP/exo.html)
 
-## 2-HTML
+## HTML
 
-[Le langage HTML](./2-HTML)
+- [Cours](./2-HTML/html.pdf)
+- [Exercices](./2-HTML/exo.html)
 
-## 3-CSS
+## CSS
 
-[Le langage CSS](./3-CSS)
+- [Cours](./3-CSS/html.pdf)
+- [Exercices](./3-CSS/exo.html)
+
+## JavaScript pour le Web
+
+- [Cours](./4-JS/html.pdf)
+- [Exercices](./4-JS/exo.html)
 
 
+## Développement Front et Back
 
-## 4-JS
-
-[JavaScript pour le Web](./4-JS)
-
-## 5-Développement
-
-[Développement Front et Back](./5-Developpement)
+- [Cours](./5-Developpement/html.pdf)
+- [Exercices](./5-Developpement/exo.html)
 
 
 
