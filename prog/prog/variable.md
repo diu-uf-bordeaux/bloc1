@@ -10,6 +10,33 @@
 
 --
 
+### aliasing ?
+
+- En Python, tout est référence :
+
+-  Après x = y, les variables x et y représentent le même objet (même
+id)
+
+-  Après x = y + z, on crée un nouvel objet de valeur y + z, dont l’id
+est stocké dans x.
+
+-  Après x.methode(...) ou x[...] = ...  la valeur de x peut être
+modifiée mais x ne change pas d’id.
+
+-  Avec des non-mutables (nombres, tuples, chaînes), il n’y a que
+l’affectation pour modifier une variable !  Donc le partage de mémoire
+est “transparent”.
+
+```python
+ m = [[0]*2]*2
+
+ m [0][0] = 1
+
+m # -> [[1 , 0] , [1 , 0]]
+```
+
+--
+
 ### Exemples
 
 ```python
