@@ -13,7 +13,7 @@ Lancez ce serveur en allant dans répertoire **static** et en exécutant les tro
     
     node index.js
 
-Vous devriez pouvoir cibler ce serveur depuis votre navigateur en allant sur l'URL : [http://localhost](http://localhost)
+Vous devriez pouvoir cibler ce serveur depuis votre navigateur en allant sur l'URL : [http://localhost:3000](http://localhost:3000)
 
 Copiez / Collez les pages HTML du BlackJack dans le répertoire **public** du serveur et chargez-les avec votre navigateur.
 
@@ -21,7 +21,7 @@ Le serveur qui s'exécute sur votre machine est accessible à travers le réseau
 
     ip route get 1 | awk '{print $NF;exit}'
 
-Échangez l'adresse IP obtenue avec votre voisin et accèder à son serveur en le ciblant depuis votre navigateur avec l'URL : [http://<adresse_IP>](http://<adresse_IP>)
+Échangez l'adresse IP obtenue avec votre voisin et accèder à son serveur en le ciblant depuis votre navigateur avec l'URL : [http://<adresse_IP>:3000](http://<adresse_IP>:3000)
 
 Vérifiez, à l'inverse, que votre voisin parvient bien à accèder à votre serveur. Modifiez la page **index.html** dans votre répertoire **public**, puis rafraîchissez l'affichage dans le navigateur de votre voisin.
 
