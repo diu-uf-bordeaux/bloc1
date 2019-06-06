@@ -84,3 +84,10 @@ p_people = [ p for p in people if p[0].startswith("P") ]
 oldest = max([ (p,p[2]-p[1]) for p in people ], key=lambda d: d[1])[0]
 ```
 <!-- .element: class="fragment" data-fragment-index="3" -->
+
+--
+
+### Pour s'entraîner ...
+
+Le <a href="#/tp_classification">lien suivant</a> amène à une annexe
+illustrant les concepts vus jusqu'à présent.

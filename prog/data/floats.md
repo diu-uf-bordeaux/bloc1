@@ -5,17 +5,43 @@
 (historique, permet de transposer des calculs indépendamment des
 machines qui les font)
 
-- Forme de la représentation
+- Forme de la représentation sur $n = p + e$ bits.
 
-![IEEE754](data/images/ieee754.png) <!-- .element: class="stretch" style="max-width: 70%;" -->
+![IEEE754](data/images/ieee754_repr.png) <!-- .element: class="stretch" style="max-width: 60%;" -->
+
+Sur 32 bits : ![IEEE754](data/images/ieee754_bits.png) <!-- .element: class="stretch" style="max-width: 90%;vertical-align: middle" -->
+Note:
+
+Il y a bien p+e bits en tout, même s'il y a un bit de signe. En effet,
+sauf pour les nombres spéciaux, le premier bit de la mantisse est
+toujours égal à 1, ce qui permet de regagner le bit de signe.
+
 
 --
 
 ### Nombres flottants : types
 
-- simple precision
+| Paramètre   | Simple | Double |
+|-------------|:------:|:------:|
+| p           | 24     | 53     |
+| e           | 8      | 11     |
+| Total :     | 32     | 64     |
+| Exposant :  | -128 à 127 | -1024 à 1023 |
+| Décimales : | $\approx 7$ | $\approx 15$ |
 
-- double precision
+--
+
+### Nombres flottants : limites
+
+- Les réels ne sont pas tous représentables exactement.
+
+$$ 0.1 = 0.0001100110011 ... $$
+
+- Les opérations ne sont plus associatives :
+
+![IEEE754](data/images/addition_assoc.png) <!-- .element: class="stretch" style="max-width: 100%; vertical-align:top" -->
+
+- Les erreurs d'approximation ont tendance à s'accumuler.
 
 --
 
@@ -36,9 +62,56 @@ bits ?
 
 ### Nombres flottants : principes
 
-- Ne jamais comparer directement deux nombres flottants
+- Ne jamais comparer directement deux nombres flottants.
 
 ```python
 x == 3.14             # à proscrire
 (x - 3.14) < 1e-5     # toujours lama faire comme ça
 ```
+
+- Éviter de soustraire des quantités équivalentes.
+
+<div class="half">
+
+```python
+def quadratic_roots1(a,b,c):
+    sq_delta = math.sqrt(b*b - 4*a*c)
+    x1 = (- b - sq_delta) / (2 * a)
+    x2 = (- b + sq_delta) / (2 * a)
+    return (x1,x2)
+```
+
+</div>
+
+<div class="half">
+
+```python
+def quadratic_roots2(a,b,c):
+    sq_delta = math.sqrt(b*b - 4*a*c)
+    if b > 0:
+        x1 = (- b - sq_delta) / (2 * a)
+    else:
+        x1 = (- b + sq_delta) / (2 * a)
+    x2 = c / (a * x1)
+    return (x1,x2)
+```
+
+</div>
+
+<div class="half">
+
+```python
+quadratic_roots1(1,1e8,1)
+# -> (-1e8, -7.450580e-09)  25% error
+```
+
+</div>
+
+<div class="half">
+
+```python
+quadratic_roots2(1,1e8,1)
+# -> (-1e8, -1e-08)      2e-12% error
+```
+
+</div>
