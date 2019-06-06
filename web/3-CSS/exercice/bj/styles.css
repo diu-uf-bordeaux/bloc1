@@ -6,7 +6,7 @@ h2 {
     color: red;
 }
 
-#nextCard {
+.mybutton {
     padding: 10px;
     border-radius: 20px;
     font-size: 150%;
