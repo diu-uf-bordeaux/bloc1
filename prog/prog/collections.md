@@ -8,7 +8,7 @@
 
 - Les collections sont itérables.
 
-- Les collections peuvent être mutables ou immutables.
+- Elles peuvent être mutables ou immutables.
 
 - Elles présentent des interfaces de programmation et des propriétés
   algorithmiques différentes.
