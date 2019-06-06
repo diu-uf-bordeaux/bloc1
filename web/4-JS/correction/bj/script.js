@@ -37,6 +37,11 @@ function majScore(carte) {
 function ajouterCarte(src) {
     let img = document.createElement('img');
     img.src = src;
+    img.id = Math.random().toString(36).substring(2, 15);
+    img.draggable = true;
+    img.ondragstart = drag;
+    img.ondragover = allowDrop;
+    img.ondrop = drop;
     document.getElementById("mes-cartes").appendChild(img);
 }
 
@@ -62,6 +67,24 @@ function clickOnAjouterCarte() {
 function addButtonListener() {
     let ajouterCarteButton = document.getElementById("boutton-ajout-carte");
     ajouterCarteButton.onclick = clickOnAjouterCarte;
+}
+
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    var srcElt = document.getElementById(data);
+    var filename = ev.target.src;
+    ev.target.src = srcElt.src;
+    srcElt.src = filename;
 }
 
 window.onload = initialization;
