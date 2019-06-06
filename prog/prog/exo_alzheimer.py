@@ -18,18 +18,12 @@ def importAlzheimerData(csvFileName):
                       SCORE(float); HIPPOVOL(float); HIPPOPERCENT(float)
         (voir https://docs.python.org/fr/3/library/csv.html)
     """
+    data = []
     with open(csvFileName) as csvfile:
+        csvfile.readline() # Skip header
         reader = csv.reader(csvfile, delimiter=';')
-        data = list(reader) # liste de liste
-
-    del data[0] # suppression des intitulés de colonnes
-
-    for l in data:
-        l[AGE] = int(l[AGE])
-        l[SCORE] = int(l[SCORE])
-        l[HIPPOVOL] = float(l[HIPPOVOL])
-        l[HIPPOPERCENT] = float(l[HIPPOPERCENT])
-
+        for class_, sex, age, score, hippovol, hippopc in reader:
+            data.append([class_, sex, int(age), int(score), float(hippovol), float(hippopc)])
     return data
 
 
