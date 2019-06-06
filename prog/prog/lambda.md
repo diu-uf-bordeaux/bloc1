@@ -18,7 +18,33 @@
 
 ### Exceptions
 
-- parler des exceptions
+- `try` enregistre une barrière dans la pile d'appel, `except` défini le type
+  des exceptions traitées (`else` tout le reste).
+
+- `raise` lève une exception qui deroule la pile d'appel jusqu'a la premiere
+  barriere qui sait la traiter.
+
+- Attention à la fuite de ressource: `finally` sert à ça.
+
+<div class='half'>
+
+~~~python
+with expr as var:
+    doSomeStruffs
+~~~
+
+</div><div class='half'>
+
+~~~python
+temp = expr
+try:
+  var = temp.__enter__()
+  doSomeStuffs
+finally:
+  temp.__exit__()
+~~~
+
+</div>
 
 --
 ### Lambda

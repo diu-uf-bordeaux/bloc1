@@ -18,7 +18,7 @@
 
     - Sans paramètres : `"CALM DOWN".lower()`
 
-    - Avec paramètres : `"and".join(["a", "b"])`
+    - Avec paramètres : `" and ".join(["a", "b"])`
 
 
 - Ce premier paramètre est appelé **receveur** et nommé `self`.
