@@ -1,5 +1,5 @@
-var cartes = new Array();
-var score = 0;
+let cartes = new Array();
+let score = 0;
 
 function initialization() {
     nouvellePartie();
