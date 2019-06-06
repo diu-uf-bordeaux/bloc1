@@ -5,9 +5,13 @@
 
 `object.method(params)`
 
-- Exemples : insérer ici
+- Exemples : "abc" est un objet de type **str** et répond à :
 
-> Regarder que peut faire un objet : `dir(uneExpression)`
+    - isdigit : `"123".isdigit()`
+    - replace : `"123".replace("1","4")`
+
+
+> Lister les messages auxquels répond un objet : `dir(expression)`
 
 --
 
@@ -33,7 +37,14 @@
 
   - allocation : préparation de la mémoire
 
-  - initialisation de l'instance :
-      appel au constructeur `__init__`
+  - initialisation : appel au constructeur `__init__`
 
-- Exemples : `list()`, `str()`, `date(1789, 7, 14)`
+- Exemples : `list()`, `int("10",2)`, `date(1789, 7, 14)`
+
+- A la fin de la vie d'un objet, il est détruit avec `__del__`.
+
+
+Note:
+Aussi `str()` pour la chaîne vide. Attention, la plupart des
+constructeurs sont des constructeurs de copie, et donc donnent une
+impression bizarre de ne rien faire.

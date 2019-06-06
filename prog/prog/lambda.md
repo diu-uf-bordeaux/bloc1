@@ -18,11 +18,17 @@
 
 ### Exceptions
 
-- `try` enregistre une barrière dans la pile d'appel, `except` défini le type
+- `try` enregistre une barrière dans la pile d'appel, `except` définit le type
   des exceptions traitées (`else` tout le reste).
 
-- `raise` lève une exception qui deroule la pile d'appel jusqu'a la premiere
-  barriere qui sait la traiter.
+- `raise` lève une exception qui déroule la pile d'appel jusqu'a la
+  première barrière qui sait la traiter.
+
+Mettre des exemples
+
+--
+
+### Exceptions : avertissement
 
 - Attention à la fuite de ressource: `finally` sert à ça.
 
@@ -45,6 +51,10 @@ finally:
 ~~~
 
 </div>
+
+Note:
+Tout ce qui est ouvert doit être fermé.
+
 
 --
 ### Lambda
