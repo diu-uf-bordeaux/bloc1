@@ -36,6 +36,16 @@ def is_palindrom(s):
     return True
 ```
 
+
+- Tests
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+```python
+is_palindrom("abc")                    # -> False
+is_palindrom("able was I,I saw elba")  # -> True
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
 --
 
 ### L'appel de fonction

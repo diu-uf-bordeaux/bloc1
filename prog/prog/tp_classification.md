@@ -1,5 +1,3 @@
---
-
 ### Classification de données
 
 - Informations liées au dépistage de la maladie d'Alzheimer sur

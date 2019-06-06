@@ -40,7 +40,7 @@ Parler de la construction et de l'envoi de message mais botter en touche (le
 premier sera vu plus tard).
 On peut faire ressentir le graphe d'objet sous-jacent
 
----
+--
 
 ### Expressions : opérateurs
 
