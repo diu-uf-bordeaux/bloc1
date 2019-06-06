@@ -19,10 +19,10 @@ Les règles de typage sont dépendante de la théorie utilisée derrière
 mais globalement le concept est similaire
 Les instructions c'est pas dans ts les langages mais le concept de forme spéciale si
 
---
+---
 
 ### Un monde de valeurs
-#### Littéraux
+#### Expressions : littéraux
 
 - Types **simples** (immutables) : \
   entiers (`42`), flottants (`42.0`), booléens (`True`), \
@@ -40,9 +40,9 @@ Parler de la construction et de l'envoi de message mais botter en touche (le
 premier sera vu plus tard).
 On peut faire ressentir le graphe d'objet sous-jacent
 
---
+---
 
-### Opérateurs
+### Expressions : opérateurs
 
 - En Python, les [opérateurs](https://docs.python.org/3.8/library/operator.html)
   sont des fonctions incarnées à travers une syntaxe particulière.
@@ -71,3 +71,15 @@ Note: C'est syntaxique, ça se transforme en un envoi de message
       Associativité et précédence sont décrits au même endroit de la doc
       Précédence, pour des opérateurs précédents
       Associativité pour un même opérateur (gauche à droite pour tout le monde, sauf l'exponentiation)
+
+--
+
+### Expressions : exemples
+
+- L'appel de fonction est une expression
+
+- Le if ternaire
+
+- Le in
+
+- Le is

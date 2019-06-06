@@ -18,7 +18,7 @@ Correction == le code fait ce qu'il prétend faire
 
 --
 
-### Spécifiation : types
+### Spécification : types
 
 - Les types constituent une technique de spécification
 
@@ -27,6 +27,8 @@ Correction == le code fait ce qu'il prétend faire
 
 ### Vérification : types
 
+
+- Mesure de fiabilité : vérifications de la composition des fonctions
 
 - Dans des langages aux systèmes de types plus perfectionnés, les
   types permettent aussi de :
@@ -46,3 +48,5 @@ Correction == le code fait ce qu'il prétend faire
 ### Vérification : tests
 
 - Le test est une technique de vérification.
+
+- Mesure de fiabilité : couverture de code

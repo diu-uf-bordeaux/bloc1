@@ -2,6 +2,8 @@
 
 - Syntaxe
 
+- Mettre un for, mettre un if
+
 - Map, filter
 
 - Facilite les transformations sur les itérables
