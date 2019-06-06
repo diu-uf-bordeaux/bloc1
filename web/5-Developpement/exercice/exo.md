@@ -21,7 +21,7 @@ Le serveur qui s'exécute sur votre machine est accessible à travers le réseau
 
 Échangez l'adresse IP obtenue avec votre voisin et accèder à son serveur en le ciblant depuis votre navigateur avec l'URL : [http://<adresse_IP>](http://<adresse_IP>)
 
-Vérifiez, à l'inverse, qu'il parvient bien à accèder à votre serveur. Modifiez la page `index.html` dans votre répertoire **public**, puis rafraîchissez l'affichage dans le navigateur de votre voisin.
+Vérifiez, à l'inverse, qu'il parvient bien à accèder à votre serveur. Modifiez la page **index.html** dans votre répertoire **public**, puis rafraîchissez l'affichage dans le navigateur de votre voisin.
 
 ## Serveur de pages dynamiques
 
