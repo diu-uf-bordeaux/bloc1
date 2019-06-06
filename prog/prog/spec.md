@@ -1,5 +1,17 @@
 ### Spécification
 
+- La spécification est un outil d'aide à la vérification de programme.
+
+- Idée : assurer la **fiabilité** et la **correction** du code.
+
+Note:
+Fiabilité == le code n'explose pas
+Correction == le code fait ce qu'il prétend faire
+
+--
+
+### Spécification : logique
+
 - Logique / Propriétés
 
 - Précondition, Postcondition, Invariant
@@ -8,10 +20,13 @@
 
 ### Spécifiation : types
 
-- Types
+- Les types constituent une technique de spécification
 
 
 --
+
+### Vérification : types
+
 
 - Dans des langages aux systèmes de types plus perfectionnés, les
   types permettent aussi de :
@@ -30,4 +45,4 @@
 
 ### Vérification : tests
 
-- Tests
+- Le test est une technique de vérification.
