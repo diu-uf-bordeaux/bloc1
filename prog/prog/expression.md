@@ -21,8 +21,8 @@ Les instructions c'est pas dans ts les langages mais le concept de forme spécia
 
 ---
 
-### Un monde de valeurs
-#### Expressions : littéraux
+### Expressions : littéraux
+#### Un monde de valeurs
 
 - Types **simples** (immutables) : \
   entiers (`42`), flottants (`42.0`), booléens (`True`), \

@@ -132,11 +132,11 @@ for variable in iterable:
     instructions(variable)
 ```
 
-- La boucle est répétée autant de fois qu'il y a d'éléments dans
-  l'**itérable**, un objet que l'on peut énumérer
+- La boucle est paramétrée par un objet dont on peut énumérer les
+  éléments, appelé**itérable**.
 
-- Exemples d'itérables : éléments d'une liste, tuple, dictionnaire,
-  chaîne de caractères ...
+- Exemples d'itérables : liste, tuple, dictionnaire, chaîne de
+  caractères ...
 
 <div class='half'>
 
