@@ -18,24 +18,22 @@
 
 --
 
---
+---
 
 ### Itération
 
 - Après le `in`, n'importe quelle valeur itérable est possible:
   - une valeur qui défini l'opérateur `__iter__`
-  - dont la valeur retournée par est un itérateur
-
-- Un itérateur défini l'operateur `__next__`
-  - Qui retourne l'élement suivant de la séquence
-  - Lève `StopIteration`
-  - Est son propre itérable
+  - dont la valeur retournée est un valeur définisant l'operateur `__next__`
+    - Qui retourne l'élement suivant de la séquence
+    - Lève `StopIteration` sinon
+    - Est son propre itérable
 
 <div class="half">
 
 ~~~python
 for i in something():
-  print(i)
+  doSomething(i)
 ~~~
 
 </div>
@@ -44,97 +42,93 @@ for i in something():
 ~~~python
 iterator = iter(something())
 try:
-  while True:
-    i = next(iterator)
-    print(i)
+    while True:
+      i = next(iterator)
+      doSomething(i)
 except StopException:
-  pass
+    pass
 ~~~
 
 </div>
 
 Note:
-C'est pas exactement vrai, il peut y avoir `__get_item__`, etc
+- Les collections sont itérables
+- Monde objet : itérateurs
+- Monde fonctionnel : générateur
+- `__get_item__`
 
 --
 
-### Exemple d'iterateur
+### Itération : Outils
 
-<div class="half" style='width:46%;'>
-
-~~~python
-class Countdown:
-    def __init__(self, value):
-        self.value = value
-    def __iter__(self):
-        return self
-    def __next__(self):
-        if self.value == 0:
-            raise StopIteration
-        self.value -= 1
-        return self.value
-
-for i in Countdown(20)
-    print(i)
-~~~
-
-</div>
-<div class="half" style='width:53%;'>
-
-~~~python
-class FilterEven:
-    def __init__(self, iterable):
-        self.iterator = iter(iterable)
-    def __iter__(self):
-        return self
-    def __next__(self):
-        while True:
-            val = next(self.iterator)
-            if val % 2 == 0:
-                return val
-
-
-for i in FilterEven(Countdown(20)):
-    print(i)
-~~~
-
-</div>
-
+- `reversed()` itère à l'envers
+- `range()` générère une séquence d'entiers
+- `zip()` fabrique un tuple en coévaluant ses paramètres
+- `enumérate()` énumère sous forme de tuples `(indice, valeur)`
 
 --
 
 ### Générateur
 
 - Utiliser `yield` dans le corps d'une fonction, transforme la fonction en générateur.
-
-- Le resultat de l'appel de fonction est un itérable, i.e., compatible avec `for`
+- Le resultat de l'appel de fonction est un générateur, itérable, i.e., compatible avec `for`
 - Chaque appel à l'operateur `next`, reprend l'execution du corps jusqu'au `yield` -- qui retourne la valeur
-- `return` ou la fin de fonction termine l'execution
+- `return`, la fin de fonction, ou lever l'exception `StopIteration` termine l'execution
+
+Note:
+Utile pour les listes infinies
 
 --
+
+### Générateur : Exemple
 
 <div class="half">
 
 ~~~python
-def countdown(value):
-    while value > 0:
-        value = value - 1
+def my_range(start, stop, step=1):
+    value = start
+    while value != stop:
         yield value
+        value += step
 ~~~
 
 </div>
 <div class="half">
 
-~~~python
-def filterEven(iterable):
+```python
+def head(iterable, count):
     iterator = iter(iterable)
-    while True:
-        try:
-            value = next(iterator)
-        except StopIteration:
-            return
-        if value % 2 == 0:
-            yield value
-~~~
+    while count > 0:
+        count -= 1
+        yield next(iterator)
+```
+
+</div>
+
+<div class="half">
+
+```python
+def one():
+  while True:
+    yield 1
+```
+
+```python
+for i in head(fibo(), 20):
+  print(i)
+```
+
+</div><div class="half">
+
+```python
+def fibo():
+  yield 1
+  yield 1
+  n_1 = 1
+  n_2 = 1
+  while True:
+    n_2, n_1 = n_1 + n_2, n_2
+    yield n_2
+```
 
 </div>
