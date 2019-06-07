@@ -9,11 +9,12 @@ lambda params_without_parentheses: expression
 - Exemples d'utilisation :
 
 ```python
-plus = lambda a,b: a + b
-plus(1,2)                                      # -> 3
+plus = lambda a, b: a + b
+plus(1, 2)                                     # -> 3
 list(filter(lambda x: x % 2 == 0, range(10)))  # -> [0 2 4 6 8]
-utiliser any
-sorted(range(8), key=lambda x: abs(4-x))       # -> [4 3 5 2 6 1 7 0]
+sorted(range(8), key=lambda x: abs(4 - x))     # -> [4 3 5 2 6 1 7 0]
+any(map(lambda x: x < 0, l))
+any([ e < 0 for e in l ])
 ```
 
 - Facilite les techniques de programmation fonctionnelle :
@@ -30,7 +31,7 @@ sorted(range(8), key=lambda x: abs(4-x))       # -> [4 3 5 2 6 1 7 0]
   de construire et de transformer des listes.
 
 ```python
-[expression(name) for name in iterable]
+[ expression(name) for name in iterable ]
 
 ```
 
@@ -40,7 +41,7 @@ sorted(range(8), key=lambda x: abs(4-x))       # -> [4 3 5 2 6 1 7 0]
 <div class="half" style="width:55%">
 
 ```python
-[ x*x for x in range(6)]
+[ x*x for x in range(6) ]
 [ x for x in range(6) if x%2 == 0 ]
 ```
 
@@ -69,7 +70,7 @@ people = [("Thalès",-625,-547), ("Archimède",-287,-212),
 - Quelle est la liste des âges de ces illustres personnes ?
 
 ```python
-ages = [ p[2]-p[1] for p in people ]
+ages = [ p[2] - p[1] for p in people ]
 ```
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -83,7 +84,7 @@ p_people = [ p for p in people if p[0].startswith("P") ]
 - Quel est le plus vieux d'entre eux à sa mort ?
 
 ```python
-oldest = max([ (p,p[2]-p[1]) for p in people ], key=lambda d: d[1])[0]
+oldest = max([ (p, p[2]-p[1]) for p in people ], key=lambda d: d[1])[0]
 ```
 <!-- .element: class="fragment" data-fragment-index="3" -->
 

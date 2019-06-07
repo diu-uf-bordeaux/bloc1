@@ -8,7 +8,7 @@
 - Exemples : `"abc"` est un objet de type **str** et répond à :
 
     - isdigit : `"abc".isdigit()`
-    - replace : `"abc".replace("1","4")`
+    - replace : `"abc".replace("b", "o")`
 
 
 > Lister les messages auxquels répond un objet : `dir(expression)`
@@ -39,7 +39,7 @@
 
   - initialisation : appel au constructeur `__init__`
 
-- Exemples : `list()`, `int("10",2)`, `date(1789, 7, 14)`
+- Exemples : `list()`, `int("10", 2)`, `date(1789, 7, 14)`
 
 - A la fin de la vie d'un objet, il est détruit avec `__del__`.
 

@@ -10,7 +10,7 @@
 
 ```python
 try:
-    mean = sum(arr)/len(arr)
+    mean = sum(arr) / len(arr)
 except ZeroDivisionError:
     mean = 0
 ```
@@ -45,21 +45,21 @@ Faire un dessin avec une pile d'appel.
 
 <div class='half'>
 
-~~~python
+```python
 with expr as var:
     doSomeStruffs
-~~~
+```
 
 </div><div class='half'>
 
-~~~python
+```python
 temp = expr
 try:
   var = temp.__enter__()
   doSomeStuffs
 finally:
   temp.__exit__()
-~~~
+```
 
 </div>
 
@@ -85,15 +85,15 @@ Tout ce qui est ouvert doit être fermé.
 
 <div class="half">
 
-~~~python
+```python
 for i in something():
   doSomething(i)
-~~~
+```
 
 </div>
 <div class="half">
 
-~~~python
+```python
 iterator = iter(something())
 try:
     while True:
@@ -101,7 +101,7 @@ try:
       doSomething(i)
 except StopException:
     pass
-~~~
+```
 
 </div>
 
@@ -148,13 +148,13 @@ Utile pour les listes infinies
 
 <div class="half">
 
-~~~python
+```python
 def my_range(start, stop, step=1):
     value = start
     while value != stop:
         yield value
         value += step
-~~~
+```
 
 </div>
 <div class="half">

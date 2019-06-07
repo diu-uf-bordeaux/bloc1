@@ -79,7 +79,7 @@ Note: C'est syntaxique, ça se transforme en un envoi de message
 - L'appel de fonction est une expression.
 
 ```python
-abs(-12), max([5,7,3,2])     # -> 12, 7
+abs(-12), max([5, 7, 3, 2])     # -> 12, 7
 ```
 
 - L'<a
@@ -93,7 +93,7 @@ x if x > 0 else -x           # -> la valeur absolue de x
 - Le `in` teste l'appartenance à une liste :
 
 ```python
-7 in [5,7,3,2]               # -> True
+7 in [5, 7, 3, 2]               # -> True
 ```
 
 - Le `is` teste si deux expressions s'évaluent en le même objet.

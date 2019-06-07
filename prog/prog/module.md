@@ -11,27 +11,27 @@
 
 <div class='half' style='width: 33%;'>
 
-~~~python
+```python
 import sys
 
 print(sys.argv)
-~~~
+```
 
 </div><div class='half' style='width: 33%;'>
 
-~~~python
+```python
 from sys import argv
 
 print(argv)
-~~~
+```
 
 </div><div class='half' style='width: 33%;'>
 
-~~~python
+```python
 from sys import *
 # mimicracra
 print(path)
-~~~
+```
 
 </div>
 

@@ -42,8 +42,8 @@ length = 123.456
 isPositive = x > 0
 name = 'Dupont'
 adress = "123 rue de Gaulle"
-L = [1, 2, 3]
-L[0] = 10
+l = [1, 2, 3]
+l[0] = 10
 ```
 
 --
@@ -163,24 +163,24 @@ def factorial(n) :
 ```python
 def uneMinuteEnPlus (h, m):
     if m < 59:
-        return (h, m+1)
+        return (h, m + 1)
     elif h < 23:
-        return (h+1, 0)
+        return (h + 1, 0)
     else:
         return (0, 0)
 ```
 
 ```python
 def uneMinuteEnPlus (h, m):
-    m = (m + 1)%60
+    m = (m + 1) % 60
     if m == 0:
-        h = (h + 1)%24
+        h = (h + 1) % 24
     return h, m
 ```
 
 ```python
 def uneMinuteEnPlus(h,m):
-    return(h+(m+1)//60)%24, (m+1)%60
+    return (h + (m + 1)//60) % 24, (m + 1)%60
 ```
 
 
@@ -274,24 +274,22 @@ print(k)
 
 - qu'affiche-t-il ?	
 ```python
-L = [1,2,3]
-def test(L):
-	L = L + [4]
-test(L)
-print(L)
+l = [1, 2, 3]
+def test(l):
+	l = l + [4]
+test(l)
+print(l)
 ```
 
 - qu'affiche-t-il ?	
 ```python
-L = [1,2,3]
-def test(L):
-	L.append(4)
-test(L)
-print(L)
+l = [1, 2, 3]
+def test(l):
+	l.append(4)
+test(l)
+print(l)
 ```
 
 --
-
-
 
 par valeur, par référence

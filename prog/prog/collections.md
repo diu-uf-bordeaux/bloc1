@@ -120,7 +120,7 @@ permettent d'écrire des algorithmes plus facilement.
 - Collection **immutable** et hétérogène.
 
 ```python
-rv = ("Luke", date(3280, 1, 1), "Object : discuss with son")
+rv = ("Luke", date(3280, 1, 1), "Object: discuss with son")
 len(rv)              # -> 3
 rv[0]                # -> "Luke"
 rv[1] = date.today() # erreur : un tuple est immutable

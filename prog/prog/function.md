@@ -30,8 +30,8 @@ l'appel de fonction
 def is_palindrom(s):
     """Teste si la chaîne `s` est symétrique."""
     n = len(s)
-    for i in range(n//2):
-        if s[i] != s[n-i-1]:
+    for i in range(n // 2):
+        if s[i] != s[n - i - 1]:
             return False
     return True
 ```
@@ -139,6 +139,7 @@ en Scheme  <!-- .element: class="title" -->
 
 Note:
     pgcd(4,6)
+Dans pgcd, on peut en profiter pour montrer le swap (et dire que c'est pas top)
 
 --
 
@@ -150,7 +151,7 @@ def factorial(n) :
   if n <= 1:
     return 1
   else:
-    return n * factorial(n-1)
+    return n * factorial(n - 1)
 ```
 
 <div class="half">
@@ -292,20 +293,21 @@ join(["a", "b", "c"], " and ") # -> "a and b and c"
 
 ```python
 def join(lst, sep):
-    """Concatène les éléments d'une liste.
+    """
+    Concatène les éléments d'une liste.
 
-       Parameters
-       ----------
-       lst : list
-           une liste
-       sep
-           un séparateur
+    Parameters
+    ----------
+    lst : list
+        une liste
+    sep
+        un séparateur
 
-       Returns
-       -------
-       str
-           le résultat de la concaténation des éléments
-           de `lst`, séparés chacun par `sep`.
+    Returns
+    -------
+    str
+        le résultat de la concaténation des éléments
+        de `lst`, séparés chacun par `sep`.
     """
 
 ```
@@ -318,7 +320,7 @@ def join(lst, sep):
 
 ### Fonctions : exercice
 
-- Écrire une fonction prenant un couple `(h,m)` représentant une heure
+- Écrire une fonction prenant un couple `(h, m)` représentant une heure
   de la journée, et renvoyant le même couple auquel on a ajouté une
   minute.
 
@@ -403,19 +405,19 @@ print(k)
 - qu'affiche-t-il ?
 
 ```python
-L = [1, 2, 3]
-def test(L):
-    L = L + [4]
-test(L)
-print(L)
+l = [1, 2, 3]
+def test(l):
+    l = l + [4]
+test(l)
+print(l)
 ```
 
 - qu'affiche-t-il ?
 
 ```python
-L = [1, 2, 3]
-def test(L):
-    L.append(4)
-test(L)
-print(L)
+l = [1, 2, 3]
+def test(l):
+    l.append(4)
+test(l)
+print(l)
 ```
