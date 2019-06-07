@@ -18,11 +18,11 @@ En JavaScript les variables sont typées mais le typage est dynamique, c'est à 
 De plus, le typage est implicite et calculé par l'interpréteur. Le code source ne mentionne pas les types.
 
 ```javascript
-var a;
-var b;
+let a;
+let b;
 a = 5; // a est un nombre
 b = '5'; // b est une chaîne de caractère
-var c = (a === b); // a===b teste l'égalité (valeur et type) de a et b, le résultat est faux. c est donc un boolean.
+let c = (a === b); // a===b teste l'égalité (valeur et type) de a et b, le résultat est faux. c est donc un boolean.
 b = 10; // maintenant b est un nombre
 c = a + b; // c vaut 15
 ```
@@ -36,7 +36,7 @@ Pour autant, JavaScript n'est pas un langage fonctionnel pur car les fonctions p
 Par exemple, le code suivant définit une fonction qui modifie une variable qui ne lui appartient pas.
 
 ```javascript
-var a;
+let a;
 
 function f() {
     a = 5;
@@ -53,7 +53,7 @@ Le code suivant définit la variable `johnSnow` qui est un objet. Cet objet poss
 On peut accéder aux propriétés des objets (en lecture et écriture).
 
 ```javascript
-var johnSnow = {
+let johnSnow = {
     first : 'John',
     last : 'Snow',
     isAlive : undefined
@@ -67,7 +67,7 @@ johnSnow.isAlive = true;
 Un objet peut définir une fonction (aussi appelée _méthode_). Par exemple le code suivant défini l'objet `johnSnow` dont l'une de ses propriétés est la fonction `resurrect`.
 
 ```javascript
-var johnSnow = {
+let johnSnow = {
     first : 'John',
     last : 'Snow',
     isAlive : undefined,

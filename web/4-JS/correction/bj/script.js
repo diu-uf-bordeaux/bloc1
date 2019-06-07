@@ -1,5 +1,5 @@
-var cartes = new Array();
-var score = 0;
+let cartes = new Array();
+let score = 0;
 
 function initialization() {
     nouvellePartie();
@@ -80,9 +80,9 @@ function drag(ev) {
 
 function drop(ev) {
     ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    var srcElt = document.getElementById(data);
-    var filename = ev.target.src;
+    let data = ev.dataTransfer.getData("text");
+    let srcElt = document.getElementById(data);
+    let filename = ev.target.src;
     ev.target.src = srcElt.src;
     srcElt.src = filename;
 }

@@ -48,8 +48,8 @@ Par exemple, si on écrit ``document.body.innerHTML = "VIDE";`` dans la console,
 L'API des éléments DOM offre de nombreuses opérations pour parcourir l'arbre DOM et pour effectuer des modifications. Le code suivant retrouve l'élement HTML dont l'id est `"mondId"` et ajoute une balise `<img>` contenant l'image "02.BMP".
 
 ```javascript
-var target = document.getElementById("monId");
-var img= document.createElement('img');
+let target = document.getElementById("monId");
+let img= document.createElement('img');
 img.src= './img/02.BMP';
 target.appendChild(img);
 ```
