@@ -128,10 +128,10 @@ int pgcd(int a, int b) {
 en Scheme  <!-- .element: class="title" -->
 ```scheme
 ;; Retourne le pgcd de 2 entiers
-(define (pgcd n p)
-   (cond [(< n p) (pgcd p n)]
-       [(zero? (rem n p)) p]
-       [else (pgcd p (rem n p))]))
+(define (pgcd a b)
+  (do () ((zero? b) (abs a))
+   (set!-values (a b)
+         (values b (modulo a b)))))
 ```
 
 </div>
