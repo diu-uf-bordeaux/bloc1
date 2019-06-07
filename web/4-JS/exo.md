@@ -1,6 +1,8 @@
 # Mise en pratique
 
-Modifications à apporter dans le fichier `script.js` du repertoire `bj`.
+Téléchargez et décompressez l'archive [bj3.zip](bj3.zip). 
+
+Les modifications sont à apporter dans le fichier `script.js` du repertoire `bj`.
 
 ## Changer le DOM dès le chargement de la page
 
