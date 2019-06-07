@@ -22,7 +22,7 @@ Le serveur qui s'exécute sur votre machine est accessible à travers le réseau
 
     ip route get 1 | awk '{print $NF;exit}'
 
-Échangez l'adresse IP obtenue avec votre voisin et accèder à son serveur en le ciblant depuis votre navigateur avec l'URL : [http://<adresse_IP>:3000](http://<adresse_IP>:3000)
+Échangez l'adresse IP obtenue avec votre voisin et accèder à son serveur en le ciblant depuis votre navigateur avec l'URL : [http://adresse_IP:3000](http://adresse_IP:3000)
 
 Vérifiez, à l'inverse, que votre voisin parvient bien à accèder à votre serveur. Modifiez la page `index.html` dans votre répertoire `public`, puis rafraîchissez l'affichage dans le navigateur de votre voisin.
 
@@ -36,5 +36,5 @@ Lancez ce serveur en allant dans le répertoire `dynamic` et en exécutant les d
 
     node index.js
 
-Modifiez la page `index.html` afin que le formulaire envoie une requête POST vers l'URL **/cartes** avec une donnée **nom** contenant le nom saisie par le joueur.
+Modifiez la page `index.html` afin que le formulaire envoie une requête POST vers l'URL **/cartes** avec une donnée `nom` contenant le nom saisie par le joueur.
 
