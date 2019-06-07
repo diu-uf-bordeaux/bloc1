@@ -1,7 +1,7 @@
 # Ressources pour le bloc 1
 
 - [Représentation de l'information]()
-- [Programmation](prog)
+- [Programmation](./prog/prog.html)
 - [Web](./web)
 
 # Évaluation présentielle
