@@ -1,5 +1,7 @@
 import csv
 import random
+import statistics
+import matplotlib.pyplot
 
 # Constantes utilisées dans ce module
 CLASS = 0         # AD == malade / CN == contrôle
@@ -38,24 +40,16 @@ def extractFeature(data, feature):
     """ Extrait la colonne d'indice `feature` d'une liste
         d'enregistrements vue comme un tableau 2D
         (1er indice = ligne, 2eme indice = colonne) """
-    # return[data[i][feature] for i in range(len(data))]
     return [l[feature] for l in data]
 
-
-def meanFeature(data, feature, rawBeginIndex, rawEndIndex):
-    """ Calcule la moyenne d'une colonne entre les lignes
-        d'indices rawBeginIndex et rawEndIndex de la liste `data`."""
-    assert((rawBeginIndex >= 0) and
-           (rawEndIndex >= rawBeginIndex) and
-           (rawEndIndex < len(data)))
-    featureData = extractFeature(data, feature)
-    sum = featureData[rawBeginIndex]
-    for i in range(rawBeginIndex + 1, rawEndIndex + 1):
-        sum += featureData[i]
-    return sum / (rawEndIndex - rawBeginIndex + 1)
+def filterData(data, feature, val):
+    """ Extrait les lignes pour lesquelles la colonne d'indice `feature`
+        a pour valeur `val` dans une liste d'enregistrements vue comme
+        un tableau 2D  (1er indice = ligne, 2eme indice = colonne) """
+    return [l for l in data if l[feature] == val]
 
 
-def separateAdCn(data):
+def separateClasses(data):
     """ Teste si dans la colonne d'indice CLASS,
         toutes les valeurs "AD" sont au début. """
     n = len(data)
@@ -65,48 +59,38 @@ def separateAdCn(data):
     return True
 
 
-def containBothClasses(data):
+def containsBothClasses(data):
     """ Teste si la liste `data` contient bien des données
         appartenant aux deux classes AD et CN. """
-    ads = [ d for d in data if d[CLASS] == "AD" ]
-    cns = [ d for d in data if d[CLASS] == "CN" ]
+    ads = filterData(data, CLASS, "AD")
+    cns = filterData(data, CLASS, "CN")
     return (len(ads) > 0) and (len(cns) > 0)
 
 
-def computeMeans(data, feature):
+def computeMean(data, group, feature):
     """
-        Calcule la moyenne du groupe AD et du groupe CN
-        pour la caractéristique `feature`.
-        Suppose que feature est une caractéristique numérique
-                            (AGE, SCORE, HIPPOVOL, HIPPOPERCENT)
-        Suppose que les deux classes apparaissent dans les données.
+        Calcule la moyenne des données de la classe `group` pour la caractéristique `feature`.
+        Suppose que feature est une caractéristique numérique (AGE, SCORE, HIPPOVOL, HIPPOPERCENT)
     """
-    # Trie la table de façon à avoir le groupe AD au début (AD avant CN)
-    sort(data, CLASS)
-    # Calcule l'indice du premier élément de la classe CN
-    i = 0
-    for l in data:
-        if l[CLASS] == "CN":
-            break
-        i += 1
-    return meanFeature(data, feature, 0, i), \
-        meanFeature(data, feature, i+1, len(data) - 1)
-
-
-def classificationErrorRate(data, feature, meanAD, meanCN):
+    
+    dataGroup = filterData(data, CLASS, group)
+    return statistics.mean(extractFeature(dataGroup, feature))
+    
+                    
+def classificationErrorRate(testData, feature, meanAD, meanCN):
     """
-       Classifie chaque individu dans `data` suivant la caractéristique
+       Classifie chaque individu dans `testData` suivant la caractéristique
        `feature` et les moyennes fournies.
        La classe est celle qui correspond à la moyenne la plus proche.
        Il y a erreur de classification si cette classe est différente
        de celle de l'individu.
     """
     nbErrors = 0
-    for l in data:
+    for l in testData:
         if abs(l[feature] - meanAD) < abs(l[feature] - meanCN): # on classifie comme AD
             if l[CLASS] != "AD":
                 nbErrors += 1
-    return round(nbErrors*100/len(data))
+    return round(nbErrors*100/len(testData))
 
 
 def subList(l, listInd):
@@ -126,11 +110,15 @@ def splitList(l, nb):
        d'une liste `l`. La première contient nb éléments, la seconde
        len(l) - nb éléments.
     """
-    listInd = list(range(len(data)))
+    listInd = list(range(len(l)))
     random.shuffle(listInd) # Une permutation aléatoire des indices de ligne
     lInd1 = listInd[0:nb]
-    lInd2 = listInd[nb: len(data)]
-    return subList(data, lInd1), subList(data, lInd2)
+    lInd2 = listInd[nb: len(l)]
+    return subList(l, lInd1), subList(l, lInd2)
+
+def classificationErrorRateForFeature(trainingData, testingData, feature):
+    meanAD, meanCN = computeMean(trainingData, "AD", feature), computeMean(trainingData, "CN", feature)
+    return classificationErrorRate(testingData, feature, meanAD, meanCN)
 
 
 ################################################################
@@ -138,51 +126,48 @@ if __name__ == '__main__':
 
     data = importAlzheimerData("Alzheimer.csv")
     n = len(data)
-
     # Extraction d'une colonne
     scores = extractFeature(data, SCORE)
     print(scores)
 
     # Calcul de la moyenne d'une colonne
-    m = 0
-    for val in scores:
-        m += val
-    m /= len(scores)
-
-    print("Moyenne des scores cognitifs : ", meanFeature(data, SCORE, 0, n-1), m)
+    print("Moyenne des scores cognitifs : ", statistics.mean(scores))
 
     # Trie les données selon leur SCORE
     sort(data, SCORE)
-    print(extractFeature(data, SCORE))
-    print(extractFeature(data, CLASS))
+    # print(extractFeature(data, SCORE))
+    # print(extractFeature(data, CLASS))
     # Trier suivant les scores ne sépare pas les deux classes mais presque!
-    print("Le score sépare les classes ? : %s" % (separateAdCn(data),))
+    print("Le score sépare les classes ? : %s" % (separateClasses(data),))
 
     # Classification
-    trainingData, testingData = splitList(data, n*2//3)
+    trainingdata, testingdata = splitList(data, n*2//3)
 
     # Vérification
-    if (not containBothClasses(trainingData)) or \
-       (not containBothClasses(testingData)):
+    if (not containsBothClasses(trainingdata)) or \
+       (not containsBothClasses(testingdata)):
         raise "Découpage des données incorrect"
 
     # Affichage des résultats
-    meanAD, meanCN = computeMeans(trainingData, SCORE)
-    print("Erreur score : ",
-          classificationErrorRate(testingData, SCORE,
-                                  meanAD, meanCN), "%")
+    
+    print("Erreur score cognitif : ", classificationErrorRateForFeature(trainingdata, testingdata, SCORE), "%")
+    print("Erreur volume hippocampe : ", classificationErrorRateForFeature(trainingdata, testingdata, HIPPOVOL), "%")
+    print("Erreur volume relatif hippocampe: ", classificationErrorRateForFeature(trainingdata, testingdata, HIPPOPERCENT), "%")
+    print("Erreur age: ", classificationErrorRateForFeature(trainingdata, testingdata, AGE), "%")
 
-    meanAD, meanCN = computeMeans(trainingData, HIPPOVOL)
-    print("Erreur volume hippocampe : ",
-          classificationErrorRate(testingData, HIPPOVOL,
-                                  meanAD, meanCN), "%")
-
-    meanAD, meanCN = computeMeans(trainingData, HIPPOPERCENT)
-    print("Erreur volume relatif hippocampe: ",
-          classificationErrorRate(testingData, HIPPOPERCENT,
-                                  meanAD, meanCN), "%")
-
-    meanAD, meanCN = computeMeans(trainingData, AGE)
-    print("Erreur age: ",
-          classificationErrorRate(testingData, AGE,
-                                  meanAD, meanCN), "%")
+    dataAD = filterData(data, CLASS, "AD")
+    scoresAD = extractFeature(dataAD, SCORE)
+    dataCN = filterData(data, CLASS, "CN")
+    scoresCN = extractFeature(dataCN, SCORE)
+    
+    matplotlib.pyplot.hist(scoresAD)
+    matplotlib.pyplot.hist(scoresCN)
+    
+    matplotlib.pyplot.show()
+    
+    volumesAD = extractFeature(dataAD, HIPPOVOL)
+    volumesCN = extractFeature(dataCN, HIPPOVOL)
+    matplotlib.pyplot.hist(volumesAD)
+    matplotlib.pyplot.hist(volumesCN)
+    matplotlib.pyplot.show()
+    
