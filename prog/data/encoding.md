@@ -1,5 +1,7 @@
 ### Objets complexes
 
+<span class="ribbon ribbon-principle"></span>
+
 L'exemple d'un fichier audio
 
 --

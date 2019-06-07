@@ -76,3 +76,33 @@ ul code {
   font-size: 32px;
   font-weight: bold;
 }
+
+.ribbon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 3px;
+    padding: 2px;
+  border-radius: 4px;
+}
+
+.ribbon-principle {
+    background-color: blue;
+    color: white; }
+.ribbon-principle:before {
+  content: "Principe";
+}
+
+.ribbon-exercise {
+    background-color: green;
+    color: white;}
+.ribbon-exercise:before {
+  content: "Exercice";
+}
+
+.ribbon-advice {
+    background-color: #aa2222;
+    color: white;}
+.ribbon-advice:before {
+  content: "Conseils";
+}
