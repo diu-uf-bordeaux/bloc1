@@ -1,4 +1,4 @@
-### Variable
+### Variables
 
 - Une **variable** est espace mémoire nommé qui **référence** une
   valeur
@@ -10,7 +10,7 @@
 
 --
 
-### aliasing ?
+### Variables : aliasing
 
 - En Python, tout est référence :
 
@@ -37,7 +37,7 @@ m # -> [[1 , 0] , [1 , 0]]
 
 --
 
-### Exemples
+### Variables : exemples
 
 ```python
 x = 3

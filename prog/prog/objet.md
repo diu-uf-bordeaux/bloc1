@@ -5,10 +5,10 @@
 
 `object.method(params)`
 
-- Exemples : "abc" est un objet de type **str** et répond à :
+- Exemples : `"abc"` est un objet de type **str** et répond à :
 
-    - isdigit : `"123".isdigit()`
-    - replace : `"123".replace("1","4")`
+    - isdigit : `"abc".isdigit()`
+    - replace : `"abc".replace("1","4")`
 
 
 > Lister les messages auxquels répond un objet : `dir(expression)`

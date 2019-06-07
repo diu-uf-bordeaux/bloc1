@@ -46,6 +46,10 @@ is_palindrom("able was I,I saw elba")  # -> True
 ```
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
+
+Note:
+Ne pas préparer un booléen de retour au départ.
+
 --
 
 ### L'appel de fonction
@@ -61,6 +65,8 @@ is_palindrom("able was I,I saw elba")  # -> True
   l'exécution de `f` dans laquelle le paramètre a été initialisé à la
   valeur de `x`.
 
+> Essayer le débuggueur sur l'expression `fact(2)`.
+
 Note:
 A propos du passage par valeur/référence, ici pas de soucis tout est reference.
 Mais quand même, certaines valeurs sont immutables, d'autres sont mutables !!!
@@ -69,12 +75,21 @@ nommés son matchés et les valeurs par défaut prises
 
 Exemples possibles :
 
+a = 1
 def plus(a, b):   # Permet de voir les renommages
     return a + b
 c = plus(3*a, a)
 
 def factorial ...
 z = factorial(2)  # Permet de voir les empilements d'appels
+
+Python évalue les paramètres de gauche à droite
+Penser à préparer une case spéciale pour le retour
+Préparation : évaluation des paramètres
+Activation : binding paramètre variables
+Exécution : ...
+Retour : remplir la case de retour
+
 
 --
 
@@ -207,13 +222,10 @@ prrrint("an important message")
 ```python
 str = "a"            # variable définie dans le module
 def update_str():
-    str += "b"       # erreur, modifie la liaison
+    str = str + "b"  # erreur, modifie la liaison
 update_str()
 # UnboundLocalError: local variable 'str' referenced before assignment
 ```
-
-- <span class="label">Python</span> Un bloc ne peut pas être vide
-  (cf. instruction `pass`)
 
 
 --
@@ -245,7 +257,7 @@ update_str()
   - Rajouter un niveau d'indentation (pluriel/singulier).
 - Si la doc est plus longue que la fonction, il y a probablement
   moyen de subdiviser.
-- Ne mélangez **jamais** les calculs et l'affichage.
+- Ne mélangez jamais les calculs et l'affichage.
 
 --
 

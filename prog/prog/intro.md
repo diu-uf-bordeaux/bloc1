@@ -84,7 +84,7 @@ Tout n'est pas incompatible ... cf java/python/...
 
 Note:
 Parlez le code
-
+C'est en programmant qu'on devient programmeron (e.g seule la pratique permet de s'améliorer)
 
 --
 

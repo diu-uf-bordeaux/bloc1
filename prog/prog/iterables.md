@@ -29,12 +29,15 @@ except FileNotFoundError:
 
 </div>
 
+Note:
+Faire un dessin avec une pile d'appel.
+
 --
 
 ### Exceptions : avertissement
 
 - Le mot-clé `finally` permet d'appliquer un traitement à la fin d'un
-  bloc, que l'exception soit levée ou pas.
+  bloc `try`, que l'exception soit levée ou pas.
 
 - Un exemple d'utilisation est le cas d'une ressource qui pourrait ne
   pas être libérée à cause d'une exception. \
@@ -114,10 +117,11 @@ Note:
 
 |||
 |--|--|
-|`reversed(iter)`                 | itère à l'envers |
 |`range(start, stop, step)`       | génère une séquence d'entiers |
-|`zip(iter_1, iter_2, .. iter_n)` | itère sur plusieurs itérateurs simultanément |
+|`reversed(iter)`                 | itère à l'envers |
+|`zip(iter_1, iter_2, .. iter_n)` | itère sur plusieurs itérables simultanément |
 | `enumerate(iter)`               | énumère sous forme de tuples `(indice, valeur)` |
+|||
 
 --
 
@@ -156,7 +160,7 @@ def my_range(start, stop, step=1):
 <div class="half">
 
 ```python
-def head(iterable, count):
+def take(iterable, count):
     iterator = iter(iterable)
     while count > 0:
         count -= 1
@@ -174,7 +178,7 @@ def one():
 ```
 
 ```python
-for i in head(fibo(), 20):
+for i in take(fibo(), 20):
   print(i)
 ```
 
@@ -184,8 +188,7 @@ for i in head(fibo(), 20):
 def fibo():
   yield 1
   yield 1
-  n_1 = 1
-  n_2 = 1
+  n_1, n_2 = 1, 1
   while True:
     n_2, n_1 = n_1 + n_2, n_2
     yield n_2

@@ -106,6 +106,15 @@ permettent d'écrire des algorithmes plus facilement.
 
 --
 
+## Listes : constructions possibles
+
+- Insérer des exemples (+, *, += ...)
+
+- Modification ou pas du binding
+
+
+--
+
 ### Tuples
 
 - Collection **immutable** et hétérogène.
@@ -119,7 +128,7 @@ rv[1] = date.today() # erreur : un tuple est immutable
 ```
 
 - Exemple d'utilisation : manipulation de données hétérogènes, retour
-  multiple de fonction
+  multiple de fonction, swap
 
 Note:
 Appel de fonction ?
@@ -156,7 +165,7 @@ for k in pills:
 
 Itérer sur tout  <!-- .element: class="title" -->
 ```python
-for k,v in pills.items():
+for k, v in pills.items():
     print(k, v)
 ```
 

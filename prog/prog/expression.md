@@ -28,7 +28,7 @@ Les instructions c'est pas dans ts les langages mais le concept de forme spécia
   entiers (`42`), flottants (`42.0`), booléens (`True`), \
   chaînes de caractères (`"Hello"`)
 
-- Types **structurés** (mutables) : \
+- Types **structurés** : \
   listes (`[]`), dictionnaires (`{:}`), t-uples (`(,)`), ensemble (`{}`)
 
 - Fonctions : `lambda`

@@ -133,7 +133,7 @@ for variable in iterable:
 ```
 
 - La boucle est paramétrée par un objet dont on peut énumérer les
-  éléments, appelé**itérable**.
+  éléments, appelé **itérable**.
 
 - Exemples d'itérables : liste, tuple, dictionnaire, chaîne de
   caractères ...
@@ -174,6 +174,10 @@ for (int i=0; i<10; i++)
 - D'autres formes de programmations s'expriment différemment :
   **logique**, **parallèle**, **quantique** ...
 
+Note:
+Prolog pour la programmation logique, dont le compilateur est écrit en Prolog.
+Python a une machine virtuelle PyPy écrite aussi en Python.
+
 
 --
 
@@ -189,11 +193,11 @@ while n > 0:
     n = n // 2
 ```
 
-| n     | s |
-| :---: |:-:|
-| 2019  | 0 |
-| 1009  | 1 |
-| 504   | 2 |
-| ...   | ... |
+|        | n      | s |
+|--------| :----: |:-:|
+| Début  | 2019  | 0 |
+| Tour 1 | 1009  | 1 |
+| Tour 2 | 504   | 2 |
+|        | ...   | ... |
 
 Note: s = 11 à la fin, et 2^11 == 2048

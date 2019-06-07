@@ -20,6 +20,8 @@ sorted(range(8), key=lambda x: abs(4-x))       # -> [4 3 5 2 6 1 7 0]
 
     contrôle de l'évaluation / paresse
 
+- Exercice : tester si un tableau contient une valeur nulle
+
 --
 
 ### Compréhensions de listes
