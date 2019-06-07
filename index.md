@@ -11,12 +11,12 @@ title: Représentation des données et programmation
 ## Thématiques pour le projet
 
 ### Web
-- Persistence des données côté client (_eg. cookies_) 
+- Persistence des données côté client (_e.g., cookies_) 
 - Mécanismes de caches
-- Envoie de données au serveur (_eg formulaires, paramètres_)
+- Envoie de données au serveur (_e.g., formulaires, paramètres_)
 - Validation des données d'un formulaire
-- Adaptation au média (_eg. responsive design_)
-- Gestion des évènements dans le DOM (_eg event bubbling and capturing_)
+- Adaptation au média (_e.g., responsive design_)
+- Gestion des évènements dans le DOM (_e.g., event bubbling and capturing_)
 - Décomposition du code JavaScript côté client 
 
 
