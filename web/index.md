@@ -21,18 +21,18 @@ Toutes ces notions seront présentées sur un exemple fil rouge : le jeu de Blac
 
 ## CSS
 
-- [Cours](./3-CSS/html.pdf)
+- [Cours](./3-CSS/css.pdf)
 - [Exercices](./3-CSS/exo.html)
 
 ## JavaScript pour le Web
 
-- [Cours](./4-JS/html.pdf)
+- [Cours](./4-JS/JavaScript.pdf)
 - [Exercices](./4-JS/exo.html)
 
 
 ## Développement Front et Back
 
-- [Cours](./5-Developpement/html.pdf)
+- [Cours](./5-Developpement/developpement.pdf)
 - [Exercices](./5-Developpement/exo.html)
 
 
