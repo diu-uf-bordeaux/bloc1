@@ -1,7 +1,9 @@
 ---
+layout: article
+title: Web
+sidebar:
+  nav: web
 ---
-
-# Web 
 
 L'objet de ce module est de voir les notions suivantes:
 * HTML

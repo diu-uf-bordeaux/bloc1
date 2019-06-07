@@ -1,4 +1,9 @@
-# Mise en pratique
+---
+layout: article
+title: Mise en pratique
+sidebar:
+  nav: web
+---
 
 Téléchargez et décompressez l'archive [bj4.zip](bj4.zip).
 

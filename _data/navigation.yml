@@ -1,0 +1,37 @@
+header:
+  - title: Programmation
+    url: /prog/prog.html
+  - title: Web
+    url: /web
+
+web:
+   - title: HTTP
+     children:
+      - title: Cours
+        url: /web/1-HTTP/http.pdf
+      - title: Exercices
+        url: /web/1-HTTP/exo.html
+   - title: HTML
+     children:
+      - title: Cours
+        url: /web/2-HTML/html.pdf
+      - title: Exercices
+        url: /web/2-HTML/exo.html
+   - title: CSS
+     children:
+      - title: Cours
+        url: /web/3-CSS/css.pdf
+      - title: Exercices
+        url: /web/3-CSS/exo.html
+   - title: Javascript
+     children:
+      - title: Cours
+        url: /web/4-JS/JavaScript.pdf
+      - title: Exercices
+        url: /web/4-JS/exo.html
+   - title: Développement
+     children:
+      - title: Cours
+        url: /web/5-Developpement/developpement.pdf
+      - title: Exercices
+        url: /web/5-Developpement/exo.html

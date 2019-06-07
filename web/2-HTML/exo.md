@@ -1,4 +1,9 @@
-# Mise en pratique HTML
+---
+layout: article
+title: Mise en pratique HTML
+sidebar:
+  nav: web
+---
 
 ## Visualisation et édition simple HTML
 

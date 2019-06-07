@@ -1,4 +1,9 @@
-# Mise en pratique
+---
+layout: article
+title: Mise en pratique CSS
+sidebar:
+  nav: web
+---
 
 ## Modification du style CSS
 

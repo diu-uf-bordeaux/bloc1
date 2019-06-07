@@ -1,4 +1,9 @@
-# Mise en pratique
+---
+layout: article
+title: Mise en pratique JavaScript
+sidebar:
+  nav: web
+---
 
 Téléchargez et décompressez l'archive [bj3.zip](bj3.zip). 
 

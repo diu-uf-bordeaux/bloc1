@@ -1,4 +1,9 @@
-# Mise en pratique
+---
+layout: article
+title: Mise en pratique HTTP
+sidebar:
+  nav: web
+---
 
 ## Observation des requêtes HTTP
 
