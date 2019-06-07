@@ -1,4 +1,7 @@
-# Représentation des données et programmation
+---
+layout: article
+title: Représentation des données et programmation
+---
 
 - [Représentation de l'information]()
 - [Programmation](./prog/prog.html)
