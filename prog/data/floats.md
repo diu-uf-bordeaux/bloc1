@@ -19,6 +19,16 @@ toujours égal à 1, ce qui permet de regagner le bit de signe.
 
 --
 
+### Nombre flottants : répartition
+
+<p>&nbsp;<p>
+
+![IEEE754](data/images/ieee754_overview.png) <!-- .element: class="stretch" style="max-width: 100%;" -->
+
+- Chaque point rouge représente un nombre flottant.
+
+--
+
 ### Nombres flottants : types
 
 | Paramètre   | Simple | Double |

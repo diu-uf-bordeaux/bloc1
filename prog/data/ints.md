@@ -21,14 +21,29 @@ Et donc rend assez difficile de parler de représentation binaire modulo.
 
 - Addition, multiplication (comme à l'école élementaire, mais en plus facile)
 
+<div class="half">
+
 ![addition entier 6bits](data/images/integer_addition.png)
-  <!-- .element: class="stretch" style="max-width: 50%" -->
+  <!-- .element: class="stretch" style="max-width: 80%" -->
+
+</div>
+
+<div class="half">
+
+![multiplication entier 6bits](data/images/integer_multiplication.png)
+  <!-- .element: class="stretch" style="max-width: 85%" -->
+
+</div>
 
 
-- Opérations sont exactes modulo
+- Opérations sont exactes modulo $2^n$.
 
 - <span class="label">Python</span> Les opérations sur les entiers
   sont exactes.
+
+Note:
+L'addition représente 22 + 49 = 71 = 7 (64)
+La multiplication représente 22 * 5 = 110 = 46 (64)
 
 --
 
@@ -44,6 +59,21 @@ Et donc rend assez difficile de parler de représentation binaire modulo.
 
 ![complément à deux](data/images/integer_complement.png)
   <!-- .element: class="stretch" style="max-width: 100%" -->
+
+--
+
+### Entiers : exemples
+
+- Manipulation avec Numpy
+
+```python
+i = np.uint32(2**32-1) # 4294967295
+i = i + np.uint32(1)   # overflow
+
+```
+
+
+
 
 --
 
