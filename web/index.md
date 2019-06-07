@@ -6,6 +6,7 @@ sidebar:
 ---
 
 L'objet de ce module est de voir les notions suivantes:
+* HTTP
 * HTML
 * CSS
 * JS
