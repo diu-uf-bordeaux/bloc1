@@ -5,13 +5,14 @@ sidebar:
   nav: web
 ---
 
+Téléchargez et décompressez l'archive [css.zip](css.zip).
+
 ## Modification du style CSS
 
 L'objectif est de changer un style CSS.
 
-1. Téléchargez et décompressez l'archive [bj2.zip](bj2.zip).
 1. Changez le style CSS de l'[exemple](bj/index.html) pour faire en sorte que la couleur de fond ne soit plus en noir.
-1. Ajoutez un style pour faire en sorte que le score du joueur (balise `span`) soit dans une police plus grosse.
+2. Ajoutez un style pour faire en sorte que le score du joueur (balise `span`) soit dans une police plus grosse.
 
 
 ## CSS avec les outils de développement
@@ -24,6 +25,4 @@ L'objectif est de changer le style CSS avec les outils de développement de Chro
     2. Modifier la couleur du texte "Vos cartes" en vert.
     3. Ajoutez un fond gris autour de l'image de la carte. Pour cela, vous pouvez utiliser les propriétés   _padding_ et _margin_.
 
-2. Ouvrez une page _Youtube_ ou _Facebook_. Modifiez-la dynamiquement pour changer son style et son contenu.
-
-
+<!-- 2. Ouvrez une page _Youtube_ ou _Facebook_. Modifiez-la dynamiquement pour changer son style et son contenu. -->

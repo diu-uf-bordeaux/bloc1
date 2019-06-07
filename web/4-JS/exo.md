@@ -5,7 +5,7 @@ sidebar:
   nav: web
 ---
 
-Téléchargez et décompressez l'archive [bj3.zip](bj3.zip). 
+Téléchargez et décompressez l'archive [js.zip](js.zip). 
 
 Les modifications sont à apporter dans le fichier `script.js` du repertoire `bj`.
 
