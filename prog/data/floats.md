@@ -31,13 +31,14 @@ toujours égal à 1, ce qui permet de regagner le bit de signe.
 
 ### Nombres flottants : types
 
-| Paramètre   | Simple | Double |
+| Paramètre   | Simple préc. | Double préc.|
 |-------------|:------:|:------:|
 | p           | 24     | 53     |
 | e           | 8      | 11     |
 | Total :     | 32     | 64     |
 | Exposant :  | -128 à 127 | -1024 à 1023 |
 | Décimales : | $\approx 7$ | $\approx 15$ |
+||||
 
 --
 
@@ -57,16 +58,23 @@ $$ 0.1 = 0.0001100110011 ... $$
 
 ### Nombres flottants : erreurs
 
-Que se passe t'il si l'on additionne plusieurs fois 0.1 sur 32
+Que se passe t'il si l'on additionne plusieurs fois 1/10 sur 32
 bits ?
 
-| Valeur réelle  | Valeur flottante      |
+| Valeur réelle  | Valeur flottante sur 64 bits |
 | :----: | --------------------- |
-| 1/10 | 0.1000000014901161193 |
-| 2/10 | 0.2000000029802322387 |
-| 3/10 | 0.3000000119209289550 |
-| 4/10 | 0.4000000059604644775 |
-| 5/10 | 0.5000000000000000000 |
+| 1/10 | 0.10000000149011612 |
+| 2/10 | 0.20000000298023224 |
+| 3/10 | 0.30000001192092896 |
+| 4/10 | 0.40000000596046450 |
+| 5/10 | 0.50000000000000000 |
+
+```python
+f32 = np.float32(0.1)
+for i in range(5):
+    print(np.float64(f32))
+    f32 = f32 + np.float32(0.1)
+```
 
 --
 

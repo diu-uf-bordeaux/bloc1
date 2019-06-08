@@ -1,14 +1,15 @@
-## Introduction
+### Introduction
 
--  Pourquoi c'est aussi compliqué
+#### Un monde de données
 
-> Juste un tas de zéros et de uns
-> et il y a tant de choses à en faire
+- Existence d'une multitude de données à représenter&nbsp;: \
+nombres, textes, sons, images ... ([si vous manquez
+d'idées](https://en.wikipedia.org/wiki/List_of_file_formats))
 
-- Besoin d'organisation pour communiquer
+- A l'autre extrémité, un espace de stockage qui au fond est ne permet
+  d'écrire que des séquences de zéros et de uns.
 
---
+![IEEE754](data/images/data_repr.png) <!-- .element: class="stretch" style="max-width: 70%; vertical-align:top" -->
 
-### truc
-
-lalal
+- Besoin de *codages* pour transcrire, décoder, et échanger toutes ces
+  données.

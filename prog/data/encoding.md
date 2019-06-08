@@ -8,20 +8,22 @@
 - Le **byte** ne faisait pas 8 bit (mais l'octet fait 8 :) )
 
 - [ASCII]: 7 bits, c'est largement assez pour encoder tout le
-  clavier américain + 32 caractères de controles.
-  La façon dont la table est organisé est super maline (des puissance de 2 partout).
+  clavier américain + 32 caractères de contrôle.
+  La façon dont la table est organisée est super maline
+  (des puissance de 2 partout).
 
 - Les français veulent leur accents, les grecs (ou les russes) leurs
-  alphabet. Principe des code page. [ISO8859] -15 latin9 (fr) -5 cyrillique
+  alphabet. Principe des code page. \
+  Exemple : [ISO8859] -15 latin9 (fr) -5 cyrillique
 
 - Les chinois arrivent ... la technique ne passe pas a l'échelle
 
 - [Unicode], et ses mises en pratiques raisonnables (UTF8/16/32).
 
-- UTF8, characteres sur un nombre variable d'octet.
-  La table ascii est sur un octet et ne bouge pas.  Si le bit de poit fort est
-  à `1`, le nombre de `1` précédent le premier zéro donne le nombre d'octet,
-  les octets suivant comment tous par `10`
+- UTF8, caractères sur un nombre variable d'octets.
+  La table ASCII est sur un octet et ne bouge pas. Si le bit de poids fort est
+  à `1`, le nombre de `1` précédent le premier zéro donne le nombre d'octets,
+  le caractère est codé après le premier `0`
 
 
 [ASCII]: https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange
@@ -33,12 +35,13 @@ le mot CodePage vient du numéro de page du manuel dans laqulle la table etait
 imprimé (chez ibm). Les codepage les plus visible sont ceux de microsoft : 437
 américain/850 latin1
 Montrer le AltGr + 225 pour faire un ß
+Un lien qui m'a aidé : https://www.figer.com/Publications/utf8.htm (DR)
 
 --
 
 ### Encodage chaines de caractère : Exercice
 
-recuperer avec clic droit [fr.txt](data/fr.txt) [en.txt](data/en.txt)
+récupérer avec clic droit [fr.txt](data/fr.txt) [en.txt](data/en.txt)
 
 ```bash
 cat fr.txt
@@ -59,7 +62,7 @@ en [python](data/poem.py)
 > Commencer par parler de Gulliver
 
 Si on considère un octet comme indivisible, la question du comment est-il
-vraiment en mémoire (au niveau du transistor)ne importe peu.
+vraiment en mémoire (au niveau du transistor) importe peu.
 
 A partir des `short` (16 bit), la question se pose. Poids fort, ou poids faible
 devant. L'un est-il mieux que l'autre ? (C'est très subjectif). Chaque fondeur
@@ -92,4 +95,3 @@ en [python](data/signal.py)
 - Hommage à la théorie de l'info.
 
 - Destructif, non destructif
-

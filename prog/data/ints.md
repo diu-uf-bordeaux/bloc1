@@ -35,11 +35,10 @@ Et donc rend assez difficile de parler de représentation binaire modulo.
 
 </div>
 
+- Opérations `+`, `-` et `*` sont exactes modulo $2^n$.
 
-- Opérations sont exactes modulo $2^n$.
-
-- <span class="label">Python</span> Les opérations sur les entiers
-  sont exactes.
+- La division `//` effectue des arrondis&nbsp;: `7 // 3 == 2`  \
+  <span class="label">Python</span> Attention avec les négatifs &nbsp;: `(-7) // 3 == -3 `
 
 Note:
 L'addition représente 22 + 49 = 71 = 7 (64)
@@ -68,7 +67,8 @@ La multiplication représente 22 * 5 = 110 = 46 (64)
 
 ```python
 i = np.uint32(2**32-1) # 4294967295
-i = i + np.uint32(1)   # overflow
+np.binary_repr(i)      # '11111111111111111111111111111111'
+i = i + np.uint32(1)   # 0 (overflow)
 
 ```
 
