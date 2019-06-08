@@ -1,14 +1,5 @@
 ### Objets complexes
 
-<span class="ribbon ribbon-principle"></span>
-
-L'exemple d'un fichier audio
-
---
-
-###  Identifier le type
-
-[plein de signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
 
 --
 
@@ -45,12 +36,30 @@ Montrer le AltGr + 225 pour faire un ß
 
 --
 
+### Encodage chaines de caractère : Exercice
+
+recuperer avec clic droit [fr.txt](data/fr.txt) [en.txt](data/en.txt)
+
+```bash
+cat fr.txt
+cat ru.txt
+```
+
+```bash
+iconv -f iso-8859-15 -t utf-8 fr.txt
+iconv -f iso-8859-5 -t utf-8 ru.txt
+```
+
+en [python](data/poem.py)
+
+--
+
 ### Endianness
 
 > Commencer par parler de Gulliver
 
 Si on considère un octet comme indivisible, la question du comment est-il
-vraiment en mémoire (au niveau du transistor) importe peu.
+vraiment en mémoire (au niveau du transistor)ne importe peu.
 
 A partir des `short` (16 bit), la question se pose. Poids fort, ou poids faible
 devant. L'un est-il mieux que l'autre ? (C'est très subjectif). Chaque fondeur
@@ -65,8 +74,22 @@ faut etre d'accord: **Protocole**.
 
 --
 
+###  Identifier le type
+
+[plein de signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
+
+--
+
+## L'exemple d'un fichier audio
+
+en [python](data/signal.py)
+
+
+--
+
 ### Compression
 
 - Hommage à la théorie de l'info.
 
 - Destructif, non destructif
+
