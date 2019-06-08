@@ -14,14 +14,14 @@ L'exemple d'un fichier audio
 
 ### Du texte tout simplement ?
 
-- Le **byte** ne faisait pas 8 bit
+- Le **byte** ne faisait pas 8 bit (mais l'octet fait 8 :) )
 
 - [ASCII]: 7 bits, c'est largement assez pour encoder tout le
   clavier américain + 32 caractères de controles.
   La façon dont la table est organisé est super maline (des puissance de 2 partout).
 
 - Les français veulent leur accents, les grecs (ou les russes) leurs
-  alphabet. Principe des code page. [ISO8859]
+  alphabet. Principe des code page. [ISO8859] -15 latin9 (fr) -5 cyrillique
 
 - Les chinois arrivent ... la technique ne passe pas a l'échelle
 
