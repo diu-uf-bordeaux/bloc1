@@ -1,6 +1,3 @@
-"""
-Nous vous 
-"""
 
 def read_file(file_name, encoding='utf-8'):
     """
@@ -9,7 +6,7 @@ def read_file(file_name, encoding='utf-8'):
     """
     with open(file_name, mode="r", encoding=encoding) as file:
         return file.readlines()
-        
+
 def print_binary(string, encoding='utf-8'):
     """
     Affiche la chaine `string` puis sa representation en base 2
@@ -40,21 +37,21 @@ def utf8_decode(char):
 
     bytes_in_bits = bit_string(char)
     print("Nombre d'octets : ", bytes_in_bits[0].find('0')) # Nombre de `1` consécutifs
-    
+
     val = ""
     for byte in bytes_in_bits:
         val += byte[(byte.find('0') + 1):] # Le zéro ne fait pas partie de la payload
-    
+
     print("Nombre de bits significatifs extraits: ", len(val))
     print("Valeur extraite : ", int(val, 2))
 
 if __name__ == '__main__':
-    
+
     # Lire le poème en francais (iso-8859-15)
     fr = read_file('fr.txt', 'iso-8859-15')
     # et l'afficher
     print(fr)
-    
+
     # Idem en russe (iso-8859-5)
     ru = read_file('ru.txt', 'iso-8859-5')
     print(ru)
