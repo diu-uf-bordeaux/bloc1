@@ -57,6 +57,9 @@ Note:
   moment ou on communique (a commencer par soi même, cas de la disquette), il
   faut etre d'accord: **Protocole**.
 
+- Technique de la multiplication dans un sens ou dans l'autre.
+  Mieux avec des decalages et des masques.
+
 --
 
 ### Texte
