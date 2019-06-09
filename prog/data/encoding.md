@@ -10,10 +10,10 @@
 
 ```python
 file = open("someName.txt", mode="r")
-file.read(42)
+print(file.read(42))
+print(file.read(42))
 file.close()
 ```
-
 
 Note:
 Bon moment pour parler/introduire de la compression ?
@@ -21,7 +21,6 @@ Bon moment pour parler/introduire de la compression ?
 --
 
 ### Du texte tout simplement ?
-
 
 - [ASCII]: 7 bits, c'est largement assez pour encoder tout le
   clavier américain + 32 caractères de contrôle.
@@ -48,6 +47,7 @@ américain/850 latin1
 Montrer le AltGr + 225 pour faire un ß
 
 --
+
 ### Texte : ASCII
 
   -  | 0x0 | 0x1 | 0x2 | 0x3 | 0x4 | 0x5 | 0x6 | 0x7 | 0x8 | 0x9 | 0xA | 0xB | 0xC | 0xD | 0xE | 0xF
@@ -101,19 +101,7 @@ Char. number range  |        UTF-8 octet sequence
 
 ### Encodage chaines de caractère : Exercice
 
-récupérer avec clic droit [fr.txt](data/fr.txt) [ru.txt](data/ru.txt)
-
-```bash
-cat fr.txt
-cat ru.txt
-```
-
-```bash
-iconv -f iso-8859-15 -t utf-8 fr.txt
-iconv -f iso-8859-5 -t utf-8 ru.txt
-```
-
-en [python](data/poem.py)
+en [python](data/poem)
 
 --
 
@@ -148,8 +136,6 @@ faut etre d'accord: **Protocole**.
 --
 
 ## Identifier le type : Exercice
-
-
 
 Note:
 Certains magics servent aussi à detecter l'endianness en un seul `read`,
