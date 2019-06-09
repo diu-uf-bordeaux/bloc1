@@ -108,7 +108,7 @@ Note:
 
 </div>
 
-> Même si tous les langages de programmation supportent de plus en plus
+> Même si les langages de programmation supportent de plus en plus
   unicode, il est fortement recommandé d'**éviter** de nommer des
   identificateurs avec.
 
