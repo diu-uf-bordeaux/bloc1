@@ -1,4 +1,7 @@
-### Encodage : Exercice
+Encodage : Exercice
+---
+
+### En ligne de commande
 
 - Dans un interpreteur, affichez `fr.txt et ru.txt`
   ```bash
@@ -24,6 +27,8 @@
 
 ---
 
+### En python
+
 - Charger `encoding.py` dans Thonny
 - En vous servant de la fonction fournie `read_file`, chargez `fr.txt`
   ```python
@@ -42,6 +47,8 @@
 
 ---
 
+### Traduire le poème
+
 - Fabriquer un fichier qui entrelace les langues
 ```python
 with open("poem.txt", "w", encoding="utf-8") as file:
@@ -55,11 +62,13 @@ with open("poem.txt", "w", encoding="utf-8") as file:
   fr[3:5] = [''.join(fr[3:5])] # Les lignes 3 et 4 doivent êtres fusionnées
 
   ## On remplace la sous-liste (c'est cher mais c'est pas grave), de 3 à 5 (exclu)
-  ## par la liste d'un element qui est la concatenation de la sous-liste de 3 à 5
+  ## par la liste d'un élément qui est la concaténation de la sous-liste de 3 à 5
   ```
   Ou coller cette ligne ?
 
 ---
+
+### Observer la représentation
 
 - En vous servant de la fonction `print_binary`, affichez les infos sur le
   11ème caractère de la seconde ligne du texte `fr` en `iso-8859-15` puis en
@@ -67,6 +76,8 @@ with open("poem.txt", "w", encoding="utf-8") as file:
 - Faites de même avec le tout premier caractère russe.
 
 ---
+
+### Décortiquer un peu l'UTF-8
 
 En vous servant de la fonction `utf8_decode` regardez les caractères suivants :
 
