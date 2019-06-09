@@ -2,7 +2,7 @@
 
 #### Représentation dans une base
 
-- Un nombre c'est un nombre peu importe la base $b$.
+- Un nombre est un nombre, peu importe la base $b$.
 
 $$d_n \times b^n + \dots + d_1 \times b^1 + d_0 \times b^0 \qquad \forall i, d_i \in [0;b[$$
 
@@ -11,7 +11,13 @@ $$d_n \times b^n + \dots + d_1 \times b^1 + d_0 \times b^0 \qquad \forall i, d_i
 ```python
 bin(42)              # -> '0b101010' (conversion en base 2)
 np.base_repr(42, 2)  # -> '101010'   (conversion en base b == 2)
-int('101010', 2)     # -> 42         (conversion en base b == 10)
+```
+
+- ou s'écrire depuis une autre
+
+```python
+0x2a                 # -> 42 (conversion depuis la base 16)
+int('101010', 2)     # -> 42 (conversion depuis une chaine en base 2)
 ```
 
 --

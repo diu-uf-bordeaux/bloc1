@@ -106,3 +106,7 @@ ul code {
 .ribbon-advice:before {
   content: "Conseils";
 }
+
+li.fill {
+  list-style-type: none; padding: .5em;
+}
