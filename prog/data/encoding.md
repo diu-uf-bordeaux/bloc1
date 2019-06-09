@@ -217,11 +217,8 @@ Certains magic servent aussi à détecter l'*endianness* en un seul `read`,
   - Suivi de la longueur de la suite (*little endian*)
   - deux magics de plus `WAVE`, `fmt`
   - Le format audio (1: `pcm`)
-  - Le nombre de pistes
-  - La frequence
-  - Le nombre de bits par ...
-  - ...
-- Ici, Le signal brut 8 bit, mono
+  - Le nombre de pistes, la frequence, le nombre de bits par ...
+- Ici, Le signal pcm brut 8 bit, mono
 
 > Chargez [signal](data/signal.py) dans `Thonny`
 
