@@ -109,7 +109,7 @@ Note:
 </div>
 
 > Même si les langages de programmation supportent de plus en plus
-  unicode, il est fortement recommandé d'**éviter** de nommer des
+  Unicode, il est fortement recommandé d'**éviter** de nommer des
   identificateurs avec.
 
 --
@@ -177,7 +177,7 @@ open(filename, mode="r", encoding="utf-8")
 ###  Identifier le type
 
 - L'extension du fichier ne sert à rien.
-  - Renommer une image ne donne pas un musique.
+  - Renommer une image ne donne pas une chanson.
 
 - On laisse des traces, des numéros magiques (`magic`).
   - Le début du fichier est souvent un bon endroit.
@@ -187,6 +187,8 @@ open(filename, mode="r", encoding="utf-8")
 - Les fichiers textes sont plus problématiques.
   - Le `#!` (prononcer *shebang*)
 
+Note:
+- Pratique pour rendre un script directement utilisable
 
 --
 
@@ -196,28 +198,28 @@ Magic | extension | Type
 ------|-----------|------
 `ID3` | `.mp3`    | MP3 file
 `PK`  | `.zip` | Archive Zip
-`MZ`  | `.exe`    | Executable windows
-`.ELF`|           | Executable linux
+`MZ`  | `.exe`    | Exécutable windows
+`.ELF`|           | Exécutable linux
 `%PDF-` | `.pdf`  | Adobe PDF Document
-`0xFFD8FFDB` | `.jpeg`  | Fichier jpeg
+`0xFFD8FFDB` | `.jpeg`  | Fichier JPEG
 `0xCAFEBABE` | `.class` | Classes java
 
 Note:
-Certains magic servent aussi à détecter l'*endianness* en un seul `read`,
+- servent aussi à détecter l'*endianness* en un seul `read`,
 0xCAFEBABE de java
 
 --
 
 ## L'exemple d'un fichier audio
 
-## Anatomie
+#### Anatomie
 
 - En tête de 44 octets
-  - commencant par `RIFF`
+  - commençant par `RIFF`
   - Suivi de la longueur de la suite (*little endian*)
   - deux magics de plus `WAVE`, `fmt`
   - Le format audio (1: `pcm`)
-  - Le nombre de pistes, la frequence, le nombre de bits par ...
+  - Le nombre de pistes, la fréquence, le nombre de bits par ...
 - Ici, Le signal pcm brut 8 bit, mono
 
 > Chargez [signal](data/signal.py) dans `Thonny`
@@ -227,16 +229,16 @@ Certains magic servent aussi à détecter l'*endianness* en un seul `read`,
 
 ### Compression
 
-- Reduire le nombre de bits pour representer l'information
+- Réduire le nombre de bits pour représenter l'information
 - Nécessite de décompresser
 - Usages:
   - Archivage. Doit être exact.
   - Réduction d'espace. Tolère une perte d'information.
-- Entropique / Arithmetique ?
+- Entropique / Arithmétique ?
 
 Note:
 On peut remarquer le cas hybride du jpeg
 - Transformée en ondelettes (~fourier)
-- on cree beaucoup de zéros (eneleve les poids pas assez fort)
-- On lit en diagonale pour avoir le plus de zeros a la fin, et on ne les encode pas.
-- Sur tout ça on applique huffman
+- on crée beaucoup de zéros (enlève les poids pas assez fort)
+- On lit en diagonale pour avoir le plus de zéros a la fin, et on ne les encode pas.
+- Sur tout ça on applique Huffman
