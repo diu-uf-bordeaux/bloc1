@@ -1,4 +1,6 @@
 header:
+  - title: Représentation des données
+    url: /prog/data.html
   - title: Programmation
     url: /prog/prog.html
   - title: Web
