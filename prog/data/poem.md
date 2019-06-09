@@ -1,15 +1,17 @@
-Encodage : Exercice
 ---
+title: Encodage des chaines de caractères
+layout: article
+------
 
 ### En ligne de commande
 
-- Dans un interpreteur, affichez `fr.txt et ru.txt`
+- Dans un interpréteur, affichez `fr.txt et ru.txt`
   ```bash
   cat fr.txt
   cat ru.txt
   ```
 
-- Convertissez les en utf-8
+- Convertissez les en UTF-8
   ```bash
   iconv -f iso-8859-15 -t utf-8 fr.txt
   iconv -f iso-8859-5 -t utf-8 ru.txt
@@ -82,7 +84,7 @@ with open("poem.txt", "w", encoding="utf-8") as file:
 En vous servant de la fonction `utf8_decode` regardez les caractères suivants :
 
 ```python
-# Décoder representation utf-8
+# Décoder représentation UTF-8
 utf8_decode(fr[1][10])
 utf8_decode(ru[0][0])
 
