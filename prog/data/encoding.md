@@ -114,8 +114,7 @@ Note:
 
 --
 
-### Encodage Unicode: UTF8
-
+### Encodage Unicode: UTF-8
 
 - Caractères sur un nombre variable d'octets.
   - Le nombre de `1` précédent le premier zéro donne le nombre d'octets
@@ -172,23 +171,40 @@ ma_chaine.encode('iso-8859-15')
 ```python
 open(filename, mode="r", encoding="utf-8")
 ```
+
 --
 
 ###  Identifier le type
 
-- L'extension du fichier ne sert à rien. Rennomer une image ne donne pas un musique.
-- On laisse des traces, des numéros magiques (`magic`). Le début du fichier est souvent un bon endroit.
-- Les fichiers sont plus problèmatiques. Le `#!` (prononcer *shebang*)
+- L'extension du fichier ne sert à rien.
+  - Renommer une image ne donne pas un musique.
+
+- On laisse des traces, des numéros magiques (`magic`).
+  - Le début du fichier est souvent un bon endroit.
 
 > [Plein de signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
+
+- Les fichiers textes sont plus problématiques.
+  - Le `#!` (prononcer *shebang*)
+
 
 --
 
 ## Identifier le type : Exercice
 
+Magic | extension | Type
+------|-----------|------
+`ID3` | `.mp3`    | MP3 file
+`PK`  | `.zip` | Archive Zip
+`MZ`  | `.exe`    | Executable windows
+`.ELF`|           | Executable linux
+`%PDF-` | `.pdf`  | Adobe PDF Document
+`0xFFD8FFDB` | `.jpeg`  | Fichier jpeg
+`0xCAFEBABE` | `.class` | Classes java
+
 Note:
-Certains magics servent aussi à detecter l'endianness en un seul `read`,
-0xCAFEBABE de java, ou le png.
+Certains magic servent aussi à détecter l'*endianness* en un seul `read`,
+0xCAFEBABE de java
 
 --
 
