@@ -1,6 +1,8 @@
 ### Objets complexes
 
-- Préparatoire: Deziper le [fichier]()
+- Préparatoire : décompresser le [fichier]()
+
+--
 
 #### Fichiers
 

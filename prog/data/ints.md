@@ -6,14 +6,14 @@
 
 $$d_n \times b^n + \dots + d_1 \times b^1 + d_0 \times b^0 \qquad \forall i, d_i \in [0;b[$$
 
-- Il peut s'écrire et s'afficher dans une base ou une autre.
+- Il peut s'écrire et s'afficher dans une base quelconque.
 
 ```python
 bin(42)              # -> '0b101010' (conversion en base 2)
 np.base_repr(42, 2)  # -> '101010'   (conversion en base b == 2)
 ```
 
-- ou s'écrire depuis une autre
+- Ou s'écrire directement depuis une autre base que $10$.
 
 ```python
 0x2a                 # -> 42 (conversion depuis la base 16)
@@ -136,11 +136,20 @@ mieux vaut ne pas le montrer. Oui, les affichages sont un peu bizarres.
 
 ### Exemple de fonction sur les entiers
 
-- Conversion en base $b$ :
+- Écrire une fonction `convert` qui prend en paramètre un entier $n$
+  positif et le convertit en base $b$ en produisant la liste de ses
+  décimales&nbsp;:
 
 ```python
-Insérer le code ici
+def convert(n,b):
+    res = []
+    while n > 0:
+        res.append(n % b)
+        n = n // b
+    res.reverse()
+    return res
 ```
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 --
 
@@ -180,7 +189,7 @@ True == 1, False == 0      # Both statements are True in Python
 
 
 ```python
-6 * 7 == 42      # True (et pas un seul '=' !)
+6 * 7 == 42      # True (attention, il y a 2 '=' !)
 arr = [1,2]
 arr.remove(1)
 arr == [2]       # True  (même contenu)
