@@ -210,13 +210,36 @@ Certains magic servent aussi à détecter l'*endianness* en un seul `read`,
 
 ## L'exemple d'un fichier audio
 
-en [python](data/signal.py)
+## Anatomie
+
+- En tête de 44 octets
+  - commencant par `RIFF`
+  - Suivi de la longueur de la suite (*little endian*)
+  - deux magics de plus `WAVE`, `fmt`
+  - Le format audio (1: `pcm`)
+  - Le nombre de pistes
+  - La frequence
+  - Le nombre de bits par ...
+  - ...
+- Ici, Le signal brut 8 bit, mono
+
+> Chargez [signal](data/signal.py) dans `Thonny`
 
 
 --
 
 ### Compression
 
-- Hommage à la théorie de l'info.
+- Reduire le nombre de bits pour representer l'information
+- Nécessite de décompresser
+- Usages:
+  - Archivage. Doit être exact.
+  - Réduction d'espace. Tolère une perte d'information.
+- Entropique / Arithmetique ?
 
-- Destructif, non destructif
+Note:
+On peut remarquer le cas hybride du jpeg
+- Transformée en ondelettes (~fourier)
+- on cree beaucoup de zéros (eneleve les poids pas assez fort)
+- On lit en diagonale pour avoir le plus de zeros a la fin, et on ne les encode pas.
+- Sur tout ça on applique huffman
