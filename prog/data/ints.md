@@ -1,9 +1,17 @@
 ### Nombres entiers
+#### Les bases
+
+- Un nombre c'est un nombre peut importe le base
+- Il peut se tapper et s'afficher dans une base ou une autre
+- Formule : $$d*b^n + d*b^1 + d*b^0$$
+
+---
+
+### Nombres entiers
 
 - Représentation canonique en base 2.
 
   Sur $n$ bits, on code les entiers de $0$ à $2^{n}-1$.
-
 
 ![entier 8 bits](data/images/integer_repr.png)
   <!-- .element: class="stretch" style="max-width: 60%" -->
@@ -15,6 +23,7 @@
 
 Note:
 Et donc rend assez difficile de parler de représentation binaire modulo.
+
 
 --
 ### Opérations élémentaires

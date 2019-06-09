@@ -26,7 +26,7 @@ def bit_string(string, encoding="utf-8"):
     Retourne la liste des bytes de `string` encodé en `encoding`.
     Les bytes sont convertis en leur representation binaire (chaine)
     """
-    return [ bin(c).lstrip('0b') for c in string.encode(encoding) ]
+    return [ format(c, '08b') for c in string.encode(encoding) ] # bin(c)[2:]
 
 def utf8_decode(char):
     assert(len(char) == 1)

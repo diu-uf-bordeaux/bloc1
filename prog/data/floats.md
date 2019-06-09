@@ -92,11 +92,11 @@ x == 3.14             # à proscrire
 <div class="half">
 
 ```python
-def quadratic_roots1(a,b,c):
+def quadratic_roots1(a, b, c):
     sq_delta = math.sqrt(b*b - 4*a*c)
     x1 = (- b - sq_delta) / (2 * a)
     x2 = (- b + sq_delta) / (2 * a)
-    return (x1,x2)
+    return (x1, x2)
 ```
 
 </div>
@@ -104,14 +104,14 @@ def quadratic_roots1(a,b,c):
 <div class="half">
 
 ```python
-def quadratic_roots2(a,b,c):
+def quadratic_roots2(a, b, c):
     sq_delta = math.sqrt(b*b - 4*a*c)
     if b > 0:
         x1 = (- b - sq_delta) / (2 * a)
     else:
         x1 = (- b + sq_delta) / (2 * a)
     x2 = c / (a * x1)
-    return (x1,x2)
+    return (x1, x2)
 ```
 
 </div>
@@ -119,7 +119,7 @@ def quadratic_roots2(a,b,c):
 <div class="half">
 
 ```python
-quadratic_roots1(1,1e8,1)
+quadratic_roots1(1, 1e8, 1)
 # -> (-1e8, -7.450580e-09)  25% error
 ```
 
@@ -128,7 +128,7 @@ quadratic_roots1(1,1e8,1)
 <div class="half">
 
 ```python
-quadratic_roots2(1,1e8,1)
+quadratic_roots2(1, 1e8, 1)
 # -> (-1e8, -1e-08)      2e-12% error
 ```
 
