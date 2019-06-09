@@ -123,10 +123,10 @@ Note:
   - La charge est codée après le premier `0` de chaque octet en *bigendian*
   - Le préfixe `10`, sert pour les continuations
 
-- Pas de changement pour l'existant. La table ASCII ne bouge pas,
-le code d'UNIX n'a pas besoin d'être changé,
-  Robuste (pas d'état),
-  Moins lourd que UTF-32,
+- Pas de changement pour l'existant: la table ASCII ne bouge pas,
+le code d'UNIX n'a pas besoin d'être changé.
+  Robuste (pas d'état).
+  Moins lourd que UTF-32.
 
 Note:
 - La représentation d'un caractère ne peut pas être contenue dans la
