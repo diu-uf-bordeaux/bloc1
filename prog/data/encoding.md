@@ -2,6 +2,19 @@
 
 - Préparatoire: Deziper le [fichier]()
 
+### Fichiers
+
+- Assositation nom / contenu. Même problèmes et raisonements que nous allons tenir ici (cf. cours de système)
+- Acquissition : `open`, Restitution : `close`
+- Entre les deux appels a `read`/`write` qui font avancer le pointeur sur le contenu.
+
+```python
+file = open("someName.txt", mode="r")
+file.read(42)
+file.close()
+```
+
+
 Note:
 Bon moment pour parler/introduire de la compression ?
 
@@ -61,11 +74,14 @@ Montrer le AltGr + 225 pour faire un ß
   - Le nombre de `1` précédent le premier zéro donne le nombre d'octets
   - La charge est codé après le premier `0` de chaque octet
   - Le prefixe `10`, sert pour les continuations -- il n'aurait pas de sens vu la propriété précédente.
-  - Robuste (pas d'état), pas de changement pour l'existant, aucun caratère n'est inclus dans un autre, moins lourd que UTF32
+  - Pas de changement pour l'existant, Robuste (pas d'état), aucun caratère n'est inclus dans un autre, moins lourd que UTF32
 
 
 Note:
-- La représentation d'un caractère ne peut pas être contenue dans la représentation d'une chaîne plus grande, ce qui permet de faire des recherches de sous-chaînes par comparaison d'octets, comme sur les codages à un octet => pas de changement de l'existant
+- La représentation d'un caractère ne peut pas être contenue dans la
+  représentation d'une chaîne plus grande, ce qui permet de faire des
+  recherches de sous-chaînes par comparaison d'octets, comme sur les codages à
+  un octet => pas de changement de l'existant
 - Un lien qui m'a aidé : https://www.figer.com/Publications/utf8.htm (DR)
 
 --
