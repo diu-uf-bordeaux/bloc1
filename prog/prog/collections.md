@@ -108,10 +108,61 @@ permettent d'écrire des algorithmes plus facilement.
 
 ## Listes : constructions possibles
 
-- Insérer des exemples (+, *, += ...)
+- explicite :
 
-- Modification ou pas du binding
+```python
+l1 = [3, 1, 4, 1, 5, 92]
+```
 
+- extension par concaténation
+
+```python
+l1 = l1 + [17]		# équivalent à l1.append(17), à l1 += [17]?
+l1 = l1 + [20, 2] 	# équivalent à l1.extend([20, 2])?
+l2 = [0]*10
+```
+
+- extension par insertion
+
+```python
+l1.insert(4, 12)
+l1[3:3] = [10, 10, 10]
+```
+
+- comme sous-liste
+
+```python
+l3 = l1[5:10]
+```
+
+- compréhension de liste
+
+--
+
+### Liste : copie
+
+copie **superficielle** vs copie **profonde**
+
+- la modification de l2 affecte-t-elle l1 ?
+
+```python
+l1 = [10, 20, 30, 40, 50, 60]
+l2 = l1
+l2[1] = 0
+```
+
+
+```python
+l1 = [10, 20, 30, 40, 50, 60]
+l2 = l1.copy()
+l2[1] = 0
+```
+
+```python
+l1 = [[10, 20], [30, 40], [50, 60]]
+l2 = l1.copy()
+l2[1] [1] = 0
+```
 
 --
 
