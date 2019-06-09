@@ -1,46 +1,85 @@
 ### Nombres entiers
-#### Les bases
 
-- Un nombre c'est un nombre peut importe le base
-- Il peut se tapper et s'afficher dans une base ou une autre
-- Formule : $$d*b^n + d*b^1 + d*b^0$$
+#### Représentation dans une base
 
----
+- Un nombre c'est un nombre peu importe la base $b$.
 
-### Nombres entiers
+$$d_n \times b^n + \dots + d_1 \times b^1 + d_0 \times b^0 \qquad \forall i, d_i \in [0;b[$$
 
-- Représentation canonique en base 2.
+- Il peut s'écrire et s'afficher dans une base ou une autre.
 
+```python
+bin(42)              # -> '0b101010' (conversion en base 2)
+np.base_repr(42, 2)  # -> '101010'   (conversion en base b == 2)
+int('101010', 2)     # -> 42         (conversion en base b == 10)
+```
+
+--
+
+### Entiers non signés
+
+- Représentation canonique en base 2. \
   Sur $n$ bits, on code les entiers de $0$ à $2^{n}-1$.
 
 ![entier 8 bits](data/images/integer_repr.png)
   <!-- .element: class="stretch" style="max-width: 60%" -->
 
-- Questions de longueur et de représentation : les entiers peuvent être représentés sur 8, 16, 32, 64 bits ...
+- Questions de longueur et de représentation : les entiers peuvent
+  être représentés sur 8, 16, 32, 64 bits ... \
+  Ex. de noms de types&nbsp;: `char`, `int`, `unsigned int`, `long` ...
 
-- Le grand mensonge de Python : les entiers sont de longueurs
+- Le grand mensonge Python : les entiers sont de longueurs
   arbitraires.
+
+```python
+2 ** 100 # -> 1267650600228229401496703205376 (== 2 puissance 100)
+
+```
 
 Note:
 Et donc rend assez difficile de parler de représentation binaire modulo.
 
+--
+### Entiers non signés : manipulation
+
+- Utiliser la bibliothèque `numpy` pour manipuler les entiers.
+
+|||
+|-|-|
+| Entiers non signés sur 32 bits : | `np.uint32` |
+| Entiers non signés sur 64 bits : | `np.uint64`|
+|||
+
+
+```python
+i = np.uint32(2**32-1)  # 4294967295
+np.binary_repr(i)       # '11111111111111111111111111111111'
+i = i + np.uint32(1)    # 0 (overflow)
+```
+
+- Attention : Python a tendance à convertir les types.
+
+```python
+i = np.uint32(2**32-1)  # 4294967295
+i = i + 1               # 4294967296 (i est devenu un np.int64)
+```
 
 --
-### Opérations élémentaires
+### Entiers : Opérations élémentaires
 
 - Addition, multiplication (comme à l'école élementaire, mais en plus facile)
 
 <div class="half">
 
 ![addition entier 6bits](data/images/integer_addition.png)
-  <!-- .element: class="stretch" style="max-width: 80%" -->
+  <!-- .element: class="stretch" style="max-width: 80%; padding: 0px; margin:0px" -->
 
 </div>
 
 <div class="half">
 
 ![multiplication entier 6bits](data/images/integer_multiplication.png)
-  <!-- .element: class="stretch" style="max-width: 85%" -->
+  <!-- .element: class="stretch" style="max-width: 85%; padding: 0px; margin:-10px" -->
 
 </div>
 
@@ -55,9 +94,9 @@ La multiplication représente 22 * 5 = 110 = 46 (64)
 
 --
 
-### Complément à deux
+### Entiers signés : complément à deux
 
-- Problème de la représentation des entiers signés
+- Problème de la représentation des entiers signés : lesquels ?
 
 - Choix d'une représentation modulo : le **complément à 2**.
 
@@ -70,19 +109,32 @@ La multiplication représente 22 * 5 = 110 = 46 (64)
 
 --
 
-### Entiers : exemples
+### Entiers signés : manipulation
 
 - Manipulation avec Numpy
 
 ```python
-i = np.uint32(2**32-1) # 4294967295
-np.binary_repr(i)      # '11111111111111111111111111111111'
-i = i + np.uint32(1)   # 0 (overflow)
-
+i = np.int32(2**31-1)  # 2147483647
+np.binary_repr(i)      # '11111111111111111111111111111111' (que 31 '1')
+i = i + np.int32(1)    # -2147483648 (overflow)
+np.binary_repr(i)      # '-b10000000000000000000000000000000'
 ```
 
+Note:
 
+np.binary_repr prend un argument optionnel qui devrait être la taille
+du type, mais ce comportement est déprécié depuis quelques versions,
+mieux vaut ne pas le montrer. Oui, les affichages sont un peu bizarres.
 
+--
+
+### Exemple de fonction sur les entiers
+
+- Conversion en base $b$ :
+
+```python
+Insérer le code ici
+```
 
 --
 
@@ -102,6 +154,29 @@ True == 1, False == 0      # Both statements are True in Python
 |`False`|valeurs $\equiv 0$, conteneurs vides (`[]`, `{}`)|
 ||||
 
+- Les booléens ont une place particulière en informatique, permettant
+  de réaliser des calculs de **logique**.
+
+- Ex. d'application : instruction conditionnelle, électronique
+  numérique, bitboards ...
+
 --
 
 ### Opérations sur les booléens
+
+|||
+|--|--|
+|opérateurs logiques    |`and`, `or`, `not`              |
+|comparaisons           |`<`, `<=`, `>`, `>=`, `==`, `!=`|
+|tests d'identité       |`is`, `is not`                  |
+|opérateurs sur les bits|`&`, `\|`, `^`, `~`, `<<`, `>>`  |
+||||
+
+
+```python
+6 * 7 == 42      # True (et pas un seul '=' !)
+arr = [1,2]
+arr.remove(1)
+arr == [2]       # True  (même contenu)
+arr is [2]       # False (deux tableaux différents)
+```

@@ -13,3 +13,17 @@ d'idées](https://en.wikipedia.org/wiki/List_of_file_formats))
 
 - Besoin de *codages* pour transcrire, décoder, et échanger toutes ces
   données.
+
+
+--
+
+### Remarque
+
+- Les exemples utilisent des bibliothèques externes permettant
+  d'accéder aux fonctions. En voici la liste :
+
+
+```python
+import math               # Bibliothèque standard de math
+import numpy as np        # Bibliothèque numpy de calcul numérique
+```
