@@ -21,6 +21,29 @@ toujours égal à 1, ce qui permet de regagner le bit de signe.
 
 --
 
+### Nombres flottants : exemple `1.0`
+
+Peu de gens savent ce que `00 00 80 3F` représente.
+
+`3F 80 00 00`
+
+`= 0011 1111 1000 0000 0000 0000 0000 0000`
+
+`= 0 01111111 00000000000000000000000`
+
+Soustraire 127 à l'exposant, ajouter le premier bit à la mantisse:
+
+`= 0 00000000 100000000000000000000000`
+
+$$ = +1 \times 2^0 \times 1.0 = 1.0$$
+
+```python
+>>> np.float32(1.0).data.hex()
+'0000803f'
+```
+
+--
+
 ### Nombre flottants : répartition
 
 <p>&nbsp;<p>
@@ -48,29 +71,6 @@ un peu de précision (de l'ordre du nombre
 | Exposant :  | -128 à 127 | -1024 à 1023 |
 | Décimales : | $\approx 7$ | $\approx 15$ |
 ||||
-
---
-
-### Nombres flottants : exemple `1.0`
-
-Peu de gens savent ce que `00 00 80 3F` représente.
-
-`3F 80 00 00`
-
-`= 0011 1111 1000 0000 0000 0000 0000 0000`
-
-`= 0 01111111 00000000000000000000000`
-
-Soustraire 127 à l'exposant, ajouter le premier bit à la mantisse:
-
-`= 0 00000000 100000000000000000000000`
-
-$$ = +1 \times 2^0 \times 1.0 = 1.0$$
-
-```python
->>> np.float32(1.0).data.hex()
-'0000803f'
-```
 
 --
 
