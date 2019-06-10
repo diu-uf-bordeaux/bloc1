@@ -242,11 +242,13 @@ Note:
 - Usages:
   - Sans perte : Archivage.
     - Ça ne sert a rien de re-compresser
-  - Avec perte : Signal.
+  - Avec perte : Signal (données perceptuelles).
+
+- Exemple d'algorithmes : RLE, Huffman, Lempel-Ziv
 
 Note:
 On peut remarquer un cas hybride du jpeg
 - Transformée en ondelettes (~fourier)
-- on crée beaucoup de zéros (enlève les poids pas assez fort)
+- on crée beaucoup de zéros, quantification (enlève les poids pas assez fort)
 - On lit en diagonale pour avoir le plus de zéros a la fin, et on ne les encode pas.
 - Sur tout ça on applique Huffman
