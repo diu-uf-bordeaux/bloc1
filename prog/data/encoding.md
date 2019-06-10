@@ -212,9 +212,13 @@ Magic | extension | Type
 `0xFFD8FF` | `.jpeg`  | Fichier JPEG
 `0xCAFEBABE` | `.class` | Classes java
 
+- Recherchez le type des fichiers du répertoire `guess` en utilisant `hexdump -C nom_de_fichier | head`
+
 Note:
 - servent aussi à détecter l'*endianness* en un seul `read`,
 0xCAFEBABE de java
+- Renommez les fichier pour les essayer
+- la réponse la plus rapide est bien sur `file guess/*`
 
 --
 
