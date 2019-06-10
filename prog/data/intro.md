@@ -27,3 +27,9 @@ d'idées](https://en.wikipedia.org/wiki/List_of_file_formats))
 import math               # Bibliothèque standard de math
 import numpy as np        # Bibliothèque numpy de calcul numérique
 ```
+
+### Preparation
+
+- Décompresser le [fichier](data/data.zip)
+
+> Si tout s'est bien passé, vous l'avez fait durant le tp de bienvenue

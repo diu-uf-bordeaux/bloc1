@@ -1,9 +1,4 @@
 ### Objets complexes
-
-- Préparatoire : décompresser le [fichier]()
-
---
-
 #### Fichiers
 
 - Associe un nom (**chemin**) à son contenu. \
