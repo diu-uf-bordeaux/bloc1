@@ -44,3 +44,15 @@ title: TP de bienvenue
 
 - Occupez vous ...
     - Ouvrir un nouveau fichier, le sauvegarder sous le nom `welcome.py`
+    - Copiez/collez le code suivant :
+    ```python
+    def mystere1(lst):
+        for i in range(1, len(lst)):
+          if lst[i] < lst[i - 1]:
+            return False
+        return True
+    ```
+    - Chargez le ... en appuyant sur `F5`
+    - Que fait cette fonction.
+    > indice, exectuez là avec des valeurs.
+    > Par exemple `[1, 3, 20, 42]`, et `[1, 3, -20, 42]`

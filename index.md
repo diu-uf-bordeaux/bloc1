@@ -3,7 +3,8 @@ layout: article
 title: Représentation des données et programmation
 ---
 
-- [Représentation de l'information]()
+- [TP de bienvenue](./welcome.html)
+- [Représentation de l'information](./prog/data.html)
 - [Programmation](./prog/prog.html)
 - [Web](./web)
 
