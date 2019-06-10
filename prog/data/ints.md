@@ -34,7 +34,7 @@ int('101010', 2)     # -> 42 (conversion depuis une chaine en base 2)
   être représentés sur 8, 16, 32, 64 bits ... \
   Ex. de noms de types&nbsp;: `char`, `int`, `unsigned int`, `long` ...
 
-- Le grand mensonge Python : les entiers sont de longueurs
+- Particularité de Python : les entiers sont de longueurs
   arbitraires.
 
 ```python
