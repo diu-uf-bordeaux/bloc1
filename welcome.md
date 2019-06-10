@@ -4,6 +4,12 @@ title: TP de bienvenue
 
 ## TP de Bienvenue
 
+<style>
+code {
+  color: #aa2222;
+}
+</style>
+
 ---
 
 1. *Logguez*-vous
