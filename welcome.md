@@ -35,7 +35,7 @@ title: TP de bienvenue
   - Soit en clic-o-drome
   - ou avec `unzip xxxx.zip`
 
-9. Lister les fichiers : `ls`
+9. Listez les fichiers : `ls`
     - Et avec plus d'information : `ls -l`
 
 10. Lancez `thonny`
@@ -53,6 +53,6 @@ title: TP de bienvenue
         return True
     ```
     - Chargez le ... en appuyant sur `F5`
-    - Que fait cette fonction.
-    > indice, exectuez là avec des valeurs.
+    - Que fait cette fonction ?
+    > Indice, exectuez là avec des valeurs.
     > Par exemple `[1, 3, 20, 42]`, et `[1, 3, -20, 42]`
