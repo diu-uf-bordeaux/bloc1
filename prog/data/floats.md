@@ -147,8 +147,8 @@ x == 3.14             # à proscrire
 ```python
 def quadratic_roots1(a, b, c):
     sq_delta = math.sqrt(b*b - 4*a*c)
-    x1 = (- b - sq_delta) / (2 * a)
-    x2 = (- b + sq_delta) / (2 * a)
+    x1 = (- b - sq_delta) / (2*a)
+    x2 = (- b + sq_delta) / (2*a)
     return (x1, x2)
 ```
 
@@ -160,10 +160,10 @@ def quadratic_roots1(a, b, c):
 def quadratic_roots2(a, b, c):
     sq_delta = math.sqrt(b*b - 4*a*c)
     if b > 0:
-        x1 = (- b - sq_delta) / (2 * a)
+        x1 = (- b - sq_delta) / (2*a)
     else:
-        x1 = (- b + sq_delta) / (2 * a)
-    x2 = c / (a * x1)
+        x1 = (- b + sq_delta) / (2*a)
+    x2 = c / (a*x1)
     return (x1, x2)
 ```
 
