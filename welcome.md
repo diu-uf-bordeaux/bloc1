@@ -8,7 +8,7 @@ title: TP de bienvenue
 
 - *Logguez*-vous
 
-- Ouvrir un navigateur (XXXXX) et faites le pointer vers : \
+- Ouvrir un navigateur (XXXXX) et faites le pointer vers : <br/>
   <https://diu-uf-bordeaux.github.io/bloc1/>
 
 - Ouvrez un terminal (si, si, il ne va pas vous mordre)
