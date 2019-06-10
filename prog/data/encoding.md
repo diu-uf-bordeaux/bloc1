@@ -1,17 +1,17 @@
 ### Objets complexes
 #### Fichiers
 
-- Associe un nom (**chemin**) à son contenu. \
-  Ceci relève des même problèmes et raisonnements que nous allons tenir ici
-  (cf. cours de système)
+- Un fichier associe un **chemin** (un nom) à son contenu concret. \
+  C'est encore une fois, un problème de représentation des données.
 
-- Acquisition : `open`, Restitution : `close`
+- Acquisition d'un pointeur sur le contenu du fichier: `open`.
+- Restitution et ménage : `close`
 - Entre les deux appels a `read`/`write` qui font avancer le pointeur sur le contenu.
 
 ```python
 file = open("someName.txt", mode="r")
-print(file.read(42))
-print(file.read(42))
+print(file.read(9))   # '\ndef read'
+print(file.read(9))   # '_file(fil'
 file.close()
 
 # Pour obtenir des bytes, lire en mode binaire, i.e., rajouter mode="rb"
@@ -235,16 +235,17 @@ Note:
 ### Compression
 
 - Réduire le nombre de bits pour représenter l'information
+- Stockage / Transfert.
 - Nécessite de décompresser
+- Profite d'une connaissance a priori sur la source
+
 - Usages:
-  - Archivage. Doit être exact.
-    - Stockage / transfert.
-    - Ca sert a rien de recompresser
-  - Réduction d'espace. Tolère une perte d'information.
-- Entropique / Arithmétique ?
+  - Sans perte : Archivage.
+    - Ça ne sert a rien de re-compresser
+  - Avec perte : Signal.
 
 Note:
-On peut remarquer le cas hybride du jpeg
+On peut remarquer un cas hybride du jpeg
 - Transformée en ondelettes (~fourier)
 - on crée beaucoup de zéros (enlève les poids pas assez fort)
 - On lit en diagonale pour avoir le plus de zéros a la fin, et on ne les encode pas.
