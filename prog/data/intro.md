@@ -24,14 +24,19 @@ d'idées](https://en.wikipedia.org/wiki/List_of_file_formats))
 
 
 ```python
-import math               # Bibliothèque standard de math
-import numpy as np        # Bibliothèque numpy de calcul numérique
+import math                     # Bibliothèque standard de math
+import numpy as np              # Bibliothèque numpy de calcul numérique
 import matplotlib.pyplot as mp  # Bibliothèque de graphiques
 ```
 
+<p>&nbsp;</p>
+
 ### Préparation
 
-- Décompresser le [fichier suivant](data/data.zip).
+- Penser à copier la liste précédente dans votre éditeur.
+
+- Décompresser le [fichier suivant](data/data.zip) dans un répertoire
+  de travail.
 
 Note:
 Si tout s'est bien passé, vous l'avez fait durant le tp de bienvenue

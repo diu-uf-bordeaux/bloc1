@@ -2,20 +2,21 @@
 #### Fichiers
 
 - Un fichier associe un **chemin** (un nom) à son contenu concret. \
-  C'est encore une fois, un problème de représentation des données.
+  Il est encore une fois question de représentation des données.
 
-- Acquisition d'un pointeur sur le contenu du fichier: `open`.
-- Restitution et ménage : `close`
-- Entre les deux appels a `read`/`write` qui font avancer le pointeur sur le contenu.
+- Acquisition d'un pointeur sur le contenu du fichier : `open`.
+- Restitution et nettoyage : `close`
+- Entre les deux, appels à `read`/`write` qui font avancer le pointeur
+  sur le contenu.
 
 ```python
-file = open("someName.txt", mode="r")
-print(file.read(9))   # '\ndef read'
-print(file.read(9))   # '_file(fil'
+file = open("someName.txt", mode="r")  # mode lecture
+print(file.read(9))                    # '\ndef read'
+print(file.read(9))                    # '_file(fil'
 file.close()
-
-# Pour obtenir des bytes, lire en mode binaire, i.e., rajouter mode="rb"
 ```
+
+- Pour obtenir des bytes, lire en [mode](https://docs.python.org/3/library/functions.html#open) binaire (`mode="rb"`).
 
 Note:
 Bon moment pour parler/introduire de la compression ?
@@ -31,15 +32,15 @@ La valeur `0xDEADBEEF` peut s'écrire :
 **big**      | `0xDE` | `0xAD` | `0xBE` | `0xEF`
 **little**   | `0xEF` | `0xBE` | `0xAD` | `0xDE`
 
-- Le protocole doit spécifier l'ordre
+- Le protocole doit spécifier l'ordre&nbsp;:
   - Les protocoles réseau utilisent généralement *big endian*
     (cf. la famille de fonction `ntoh`, *network to harware*).
   - Les types de fichiers `jpeg`/`wave` veulent *little endian*.
 
-- En python, on peut fabriquer un `int` a partir de `bytes`
+- En Python, on peut fabriquer un `int` a partir de `bytes`
 
 ```python
-int.from_bytes(some_bytes, endianness='big', signed=False)
+int.from_bytes(b'\x10\x00', byteorder='big', signed=False)  # -> 4096
 ```
 
 Note:
@@ -64,15 +65,17 @@ Note:
 
 - Associer un nombre à une lettre nécessite des standards
 
-- [ASCII]: Définit le représentation de 7 bits
+- [ASCII] : définit le représentation de 7 bits
 
-- [ISO-8859]: Définit une famille de représentation avec un 8ème bit (double la taille)
+- [ISO-8859] : définit une famille de représentation avec un 8ème bit
+  (double la taille)
 
-  - La représentation dépend de sa *code page*. Les plus connues des français :
-`iso-8859-15`, `iso-8859-1`.
+  - La représentation dépend de sa **code page**. Les plus connues des
+  français : `iso-8859-15`, `iso-8859-1`.
   - De moins en moins utilisé.
 
-- [Unicode]: Définit les caractères comme des *code point*. La version 12.1 en contient 137994 😀.
+- [Unicode]: définit les caractères comme des **code points**. La
+  version 12.1 en contient 137994 😀.
   - UTF-32: chaque caractère  est codé sur 4 octets.
 
 [ASCII]: https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange
@@ -98,7 +101,7 @@ Note:
 
 <div class="stretch center" style="font-size: 22px;">
 
-.   | 0x0 | 0x1 | 0x2 | 0x3 | 0x4 | 0x5 | 0x6 | 0x7 | 0x8 | 0x9 | 0xA | 0xB | 0xC | 0xD | 0xE | 0xF
+&nbsp;   | 0x0 | 0x1 | 0x2 | 0x3 | 0x4 | 0x5 | 0x6 | 0x7 | 0x8 | 0x9 | 0xA | 0xB | 0xC | 0xD | 0xE | 0xF
 -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|----|----|----
 **0x20** | SP  | !   |  "  |  #  |  $  |  %  |  &  |  '  |  (  |  )  |  *  |  +  |  ,  | -  | .  | /
 **0x30** | 0   |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  :  |  ;  |  <  | =  | >  | ?
@@ -128,7 +131,7 @@ Note:
 
 - Pas de changement pour l'existant: la table ASCII ne bouge pas,
 le code d'UNIX n'a pas besoin d'être changé.
-- Robuste (pas d'état), Moins lourd que UTF-32.
+- Robuste (pas d'état), moins lourd que UTF-32.
 
 Note:
 - La représentation d'un caractère ne peut pas être contenue dans la
@@ -155,20 +158,19 @@ Char. number range  |        UTF-8 octet sequence
 
 --
 
-### Encodage chaines de caractère : Python
+### Encodage chaînes de caractères : Python
 
-- Convertir une chaine en tableau de `bytes` en spécifiant l'encodage
+- Convertir une chaîne en tableau de `bytes` en spécifiant l'encodage
 
 ```python
 mes_bytes = "Ça".encode('iso-8859-15')  #  b'\xc7a'
 ```
 
-- Construire une chaine depuis un tableau de `bytes` en spécifiant l'encodage
+- Construire une chaîne depuis un tableau de `bytes` en spécifiant l'encodage
 
 ```python
 str(mes_bytes, 'iso-8859-15')  # "Ça"
 ```
-
 
 - Pour l'appliquer à toutes les lectures et les écritures d'un fichier texte (`mode="t"`)
 
@@ -176,7 +178,7 @@ str(mes_bytes, 'iso-8859-15')  # "Ça"
 open(filename, mode="r", encoding="utf-8")
 ```
 
-> Exercice: [python](data/poem)
+> Exercice: [poem](data/poem).
 
 --
 
@@ -234,17 +236,17 @@ Note:
 
 ### Compression
 
-- Réduire le nombre de bits pour représenter l'information
-- Stockage / Transfert.
+- Réduire le nombre de bits pour représenter l'information.
+- Utilisé à la fois pour le stockage et le rransfert.
 - Nécessite de décompresser
 - Profite d'une connaissance a priori sur la source
 
 - Usages:
-  - Sans perte : Archivage.
-    - Ça ne sert a rien de re-compresser
-  - Avec perte : Signal (données perceptuelles).
+  - Sans perte : Archivage
+    - Ça ne sert à rien de re-compresser.
+  - Avec perte : Signal (image, son, vidéo ...)
 
-- Exemple d'algorithmes : RLE, Huffman, Lempel-Ziv
+- Exemple d'algorithmes : RLE, Huffman, Lempel-Ziv ...
 
 Note:
 On peut remarquer un cas hybride du jpeg

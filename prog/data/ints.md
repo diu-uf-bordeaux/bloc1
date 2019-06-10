@@ -34,7 +34,7 @@ int('101010', 2)     # -> 42 (conversion depuis une chaine en base 2)
   être représentés sur 8, 16, 32, 64 bits ... \
   Ex. de noms de types&nbsp;: `char`, `int`, `unsigned int`, `long` ...
 
-- Particularité de Python : les entiers sont de longueurs
+- Particularité Python : les entiers sont de longueurs
   arbitraires.
 
 ```python
@@ -159,6 +159,12 @@ def convert(n, b):
         n = n // b
     res.reverse()
     return res
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+```python
+convert(42, 2)    # [1, 0, 1, 0, 1, 0]
+convert(42, 8)    # [5, 2]
 ```
 <!-- .element: class="fragment" data-fragment-index="1" -->
 

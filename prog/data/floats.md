@@ -109,6 +109,22 @@ plus_zero / plus_zero                 # -> nan (warning)
 
 --
 
+### Nombres flottants : manipulation
+
+|||
+|-|-|
+| Flottants sur 32 bits : | `np.float32` |
+| Flottants sur 64 bits : | `np.float64` <br/> ou `float` |
+|||
+
+```python
+i = np.float32(0.1)   # -> 1
+np.float64(i)         # -> 0.10000000149011612
+type(i)               # <class 'numpy.float32'>
+```
+
+--
+
 ### Nombres flottants : erreurs
 
 Que se passe t'il si l'on additionne plusieurs fois 1/10 sur 32
