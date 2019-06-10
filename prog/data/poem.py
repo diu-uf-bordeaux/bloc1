@@ -56,8 +56,7 @@ if __name__ == '__main__':
     ru = read_file('ru.txt', 'iso-8859-5')
     print(ru)
 
-    # Les lignes 3 et 4 doivent êtres fusionnées
-    fr[3:5] = [''.join(fr[3:5])] # Rajouter ça après
+    fr[3:5] = [''.join(fr[3:5])] # Les lignes 3 et 4 doivent êtres fusionnées
     ## On remplace la sous-liste (c'est cher mais c'est pas grave), de 3 à 5 (exclu)
     ## par la liste d'un element qui est la concatenation de la sous-liste de 3 à 5
 
