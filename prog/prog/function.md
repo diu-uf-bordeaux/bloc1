@@ -340,7 +340,7 @@ def uneMinuteEnPlus (h, m):
 
 --
 
-### Variables : exercice
+### Portée : exercice (1/3)
 
 - affiche-t-il 2 ou 3 ?
 
@@ -372,15 +372,10 @@ def test():
 test()
 ```
 
-- affiche-t-il 2 ou 3 ?
+--
 
-```python
-k = 2
-def test():
-    k = k + 1
-test()
-print(k)
-```
+### Portée : exercice (2/3)
+
 - affiche-t-il 2 ou 3 ?
 
 ```python
@@ -401,6 +396,10 @@ def test(k):
 k = test(k)
 print(k)
 ```
+
+--
+
+### Portée : exercice (3/3)
 
 - qu'affiche-t-il ?
 
