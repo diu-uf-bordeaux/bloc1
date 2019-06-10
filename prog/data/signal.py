@@ -38,15 +38,13 @@ data_filtered = [ data[i] if i in bounds else int(sum(data[i-1 : i+2]) / 3.0)
 mp.plot(data_filtered[:100])
 
 
-avg_filter = [1/3, 1/3, 1/3]
 def dot_product(v1, v2):
     return sum([ i*j for i, j in zip(v1, v2)])
 
+avg_filter = [1/3, 1/3, 1/3]
+
 data_filtered_dot = [ data[i] if i in bounds else int(dot_product(data[i-1 : i+2], avg_filter))
                       for i in range(data_len) ]
-
-print([ i for i, (d1, d2) in enumerate(zip(data_filtered, data_filtered_dot)) if d1 == d2 ])
-# Note: On pourrait faire un map de range aussi ... ca serait pas plus moche
 
 mp.plot(data_filtered_dot[:100])
 

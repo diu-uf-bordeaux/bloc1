@@ -3,6 +3,8 @@ title: Encodage des chaines de caractères
 layout: article
 ------
 
+## Encodage des chaines de caractères
+
 ---
 
 ### En ligne de commande

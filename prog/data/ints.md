@@ -113,6 +113,10 @@ La multiplication représente 22 * 5 = 110 = 46 (64)
 ![complément à deux](data/images/integer_complement.png)
   <!-- .element: class="stretch" style="max-width: 100%" -->
 
+```python
+~42 + 1 ## -42
+```
+
 --
 
 ### Entiers signés : manipulation
@@ -194,4 +198,6 @@ arr = [1,2]
 arr.remove(1)
 arr == [2]       # True  (même contenu)
 arr is [2]       # False (deux tableaux différents)
+1 << 10          # 2**9
+x | (1 << 10)    # Force le 9ème bit de x à `1`
 ```

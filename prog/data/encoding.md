@@ -233,8 +233,7 @@ Note:
   - Le nombre de pistes, la fréquence, le nombre de bits par ...
 - Ici, le signal pcm brut 8 bit, mono
 
-> Exercice: [signal](data/signal/)
-
+> Exercice: [signal](data/signal)
 
 --
 

@@ -207,13 +207,11 @@ réalisées par chaque calcul, comme le **conditionnement**. Mais cela n'a pas d
 
 $$ \frac{1}{n+1} \sum_{i=0}^{n} f(a + i \frac{b-a}{n} ) $$
 
-- Discuter de la précision obtenue.
-
 ```python
 def sum_riemann(f, a, b, n):
     res = 0
     x, h = a, float(b - a) / n
-    for i in range(n+1):
+    for i in range(n + 1):
         res = res + f(x)
         x   = x + h
     return res / (n + 1)
