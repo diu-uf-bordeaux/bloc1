@@ -26,10 +26,12 @@ d'idées](https://en.wikipedia.org/wiki/List_of_file_formats))
 ```python
 import math               # Bibliothèque standard de math
 import numpy as np        # Bibliothèque numpy de calcul numérique
+import matplotlib.pyplot as mp  # Bibliothèque de graphiques
 ```
 
-### Preparation
+### Préparation
 
-- Décompresser le [fichier](data/data.zip)
+- Décompresser le [fichier suivant](data/data.zip).
 
-> Si tout s'est bien passé, vous l'avez fait durant le tp de bienvenue
+Note:
+Si tout s'est bien passé, vous l'avez fait durant le tp de bienvenue

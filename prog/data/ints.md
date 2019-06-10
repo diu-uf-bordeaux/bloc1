@@ -73,7 +73,7 @@ i = i + 1               # 4294967296 (i est devenu un np.int64)
 --
 ### Entiers : Opérations élémentaires
 
-- Addition, multiplication (comme à l'école élementaire, mais en plus facile)
+- Addition, multiplication (comme à l'école élémentaire, mais en plus facile)
 
 <div class="half">
 
@@ -123,6 +123,13 @@ La multiplication représente 22 * 5 = 110 = 46 (64)
 
 - Manipulation avec Numpy
 
+|||
+|-|-|
+| Entiers signés sur 32 bits : | `np.int32` |
+| Entiers signés sur 64 bits : | `np.int64`|
+|||
+
+
 ```python
 i = np.int32(2**31-1)  # 2147483647
 np.binary_repr(i)      # '11111111111111111111111111111111' (que 31 '1')
@@ -145,7 +152,7 @@ mieux vaut ne pas le montrer. Oui, les affichages sont un peu bizarres.
   décimales&nbsp;:
 
 ```python
-def convert(n,b):
+def convert(n, b):
     res = []
     while n > 0:
         res.append(n % b)
