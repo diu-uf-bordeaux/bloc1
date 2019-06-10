@@ -227,7 +227,7 @@ Note:
   - Le nombre de pistes, la fréquence, le nombre de bits par ...
 - Ici, Le signal pcm brut 8 bit, mono
 
-> Chargez [signal](data/signal.py) dans `Thonny`
+> Exercice: [signal](data/signal/)
 
 
 --

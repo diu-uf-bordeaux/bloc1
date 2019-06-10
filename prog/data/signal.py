@@ -11,15 +11,16 @@ header = file.read(44)
 # Les 4 suivants contienent la longueur du fichier - 8 (la position courrante)
 #     et en little endian
 # Les 4 suivant contienent la chaine `WAVE`
-print(header[:4], header[8:12])
+print(header[:4], header[8:12], header[12:15])
 
 # on construit un int depuis la longueur ... et on le corrige pour le ramener a
 # la taille du signal
 data_len = int.from_bytes(header[4:8], "little") - (44 - 8)
-print("Longueur : ", data_len)
+print("Longueur attendue : ", data_len)
 
 # on lit le fichier ; puis on construit une liste a partir des donnée lues
-data = list(file.read(data_len)) # Optional and 'll read
+data = list(file.read())
+assert(data_len == len(data))
 
 # On ferme le fichier
 file.close()
