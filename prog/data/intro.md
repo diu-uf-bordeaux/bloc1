@@ -6,7 +6,7 @@
 nombres, textes, sons, images ... ([si vous manquez
 d'idées](https://en.wikipedia.org/wiki/List_of_file_formats))
 
-- A l'autre extrémité, un espace de stockage qui au fond est ne permet
+- A l'autre extrémité, un espace de stockage qui au fond ne permet
   d'écrire que des séquences de zéros et de uns.
 
 ![IEEE754](data/images/data_repr.png) <!-- .element: class="stretch" style="max-width: 70%; vertical-align:top" -->
