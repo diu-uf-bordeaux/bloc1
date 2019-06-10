@@ -162,17 +162,18 @@ Char. number range  |        UTF-8 octet sequence
 
 ### Encodage chaines de caractère : Python
 
-- Construire une chaine depuis un tableau de `bytes` en spécifiant l'encodage
-
-```python
-str(some_bytes, 'utf-8')
-```
-
 - Convertir une chaine en tableau de `bytes` en spécifiant l'encodage
 
 ```python
-ma_chaine.encode('iso-8859-15')
+mes_bytes = "Ça".encode('iso-8859-15')  #  b'\xc7a'
 ```
+
+- Construire une chaine depuis un tableau de `bytes` en spécifiant l'encodage
+
+```python
+str(mes_bytes, 'iso-8859-15')  # "Ça"
+```
+
 
 - Pour l'appliquer à toutes les lectures et les écritures d'un fichier texte (`mode="t"`)
 
@@ -184,9 +185,9 @@ open(filename, mode="r", encoding="utf-8")
 
 --
 
-###  Identifier le type
+###  Identifier le type d'un fichier
 
-- L'extension du fichier ne sert à rien.
+- L'extension du fichier n'est pas significative
   - Renommer une image ne donne pas une chanson.
 
 - On laisse des traces, des numéros magiques (`magic`).
@@ -202,7 +203,7 @@ Note:
 
 --
 
-## Identifier le type : Exercice
+### Identifier le type : Exercice
 
 Magic | extension | Type
 ------|-----------|------
@@ -211,7 +212,7 @@ Magic | extension | Type
 `MZ`  | `.exe`    | Exécutable windows
 `.ELF`|           | Exécutable linux
 `%PDF-` | `.pdf`  | Adobe PDF Document
-`0xFFD8FFDB` | `.jpeg`  | Fichier JPEG
+`0xFFD8FF` | `.jpeg`  | Fichier JPEG
 `0xCAFEBABE` | `.class` | Classes java
 
 Note:
@@ -224,13 +225,13 @@ Note:
 
 #### Anatomie
 
-- En tête de 44 octets
+- En-tête de 44 octets
   - commençant par `RIFF`
-  - Suivi de la longueur de la suite (*little endian*)
+  - Suivi de la longueur de la suite (4 octets *little endian*)
   - deux magics de plus `WAVE`, `fmt`
   - Le format audio (1: `pcm`)
   - Le nombre de pistes, la fréquence, le nombre de bits par ...
-- Ici, Le signal pcm brut 8 bit, mono
+- Ici, le signal pcm brut 8 bit, mono
 
 > Exercice: [signal](data/signal/)
 

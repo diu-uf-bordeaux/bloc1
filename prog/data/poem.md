@@ -3,6 +3,8 @@ title: Encodage des chaines de caractères
 layout: article
 ------
 
+---
+
 ### En ligne de commande
 
 - Dans un interpréteur, affichez `fr.txt et ru.txt`
