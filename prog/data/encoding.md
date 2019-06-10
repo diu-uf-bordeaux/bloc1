@@ -19,7 +19,7 @@ print(file.read(42))
 print(file.read(42))
 file.close()
 
-# Pour obtenir des bytes, rajouter encoding=None
+# Pour obtenir des bytes, lire en mode binaire, i.e., rajouter mode="rb"
 ```
 
 Note:
@@ -238,6 +238,8 @@ Note:
 - Nécessite de décompresser
 - Usages:
   - Archivage. Doit être exact.
+    - Stockage / transfert.
+    - Ca sert a rien de recompresser
   - Réduction d'espace. Tolère une perte d'information.
 - Entropique / Arithmétique ?
 
