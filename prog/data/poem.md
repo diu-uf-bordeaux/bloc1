@@ -49,27 +49,6 @@ layout: article
 
 ---
 
-### Traduire le poème
-
-- Fabriquer un fichier qui entrelace les langues
-```python
-with open("poem.txt", "w", encoding="utf-8") as file:
-    for r, f in zip(ru, fr):
-        print(r, f, file=file)
-```
-- *bonus*: Peut on proposer un autre encodage ? Essayez, comparez.
-- Vérifiez (dans l'interpréteur) le contenu de la variable `fr`. Comparez au fichier `poem.py`. Pourquoi.
-- Pour fixer le problème, au lieu d'éditer le fichier `fr.txt`, nous proposons de fusionner les lignes 3 et 4.
-  ```python
-  fr[3:5] = [''.join(fr[3:5])] # Les lignes 3 et 4 doivent êtres fusionnées
-
-  ## On remplace la sous-liste (c'est cher mais c'est pas grave), de 3 à 5 (exclu)
-  ## par la liste d'un élément qui est la concaténation de la sous-liste de 3 à 5
-  ```
-  Ou coller cette ligne ?
-
----
-
 ### Observer la représentation
 
 - En vous servant de la fonction `print_binary`, affichez les infos sur le
@@ -93,3 +72,26 @@ utf8_decode('\ufb79')
 ```
 
 - Lire le code de la fonction `utf8_decode`
+
+---
+
+### Traduire le poème
+
+- Fabriquer un fichier qui entrelace les langues
+```python
+with open("poem.txt", "w", encoding="utf-8") as file:
+    for r, f in zip(ru, fr):
+        print(r, f, file=file)
+```
+- *bonus*: Peut on proposer un autre encodage ? Essayez, comparez.
+- Vérifiez (dans l'interpréteur) le contenu de la variable `fr`. Comparez au fichier `poem.py`. Pourquoi.
+- Pour fixer le problème, au lieu d'éditer le fichier `fr.txt`, nous proposons de fusionner les lignes 3 et 4.
+  ```python
+  fr[3:5] = [''.join(fr[3:5])] # Les lignes 3 et 4 doivent êtres fusionnées
+
+  ## On remplace la sous-liste (c'est cher mais c'est pas grave), de 3 à 5 (exclu)
+  ## par la liste d'un élément qui est la concaténation de la sous-liste de 3 à 5
+  ```
+  Ou coller cette ligne ?
+
+

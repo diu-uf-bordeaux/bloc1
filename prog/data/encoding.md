@@ -37,7 +37,8 @@ La valeur `0xDEADBEEF` peut s'écrire :
 **little**   | `0xEF` | `0xBE` | `0xAD` | `0xDE`
 
 - Le protocole doit spécifier l'ordre
-  - Les protocoles réseau utilisent généralement *big endian* (cf. la famille de fonction `ntoh`).
+  - Les protocoles réseau utilisent généralement *big endian*
+    (cf. la famille de fonction `ntoh`, *network to harware*).
   - Les types de fichiers `jpeg`/`wave` veulent *little endian*.
 
 - En python, on peut fabriquer un `int` a partir de `bytes`
@@ -68,15 +69,15 @@ Note:
 
 - Associer un nombre à une lettre nécessite des standards
 
-- [ASCII]: Défini le représentation de 7 bits
+- [ASCII]: Définit le représentation de 7 bits
 
-- [ISO-8859]: Défini une famille de représentation avec un 8ème bit (double la taille)
+- [ISO-8859]: Définit une famille de représentation avec un 8ème bit (double la taille)
 
   - La représentation dépend de sa *code page*. Les plus connues des français :
 `iso-8859-15`, `iso-8859-1`.
   - De moins en moins utilisé.
 
-- [Unicode]: Défini les caractères comme des *code point*. La version 12.1 en contient 137994.
+- [Unicode]: Définit les caractères comme des *code point*. La version 12.1 en contient 137994 😀.
   - UTF-32: chaque caractère  est codé sur 4 octets.
 
 [ASCII]: https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange
@@ -113,9 +114,12 @@ Note:
 
 </div>
 
-> Même si les langages de programmation supportent de plus en plus
-  Unicode, il est fortement recommandé d'**éviter** de nommer des
-  identificateurs avec.
+> Il est fortement recommandé d'**éviter** de nommer des
+  identificateurs avec autre chose que des caractères ASCII.
+
+Note:
+- Python 3 le tolère par défaut
+- Essayez de lire du code en japonais/chinois ... avec des emojis
 
 --
 
@@ -123,14 +127,13 @@ Note:
 
 - Caractères sur un nombre variable d'octets.
   - Le nombre de `1` précédent le premier zéro donne le nombre d'octets
-    - Avec un cas particulier pour 0 qui veut dire 1.
-  - La charge est codée après le premier `0` de chaque octet en *bigendian*
+    - Avec un cas particulier pour `0` qui veut dire 1 octet.
+  - La charge (*payload*) est codée après le premier `0` de chaque octet en *bigendian*
   - Le préfixe `10`, sert pour les continuations
 
 - Pas de changement pour l'existant: la table ASCII ne bouge pas,
 le code d'UNIX n'a pas besoin d'être changé.
-  Robuste (pas d'état).
-  Moins lourd que UTF-32.
+- Robuste (pas d'état), Moins lourd que UTF-32.
 
 Note:
 - La représentation d'un caractère ne peut pas être contenue dans la
@@ -143,7 +146,7 @@ Note:
 
 ### UTF-8: Exemple
 
-> Extrait de la RFC-3629
+> Extrait de la [RFC-3629]
 
 Char. number range  |        UTF-8 octet sequence
 --------------------|---------------------------------------------
@@ -153,11 +156,11 @@ Char. number range  |        UTF-8 octet sequence
 0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
 <!-- .element: class="small" -->
 
+[RFC-3629]: https://tools.ietf.org/html/rfc3629
+
 --
 
 ### Encodage chaines de caractère : Python
-
-> Exercice: [python](data/poem)
 
 - Construire une chaine depuis un tableau de `bytes` en spécifiant l'encodage
 
@@ -176,6 +179,8 @@ ma_chaine.encode('iso-8859-15')
 ```python
 open(filename, mode="r", encoding="utf-8")
 ```
+
+> Exercice: [python](data/poem)
 
 --
 
