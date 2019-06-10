@@ -19,7 +19,7 @@ code {
 
 3. Ouvrez un terminal (si, si, il ne va pas vous mordre)
 
-4. Créez un répertoire `data`.
+4. Créez un répertoire `python`.
   - Pour créer un répertoire : `mkdir xxxx`
   > Les informaticiens n'aiment pas trop les majuscules et vraiment pas les espaces.
 
