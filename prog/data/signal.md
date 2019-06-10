@@ -2,6 +2,16 @@
 title: Traitement du signal en python
 ---
 
+## Traitement du signal
+
+<style>
+code {
+  color: #aa2222;
+}
+</style>
+
+--
+
 ### En ligne de commande
 
 Regarder les premiers octets du fichier `signal_bruite.wav`

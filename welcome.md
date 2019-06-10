@@ -14,7 +14,7 @@ code {
 
 1. *Logguez*-vous
 
-2. Ouvrir un navigateur (XXXXX) et faites le pointer vers : <br/>
+2. Ouvrir un navigateur et faites le pointer vers : <br/>
   <https://diu-uf-bordeaux.github.io/bloc1/>
 
 3. Ouvrez un terminal (si, si, il ne va pas vous mordre)
@@ -31,10 +31,10 @@ code {
 
 6. A partir de maintenant, nous considérons que vous êtes dans le répertoire `data`
 
-7. Téléchargez l'archive [suivante](xxxxx).
+7. Téléchargez l'archive [suivante](prog/data/data.zip).
   - Si vous voulez le faire en ligne de commande :
   ```python
-  wget xxxxx
+  wget https://diu-uf-bordeaux.github.io/bloc1/prog/data/data.zip
   ```
 
 8. Décompressez l'archive

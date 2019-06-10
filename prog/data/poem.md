@@ -5,6 +5,15 @@ layout: article
 
 ## Encodage des chaines de caractères
 
+<style>
+code {
+  color: #aa2222;
+}
+</style>
+
+> Я вас любил (Je vous aimais)
+>             -- A. Pouchkine
+
 ---
 
 ### En ligne de commande
