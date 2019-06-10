@@ -29,7 +29,7 @@ code {
   - Revenir dans votre maison : `cd`
   - Remonter d'un répertoire : `cd ..`
 
-6. A partir de maintenant, nous considérons que vous êtes dans le répertoire `data`
+6. A partir de maintenant, nous considérons que vous êtes dans le répertoire `python`
 
 7. Téléchargez l'archive [suivante](prog/data/data.zip).
   - Si vous voulez le faire en ligne de commande :

@@ -237,7 +237,7 @@ Note:
 ### Compression
 
 - Réduire le nombre de bits pour représenter l'information.
-- Utilisé à la fois pour le stockage et le rransfert.
+- Utilisé à la fois pour le stockage et le transfert.
 - Nécessite de décompresser
 - Profite d'une connaissance a priori sur la source
 
