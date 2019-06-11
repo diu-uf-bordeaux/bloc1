@@ -1,0 +1,9 @@
+#!/bin/bash
+
+S="\x4C \x45 \x4E \x41"
+
+for L in $S
+do
+    echo -n -e $L
+done
+echo

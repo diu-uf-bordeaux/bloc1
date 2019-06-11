@@ -12,7 +12,7 @@
 
 ### Variables : aliasing
 
-- En Python, tout est référence :
+En Python, tout est référence :
 
 -  Après x = y, les variables x et y représentent le même objet (même
 id)
@@ -29,10 +29,8 @@ est “transparent”.
 
 ```python
  m = [[0]*2]*2
-
  m [0][0] = 1
-
-m # -> [[1 , 0] , [1 , 0]]
+ m # -> [[1 , 0] , [1 , 0]]
 ```
 
 --

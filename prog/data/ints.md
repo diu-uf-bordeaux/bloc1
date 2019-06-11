@@ -2,16 +2,22 @@
 
 #### Représentation dans une base
 
-- Un nombre c'est un nombre peu importe la base $b$.
+- Un nombre est un nombre, peu importe la base $b$.
 
 $$d_n \times b^n + \dots + d_1 \times b^1 + d_0 \times b^0 \qquad \forall i, d_i \in [0;b[$$
 
-- Il peut s'écrire et s'afficher dans une base ou une autre.
+- Il peut s'écrire et s'afficher dans une base quelconque.
 
 ```python
 bin(42)              # -> '0b101010' (conversion en base 2)
 np.base_repr(42, 2)  # -> '101010'   (conversion en base b == 2)
-int('101010', 2)     # -> 42         (conversion en base b == 10)
+```
+
+- Ou s'écrire directement depuis une autre base que $10$.
+
+```python
+0x2a                 # -> 42 (conversion depuis la base 16)
+int('101010', 2)     # -> 42 (conversion depuis une chaine en base 2)
 ```
 
 --
@@ -28,7 +34,7 @@ int('101010', 2)     # -> 42         (conversion en base b == 10)
   être représentés sur 8, 16, 32, 64 bits ... \
   Ex. de noms de types&nbsp;: `char`, `int`, `unsigned int`, `long` ...
 
-- Le grand mensonge Python : les entiers sont de longueurs
+- Particularité Python : les entiers sont de longueurs
   arbitraires.
 
 ```python
@@ -67,7 +73,7 @@ i = i + 1               # 4294967296 (i est devenu un np.int64)
 --
 ### Entiers : Opérations élémentaires
 
-- Addition, multiplication (comme à l'école élementaire, mais en plus facile)
+- Addition, multiplication (comme à l'école élémentaire, mais en plus facile)
 
 <div class="half">
 
@@ -107,11 +113,22 @@ La multiplication représente 22 * 5 = 110 = 46 (64)
 ![complément à deux](data/images/integer_complement.png)
   <!-- .element: class="stretch" style="max-width: 100%" -->
 
+```python
+~42 + 1 ## -42
+```
+
 --
 
 ### Entiers signés : manipulation
 
 - Manipulation avec Numpy
+
+|||
+|-|-|
+| Entiers signés sur 32 bits : | `np.int32` |
+| Entiers signés sur 64 bits : | `np.int64`|
+|||
+
 
 ```python
 i = np.int32(2**31-1)  # 2147483647
@@ -130,11 +147,26 @@ mieux vaut ne pas le montrer. Oui, les affichages sont un peu bizarres.
 
 ### Exemple de fonction sur les entiers
 
-- Conversion en base $b$ :
+- Écrire une fonction `convert` qui prend en paramètre un entier $n$
+  positif et le convertit en base $b$ en produisant la liste de ses
+  décimales&nbsp;:
 
 ```python
-Insérer le code ici
+def convert(n, b):
+    res = []
+    while n > 0:
+        res.append(n % b)
+        n = n // b
+    res.reverse()
+    return res
 ```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+```python
+convert(42, 2)    # [1, 0, 1, 0, 1, 0]
+convert(42, 8)    # [5, 2]
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 --
 
@@ -174,9 +206,11 @@ True == 1, False == 0      # Both statements are True in Python
 
 
 ```python
-6 * 7 == 42      # True (et pas un seul '=' !)
+6 * 7 == 42      # True (attention, il y a 2 '=' !)
 arr = [1,2]
 arr.remove(1)
 arr == [2]       # True  (même contenu)
 arr is [2]       # False (deux tableaux différents)
+1 << 10          # 2**9
+x | (1 << 10)    # Force le 9ème bit de x à `1`
 ```

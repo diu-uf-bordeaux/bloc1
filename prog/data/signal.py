@@ -11,15 +11,16 @@ header = file.read(44)
 # Les 4 suivants contienent la longueur du fichier - 8 (la position courrante)
 #     et en little endian
 # Les 4 suivant contienent la chaine `WAVE`
-print(header[:4], header[8:12])
+print(header[:4], header[8:12], header[12:15])
 
 # on construit un int depuis la longueur ... et on le corrige pour le ramener a
 # la taille du signal
 data_len = int.from_bytes(header[4:8], "little") - (44 - 8)
-print("Longueur : ", data_len)
+print("Longueur attendue : ", data_len)
 
 # on lit le fichier ; puis on construit une liste a partir des donnée lues
-data = list(file.read(data_len)) # Optional and 'll read
+data = list(file.read())
+assert(data_len == len(data))
 
 # On ferme le fichier
 file.close()
@@ -37,15 +38,13 @@ data_filtered = [ data[i] if i in bounds else int(sum(data[i-1 : i+2]) / 3.0)
 mp.plot(data_filtered[:100])
 
 
-avg_filter = [1/3, 1/3, 1/3]
 def dot_product(v1, v2):
     return sum([ i*j for i, j in zip(v1, v2)])
 
+avg_filter = [1/3, 1/3, 1/3]
+
 data_filtered_dot = [ data[i] if i in bounds else int(dot_product(data[i-1 : i+2], avg_filter))
                       for i in range(data_len) ]
-
-print([ i for i, (d1, d2) in enumerate(zip(data_filtered, data_filtered_dot)) if d1 == d2 ])
-# Note: On pourrait faire un map de range aussi ... ca serait pas plus moche
 
 mp.plot(data_filtered_dot[:100])
 
