@@ -1,37 +1,44 @@
 ### Variables
 
-- Une **variable** est espace mémoire nommé qui **référence** une
-  valeur
+- Une **variable** est un espace mémoire nommé qui **référence** une
+  valeur.
+
+- <span class="label">Python</span> L'espace utilisé pour `x` peut
+  être identifié par `id(x)`.
+
 - <span class="label">Python</span> La déclaration des variables est implicite.
+
 - L'**affectation** stocke en mémoire la valeur de l'expression affectée :
-  `foo = 2 * 3`
+
+```python
+foo = 2 * 3          # foo contient 6
+```
+
 - L'**évaluation** renvoie la valeur actuellement référencée. \
-  `36 + foo`
+
+```python
+36 + foo             # s'évalue à 42
+```
 
 --
 
 ### Variables : aliasing
 
-En Python, tout est référence :
+#### En Python, tout est référence
 
--  Après x = y, les variables x et y représentent le même objet (même
-id)
+- L'**aliasing** consister à donner plusieurs noms à un même objet.
+  Après `x = y`, `x` et `y` représentent le même objet (même id).
 
--  Après x = y + z, on crée un nouvel objet de valeur y + z, dont l’id
-est stocké dans x.
+- Après `x = y + z`, on crée un nouvel objet `x` de valeur `y + z`
 
--  Après x.methode(...) ou x[...] = ...  la valeur de x peut être
-modifiée mais x ne change pas d’id.
+- Après `x.method(...)` ou `x[...] = ...`  la valeur de `x` peut être
+modifiée mais `x` ne change pas d’id.
 
--  Avec des non-mutables (nombres, tuples, chaînes), il n’y a que
-l’affectation pour modifier une variable !  Donc le partage de mémoire
-est “transparent”.
+- Avec des valeurs immutables (nombres, tuples, chaînes), seule
+  l’affectation peut modifier une variable. \
+  $\Rightarrow$ l'aliasing se fait sans risque.
 
-```python
- m = [[0]*2]*2
- m [0][0] = 1
- m # -> [[1 , 0] , [1 , 0]]
-```
+
 
 --
 
@@ -55,6 +62,14 @@ stillSame = x == y   # -> True
 
 x = "Une bien mauvaise idée"
 ```
+
+```python
+m = [[0]*2]*2        # -> [[1 , 0] , [1 , 0]]
+id(m[0]) == id(m[1]) # -> True (c'est une copie !)
+m[0][0] = 1          #
+m                    # -> [[1 , 0] , [1 , 0]]
+```
+
 
 --
 

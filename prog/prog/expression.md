@@ -87,7 +87,7 @@ abs(-12), max([5, 7, 3, 2])     # -> 12, 7
   ternaire</a> est une expression.
 
 ```python
-x if x > 0 else -x           # -> la valeur absolue de x
+x if x > 0 else -x              # -> la valeur absolue de x
 ```
 
 - Le `in` teste l'appartenance à une liste :
@@ -99,6 +99,6 @@ x if x > 0 else -x           # -> la valeur absolue de x
 - Le `is` teste si deux expressions s'évaluent en le même objet.
 
 ```python
-(0 == 0) is True             # -> True
-([] == []) is True           # -> False, both lists are different objects
+0 is 0             # -> True
+[] is []           # -> False, les deux listes sont des objets différents
 ```
