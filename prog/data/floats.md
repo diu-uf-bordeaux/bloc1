@@ -21,21 +21,21 @@ toujours égal à 1, ce qui permet de regagner le bit de signe.
 
 --
 
-### Nombres flottants : exemple `1.0`
+### Nombres flottants : exemple de `1.0`
 
-Peu de gens savent ce que `00 00 80 3F` représente.
+- Représentation binaire d'un flottant comme `1.0` sur 32 bits :
+  - Signe : positif donc `0`
+  - Mantisse : `100..00` privé du `1`, donc `00..00`
+  - Exposant : `0`, mais décalé de `127`, donc `01111111`
 
-`3F 80 00 00`
+`0 01111111 00000000000000000000000`
 
-`= 0011 1111 1000 0000 0000 0000 0000 0000`
+- Le découpage de ce nombre sur 4 octets donne&nbsp;:
 
-`= 0 01111111 00000000000000000000000`
+`0011 1111 1000 0000 0000 0000 0000 0000`
 
-Soustraire 127 à l'exposant, ajouter le premier bit à la mantisse:
-
-`= 0 00000000 100000000000000000000000`
-
-$$ = +1 \times 2^0 \times 1.0 = 1.0$$
+- En hexadécimal, cela se traduit par `3F 80 00 00` ou \
+  `00 00 80 3f` (selon l'[endianness](data.html#/4/1))
 
 ```python
 >>> np.float32(1.0).data.hex()
@@ -254,5 +254,10 @@ def sum_riemann(f, a, b, n):
         res = res + f(x)
         x   = x + h
     return res / (n + 1)
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+```python
+sum_riemann(lambda x: x, 0, 1, 100) # -> 0.5000000000000003
 ```
 <!-- .element: class="fragment" data-fragment-index="1" -->

@@ -10,10 +10,10 @@
   sur le contenu.
 
 ```python
-file = open("someName.txt", mode="r")  # mode lecture
+file = open("poem.py", mode="r")       # acquisition (mode lecture)
 print(file.read(9))                    # '\ndef read'
 print(file.read(9))                    # '_file(fil'
-file.close()
+file.close()                           # restitution
 ```
 
 - Pour obtenir des bytes, lire en [mode](https://docs.python.org/3/library/functions.html#open) binaire (`mode="rb"`).
@@ -192,8 +192,9 @@ open(filename, mode="r", encoding="utf-8")
 
 > [Plein de signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
 
-- Les fichiers textes sont plus problématiques.
-  - Le `#!` (prononcer *shebang*)
+- Les fichiers textes n'ont usuellement pas de signature.
+  - Certains débutent par un `#!` (prononcer *shebang*)
+    qui désigne l'interpréteur à utiliser pour lire le fichier.
 
 Note:
 - Pratique pour rendre un script directement utilisable
@@ -211,6 +212,7 @@ Magic | extension | Type
 `%PDF-` | `.pdf`  | Adobe PDF Document
 `0xFFD8FF` | `.jpeg`  | Fichier JPEG
 `0xCAFEBABE` | `.class` | Classes java
+||
 
 - Recherchez le type des fichiers du répertoire `guess` en utilisant `hexdump -C nom_de_fichier | head`
 

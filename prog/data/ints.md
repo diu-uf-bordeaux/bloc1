@@ -52,6 +52,7 @@ Et donc rend assez difficile de parler de représentation binaire modulo.
 
 |||
 |-|-|
+| Entiers non signés sur 8 bits :  | `np.uint8` |
 | Entiers non signés sur 32 bits : | `np.uint32` |
 | Entiers non signés sur 64 bits : | `np.uint64`|
 |||
@@ -114,7 +115,7 @@ La multiplication représente 22 * 5 = 110 = 46 (64)
   <!-- .element: class="stretch" style="max-width: 100%" -->
 
 ```python
-~42 + 1 ## -42
+~42 + 1 # Calcul du complément à 42 -> -42
 ```
 
 --
@@ -125,6 +126,7 @@ La multiplication représente 22 * 5 = 110 = 46 (64)
 
 |||
 |-|-|
+| Entiers signés sur 8 bits :  | `np.int8` |
 | Entiers signés sur 32 bits : | `np.int32` |
 | Entiers signés sur 64 bits : | `np.int64`|
 |||
@@ -211,6 +213,6 @@ arr = [1,2]
 arr.remove(1)
 arr == [2]       # True  (même contenu)
 arr is [2]       # False (deux tableaux différents)
-1 << 10          # 2**9
-x | (1 << 10)    # Force le 9ème bit de x à `1`
+1 << 10          # -> 2**10 == 1024
+x | (1 << 10)    # Force le 10ème bit de x à `1`
 ```
