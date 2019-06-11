@@ -29,10 +29,13 @@ toujours égal à 1, ce qui permet de regagner le bit de signe.
   - Exposant : `0`, mais décalé de `127`, donc `01111111`
 
 `0 01111111 00000000000000000000000`
+<!-- .element: style="background-color:#cccccc" -->
+
 
 - Le découpage de ce nombre sur 4 octets donne&nbsp;:
 
 `0011 1111 1000 0000 0000 0000 0000 0000`
+<!-- .element: style="background-color:#cccccc" -->
 
 - En hexadécimal, cela se traduit par `3F 80 00 00` ou \
   `00 00 80 3f` (selon l'[endianness](data.html#/4/1))
