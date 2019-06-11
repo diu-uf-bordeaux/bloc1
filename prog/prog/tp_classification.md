@@ -16,7 +16,9 @@ une cohorte de 366 personnes.
 
 ### Importer les données
 
-- Récupérez le fichier `alzheimer_data.py`
+- Récupérez le fichier [exo_alzheimer_data.py](prog/exo_alzheimer_data.py)
+
+Il a été construit à partir du fichier csv [suivant](prog/Alzheimer.csv)
 
 - Importez les données avec le code suivant :
 
