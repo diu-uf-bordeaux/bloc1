@@ -1,4 +1,4 @@
----
+﻿---
 layout: article
 title: Mise en pratique
 sidebar:
@@ -9,7 +9,7 @@ Téléchargez et décompressez l'archive [developpement.zip](developpement.zip).
 
 ## Serveur de pages statiques
 
-Nous avons codé un serveur qui est gère uniquement les pages statiques.
+Nous avons codé un serveur qui gère uniquement les pages statiques.
 
 Lancez ce serveur en allant dans répertoire `static` et en exécutant les trois commandes suivantes :
 
