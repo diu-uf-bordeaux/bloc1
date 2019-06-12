@@ -11,6 +11,18 @@ title: Représentation des données et programmation
 
 ## Thématiques pour le projet
 
+### Représentation de l'information
+- Compression de données
+- Echantillonnage
+- Nombres flottants (_e.g_, visualisation des erreurs)
+- Chaînes de caractères 
+
+### Programmation
+- Compréhension de listes
+- Tranches / Slices
+- Interface graphique (simple)
+
+
 ### Web
 - Persistence des données côté client (_e.g., cookies_) 
 - Mécanismes de caches
