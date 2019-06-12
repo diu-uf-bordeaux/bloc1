@@ -11,7 +11,7 @@ Téléchargez et décompressez l'archive [css.zip](css.zip).
 
 L'objectif est de changer un style CSS.
 
-1. Changez le style CSS de l'[exemple](bj/index.html) pour faire en sorte que la couleur de fond ne soit plus en noir.
+1. Changez le style CSS de l'[exemple](css/bj/index.html) pour faire en sorte que la couleur de fond ne soit plus en noir.
 2. Ajoutez un style pour faire en sorte que le score du joueur (balise `span`) soit dans une police plus grosse.
 
 
