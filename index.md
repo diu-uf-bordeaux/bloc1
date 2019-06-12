@@ -9,7 +9,7 @@ title: Représentation des données et programmation
 - [Web](./web)
 
 
-## Thématiques pour le projet
+## Suggestion de thématiques pour le projet
 
 ### Représentation de l'information
 - Compression de données
@@ -21,7 +21,6 @@ title: Représentation des données et programmation
 - Compréhension de listes
 - Tranches / Slices
 - Interface graphique (simple)
-
 
 ### Web
 - Persistence des données côté client (_e.g., cookies_) 
