@@ -35,7 +35,7 @@ def function(args):
 </div>
 
 - <span class="label">Python</span> Les instructions d'un bloc doivent
-  être au même niveau d'indentation (ou plus profond si sous-blocs).
+  être au même niveau d'indentation (ou plus profond si sous-blocs, après un `:`).
 
 Note: Python redéfinit la notion de bloc, qui n'est pas la même
 puisqu'elle ne considère comme bloc que les modules, fonctions et

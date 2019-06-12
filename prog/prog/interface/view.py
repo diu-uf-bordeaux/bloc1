@@ -1,10 +1,10 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" View
+"""
+View
 """
 
-         
 from math import *
 from tkinter import *
 
@@ -37,7 +37,7 @@ def draw_grid():
 def healthy_board():
     model.healthy_board(pandemia, nc, nl)
     draw_grid()
-    
+
 def random_board():
     immunePercent=immuneVal.get()
     model.random_board(pandemia, nc, nl, immunePercent)
@@ -50,7 +50,6 @@ def edit_grid(event):
     model.set_cell(pandemia, l, c, state)
     color = states_colors[state]
     set_cell_color(l, c, color)
-   
 
 def compute_evolution():
     if pause.get() == 0 :
@@ -73,7 +72,7 @@ def switch_pause():
 
 def get_prevision():
     return (100-immuneVal.get())*mortality//100
-        
+
 #----------------- interface ------------------------
 
 window = Tk()
@@ -88,7 +87,7 @@ canvas = Canvas(window, width=nc*cell_size, height=nl*cell_size,
 grid = [None]*nc
 for i in range (0, nc):
     grid[i] = [None]*nl
-        
+
 for l in range(nl):
     for c in range(nc):
         top_x = c*cell_size+1
@@ -173,24 +172,10 @@ result = LabelFrame(frame, bd=4, text="Bilan")
 result.grid(row=3, column=0, sticky="ew", pady=10, ipady=10, padx=10, ipadx=10)
 mortalityTxt= Label(result, bd = 4, text = str(mortality) + "% de mortalité dans la population touchée")
 mortalityTxt.grid(row=0)
-        
+
 #prevision= Label(result, bd = 4, text = "Prévision : " + str(get_prevision()) + "% de mortalité")
 #prevision.grid (row = 0)
 final_result= Label(result, bd = 4, text = "Résultat : " + str(round(model.compute_stats(pandemia, nc, nl, mortality), 2)) + "% de mortalité totale")
 final_result.grid (row = 1)
 
-           
 window.mainloop()
-
-
-            
-
-
-
-     
-   
-            
-   
-        
-
-    

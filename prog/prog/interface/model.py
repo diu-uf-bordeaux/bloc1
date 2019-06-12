@@ -1,7 +1,8 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""Module model: the cellular automaton modelizing a pandemia.
+"""
+Module model: the cellular automaton modelizing a pandemia.
 """
 
 
@@ -51,7 +52,6 @@ def compute_stats(board, width, height, mortality):
             if board[l][c] == "touched":
                 count = count + 1
     return count * mortality / (height*width)
-        
 
 def board_copy (board, width, height):
     """ Returns a "deep" copy of the board. """
@@ -62,16 +62,16 @@ def board_copy (board, width, height):
 
 def neighbors(board, width, height, l, c):
     """ Returns a list of 8-neighbors (less on the borders)."""
-    L = []
+    neighbors_list = []
     for dl in range(- 1, 2):
         for dc in range(- 1, 2):
             if (0 <= c + dc < width and 0 <= l + dl < height):
-                L.append(board[l + dl][c + dc])
-    return L
+                neighbors_list.append(board[l + dl][c + dc])
+    return neighbors_list
 
 def get_cell(board, l, c):
     return board[l][c]
-    
+
 def set_cell(board, l, c, state):
     board[l][c] = state
 
@@ -92,7 +92,6 @@ def compute_step(board, width, height):
                 changed = True
     return changed
 
-    
 def next_state(initialState, neighbors):
     """Applies one step of evolution.
 
