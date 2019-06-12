@@ -134,4 +134,4 @@ def join(lst, sep):
 |`join(["a", "b"], ",")` | `"a,b"` | longueur > 1 |
 |||
 
-- C'est l'occasion de voir que la fonction ne gère pas les tableau
+- C'est l'occasion de voir qu'elle ne gère pas les tableaux vides.
