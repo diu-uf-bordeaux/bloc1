@@ -47,6 +47,29 @@ toujours égal à 1, ce qui permet de regagner le bit de signe.
 
 --
 
+### Nombres flottants : exemple de `0.1`
+
+- Expansion binaire de 0.1 :
+
+| $\times 2\mod 1$  | 0.1 | 0.2 | 0.4 | 0.8 | 0.6 | 0.2 | 0.4 | 0.8 | 0.6 | 0.2 | ... |
+|-    |-    |-    |-    |-    |-    |-    |-    |-    |-    |-    |-    |
+| Bits | 0   | 0   | 0   | 0   | 1   | 1   | 0   | 0   | 1   | 1   | ... |
+
+$$ \frac{1}{10} = 0.000110011001100\dots = 1.10011001100\dots \times 2^{-4} $$
+
+  - Exposant : `-4`, mais décalé de `127`, donc `01111011`
+  - Mantisse : `110011001100..` privé du premier `1`, \
+    avec un arrondi à `1` sur le dernier bit.
+
+`0 01111011 10011001100110011001101`
+<!-- .element: style="background-color:#cccccc" -->
+
+`3D CC CC CD` ou `CD CC CC 3D` selon l'[endianness](data.html#/4/1)
+<!-- .element: style="background-color:#cccccc" -->
+
+
+--
+
 ### Nombre flottants : répartition
 
 <p>&nbsp;<p>

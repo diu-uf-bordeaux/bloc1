@@ -72,11 +72,9 @@ def computeMean(data, group, feature):
         Calcule la moyenne des données de la classe `group` pour la caractéristique `feature`.
         Suppose que feature est une caractéristique numérique (AGE, SCORE, HIPPOVOL, HIPPOPERCENT)
     """
-    
     dataGroup = filterData(data, CLASS, group)
     return statistics.mean(extractFeature(dataGroup, feature))
-    
-                    
+
 def classificationErrorRate(testData, feature, meanAD, meanCN):
     """
        Classifie chaque individu dans `testData` suivant la caractéristique
@@ -149,7 +147,6 @@ if __name__ == '__main__':
         raise "Découpage des données incorrect"
 
     # Affichage des résultats
-    
     print("Erreur score cognitif : ", classificationErrorRateForFeature(trainingdata, testingdata, SCORE), "%")
     print("Erreur volume hippocampe : ", classificationErrorRateForFeature(trainingdata, testingdata, HIPPOVOL), "%")
     print("Erreur volume relatif hippocampe: ", classificationErrorRateForFeature(trainingdata, testingdata, HIPPOPERCENT), "%")
@@ -159,15 +156,15 @@ if __name__ == '__main__':
     scoresAD = extractFeature(dataAD, SCORE)
     dataCN = filterData(data, CLASS, "CN")
     scoresCN = extractFeature(dataCN, SCORE)
-    
+
     matplotlib.pyplot.hist(scoresAD)
     matplotlib.pyplot.hist(scoresCN)
-    
+
     matplotlib.pyplot.show()
-    
+
     volumesAD = extractFeature(dataAD, HIPPOVOL)
     volumesCN = extractFeature(dataCN, HIPPOVOL)
     matplotlib.pyplot.hist(volumesAD)
     matplotlib.pyplot.hist(volumesCN)
     matplotlib.pyplot.show()
-    
+

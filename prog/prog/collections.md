@@ -194,7 +194,7 @@ Appel de fonction ?
 - Exemple : les clés sont des chaînes, les valeurs des entiers.
 
 ```python
-pills = { "red" : 1, "blue" : 1, "pink" : 0 }
+pills = { "red": 1, "blue": 1, "pink": 0 }
 pills["red"]       # -> 1
 pills["pink"]      # -> 0
 "blue" in pills    # -> True

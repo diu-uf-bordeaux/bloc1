@@ -41,7 +41,7 @@ Correction == le code fait ce qu'il prétend faire
 ```python
 def join(lst, sep):
     """Concatène les éléments d'une liste avec un séparateur"""
-    result = lst.copy().pop(0)
+    result = lst.pop(0)
     for l in lst:
         result = result + sep + l
     return result
@@ -115,7 +115,7 @@ def join(lst, sep):
 
 - Faiblesse&nbsp;: les tests ne vérifient pas toutes les exécutions.
 
-"Testing shows the presence, not the absence of bugs"
+"Testing shows the presence, not the absence of bugs" -- Dijkstra
 
 --
 
@@ -134,4 +134,80 @@ def join(lst, sep):
 |`join(["a", "b"], ",")` | `"a,b"` | longueur > 1 |
 |||
 
-- C'est l'occasion de voir que la fonction ne gère pas les tableau
+- C'est l'occasion de voir qu'elle ne gère pas les tableaux vides.
+
+--
+
+### Tests : exemples avec `join`
+
+
+Avec copie  <!-- .element: class="title" -->
+```python
+def join(lst, sep):
+    """Concatène les éléments d'une liste avec un séparateur"""
+    if len(lst) == 0:          # ou not lst
+        return ""
+    lstcpy = lst.copy()        # ou list(lst)
+    result = lstcpy.pop(0)
+    for l in lstcpy:
+        result = result + sep + l
+    return result
+```
+
+Avec itérateur  <!-- .element: class="title" -->
+```python
+def join(lst, sep):
+    """Concatène les éléments d'une liste avec un séparateur"""
+    if len(lst) == 0:
+        return ""
+    it = iter(lst)
+    result = next(it)
+    for l in it:
+        result = result + sep + l
+    return result
+```
+
+
+
+--
+
+### Tests : exemples avec `fact`
+
+```python
+import minitest             # cf. slide suivante
+
+def fact(n):
+    """une fonction factorielle"""
+    if n <= 1:
+        return 1
+    else:
+        return n * fact(n - 1)
+
+_fact_test_cases = [        # un ensemble de cas de test
+    ((2,), 2),
+    ((3,), 6),
+    ((3,), 7)
+]
+
+if __name__ == '__main__':  # code exécuté quand on charge ce module seul
+    minitest.run(fact, _fact_test_cases)
+```
+
+--
+
+### Le module `minitest`
+
+```python
+def run(fun, test_cases):
+    return [ params
+             for (params, expected) in test_cases
+             if not assertEquals(expected, fun.__call__(*params),
+                                 "%s%s" % (fun.__name__, params))]
+
+def assertEquals(expected, actual, message=None):
+    result = expected == actual
+    if not result:
+        print("In %s, expecting %s, found %s" % (message, expected, actual))
+    return result
+
+```
