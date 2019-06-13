@@ -270,9 +270,9 @@ update_str()
 ```python
 def join(lst, sep):
     """Concatène les éléments d'une liste avec un séparateur"""
-    result = lst.pop(0)
-    for l in lst:
-        result = result + sep + l
+    result = lst[0]
+    for l in range(1, len(lst)):
+        result = result + sep + lst[l]
     return result
 ```
 - Dans cette fonction &nbsp;:
