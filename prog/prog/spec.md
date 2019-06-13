@@ -115,7 +115,7 @@ def join(lst, sep):
 
 - Faiblesse&nbsp;: les tests ne vérifient pas toutes les exécutions.
 
-"Testing shows the presence, not the absence of bugs"
+"Testing shows the presence, not the absence of bugs" -- Dijkstra
 
 --
 
