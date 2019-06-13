@@ -4,11 +4,13 @@ title: Représentation des données et programmation
 ---
 
 - [TP de bienvenue](./welcome.html)
-- [Représentation de l'information](./prog/data.html) - version [pdf](./prog/data.html?print-pdf)
-- [Programmation](./prog/prog.html) - version [pdf](./prog/prog.html?print-pdf)
+- [Représentation de l'information](./prog/data.html) - version [imprimable](./prog/data.html?print-pdf)
+- [Programmation](./prog/prog.html) - version [pimprimable](./prog/prog.html?print-pdf)
 - [Web](./web)
 
-*Remarque: les version `pdf` marchent mieux sous chrome. Elles sont plus longues à charger*
+*Remarque: Les version imprimables rendent mieux sous chrome. Elles sont plus
+longues à charger. Pour les imprimer ou generez un pdf, utiliser la fonction
+imprimer dans un pdf de votre navigateur.*
 
 ## Suggestion de thématiques pour le projet
 
