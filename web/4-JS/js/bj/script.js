@@ -21,6 +21,7 @@ function nouvelleCarte() {
     while (cartes[i] != 0) {
         i = Math.floor((Math.random()*52)+1);
     }
+    cartes[i] = 1;
     return i;
 }
 
