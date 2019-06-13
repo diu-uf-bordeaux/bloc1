@@ -50,7 +50,7 @@ function ajouterCarte(src) {
 ```
 Et ajoutez les fonctions :
 
-````javascript 
+```javascript 
 function allowDrop(ev) {
     ev.preventDefault();
 }
