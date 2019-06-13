@@ -62,9 +62,9 @@ any([ e < 0 for e in l ])
 ### Compréhensions : exemples
 
 ```python
-people = [("Thalès",-625,-547), ("Archimède",-287,-212),
-          ("Épicure",-331,-270), ("Pythagore",-580,-495),
-          ("Socrate",-470,-399), ("Platon",-428,-347) ]
+people = [("Thalès",  -625, -547), ("Archimède", -287, -212),
+          ("Épicure", -331, -270), ("Pythagore", -580, -495),
+          ("Socrate", -470, -399), ("Platon",    -428, -347) ]
 ```
 
 - Quelle est la liste des âges de ces illustres personnes ?
