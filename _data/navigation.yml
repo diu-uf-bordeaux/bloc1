@@ -1,4 +1,6 @@
 header:
+  - title: Didactique
+    url: /didactique/didactique.html
   - title: Représentation de l'information
     url: /prog/data.html
   - title: Programmation
