@@ -173,20 +173,22 @@ def join(lst, sep):
 
 ### Tests : exemples avec `fact`
 
+- Exemple complet d'une fonction fournie avec ses tests&nbsp;:
+
 ```python
-import minitest             # cf. slide suivante
+import minitest             # module défini au slide suivant
 
 def fact(n):
-    """une fonction factorielle"""
+    """Renvoie le produit des entiers de 1 à n"""
     if n <= 1:
         return 1
     else:
         return n * fact(n - 1)
 
 _fact_test_cases = [        # un ensemble de cas de test
-    ((2,), 2),
-    ((3,), 6),
-    ((3,), 7)
+    ((2,), 2),              # fact(2) == 2
+    ((3,), 6),              # fact(3) == 6
+    ((3,), 7),              # fact(3) == 7, un test faux
 ]
 
 if __name__ == '__main__':  # code exécuté quand on charge ce module seul
@@ -197,17 +199,25 @@ if __name__ == '__main__':  # code exécuté quand on charge ce module seul
 
 ### Le module `minitest`
 
+- Exemple de module fournissant des fonctions pour les tests&nbsp;:
+
 ```python
+def assertEquals(expected, actual, msg=None):
+    """Teste l'égalité de deux valeurs, affichant un message
+        si jamais elles sont différentes."""
+    result = (expected == actual)
+    if not result:
+        print("In %s, expecting '%s', found '%s'" % (msg, expected, actual))
+    return result
+
 def run(fun, test_cases):
+    """Etant donnée une fonction f et une liste de paires
+       (params, retour), vérifie que f(params) == retour et
+       renvoie la liste des paires pour lesquelles c'est faux."""
     return [ params
              for (params, expected) in test_cases
              if not assertEquals(expected, fun.__call__(*params),
                                  "%s%s" % (fun.__name__, params))]
-
-def assertEquals(expected, actual, message=None):
-    result = expected == actual
-    if not result:
-        print("In %s, expecting %s, found %s" % (message, expected, actual))
-    return result
-
 ```
+
+- Note : à sauver dans un fichier `minitest.py`

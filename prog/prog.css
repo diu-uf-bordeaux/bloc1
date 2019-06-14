@@ -83,28 +83,49 @@ ul code {
     right: 0px;
     margin: 3px;
     padding: 2px;
-  border-radius: 4px;
+    border-radius: 4px;
+}
+
+a.ribbon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 3px;
+    padding: 2px;
+    border-radius: 4px;
+    color: white;
 }
 
 .ribbon-principle {
     background-color: blue;
-    color: white; }
+    color: white;
+}
 .ribbon-principle:before {
   content: "Principe";
 }
 
 .ribbon-exercise {
     background-color: green;
-    color: white;}
+    color: white;
+  }
 .ribbon-exercise:before {
   content: "Exercice";
 }
 
 .ribbon-advice {
     background-color: #aa2222;
-    color: white;}
+    color: white;
+}
 .ribbon-advice:before {
   content: "Conseils";
+}
+
+.ribbon-ref {
+    background-color: #aa22aa;
+    color: white;
+}
+.ribbon-ref:before {
+  content: "Référence";
 }
 
 li.fill {
