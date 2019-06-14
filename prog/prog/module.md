@@ -36,14 +36,51 @@ print(path)
 </div>
 
 Note:
+Message
 - Copier/coller des fonctions c'est pas top
 - Un fichier, okay on peut faire un répertoire ...
+
+Syntaxe: un mot sur le `as`
 
 --
 
 ### Fabriquer un module
 
-https://docs.python.org/3/tutorial/modules.html
+<a href='https://docs.python.org/3/tutorial/modules.html' class='ribbon ribbon-ref'></a>
+
+fact.py <!-- .element: class="title" -->
+```python
+def fact(n):
+    """Renvoie le produit des entiers de 1 à n"""
+    if n <= 1:
+        return 1
+    else:
+        return n * fact(n - 1)
+```
+
+exemple.py <!-- .element: class="title" -->
+```python
+import fact from fact
+
+def binomial(n, k):
+    """Retourne le coéfficient binomial de n et k"""
+    if n > k:
+        k, n = n, k
+    return fact(n) / (fact(n)*fact(n - k))
+
+if __name__ == '__main__'
+    n, k = int(input()), int(input())      # Bouuuh
+    # from sys import argv                 # Importer la ligne de commande
+    # n, k = int(argv[1]), int(argv[2])    # Les valeurs commencent à [1:]
+    print("C(%s, %s) = %s" % (k, n, binomial(k, n)))
+
+```
+
+Note:
+- Pourquoi `input` n'est pas la meilleure idée du monde
+- Comment le remplacer par une ligne de commande :
+  - `from sys import argv` (apres le `if main`)
+  - `n, k = int(argv[1]), int(argv[2])`
 
 --
 
