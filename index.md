@@ -3,6 +3,7 @@ layout: article
 title: Représentation des données et programmation
 ---
 
+- [Didactique](./didactique/didactique.html)
 - [TP de bienvenue](./welcome.html)
 - [Représentation de l'information](./prog/data.html) - version [imprimable](./prog/data.html?print-pdf)
 - [Programmation](./prog/prog.html) - version [imprimable](./prog/prog.html?print-pdf)
