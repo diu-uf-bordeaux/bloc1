@@ -58,7 +58,7 @@ def fact(n):
         return n * fact(n - 1)
 ```
 
-exemple.py <!-- .element: class="title" -->
+binomial.py <!-- .element: class="title" -->
 ```python
 import fact from fact
 
