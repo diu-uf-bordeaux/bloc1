@@ -4,7 +4,7 @@
 
 - Regroupe un ensemble de fonctions (classes, modules) dans un même module, i.e., un fichier.
 
-- Importer un module, rends les fonctions du module accessible au module courant.
+- Importer un module rend les fonctions du module accessible au module courant.
 
 - Pour éviter les conflits de noms, les **espaces de noms** permettent de lever
   les ambigüités. Le module est aussi un espace de nom.

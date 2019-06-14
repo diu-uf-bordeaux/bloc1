@@ -23,7 +23,7 @@ Il a été construit à partir du fichier csv [suivant](prog/Alzheimer.csv)
 - Importez les données avec le code suivant :
 
 ```python
-import alzheimer_data
+import exo_alzheimer_data
 
 data = import_data()
 ```
