@@ -9,7 +9,10 @@ indépendamment des machines qui les font)
 
 ![IEEE754](data/images/ieee754_repr.png) <!-- .element: class="stretch" style="max-width: 60%;" -->
 
-Sur 32 bits : ![IEEE754](data/images/ieee754_bits.png) <!-- .element: class="stretch" style="max-width: 90%;vertical-align: middle" -->
+Sur 32 bits : ![IEEE754](data/images/ieee754_bits.png) <!-- .element: class="stretch" style="max-width: 90%;vertical-align: middle; margin:0px" -->
+
+- La représentation d'un flottant donné est [calculée ici](https://baseconvert.com/ieee-754-floating-point).
+
 Note:
 
 La norme date de 1985, et est une belle histoire où la standardisation
