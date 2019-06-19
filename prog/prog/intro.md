@@ -78,10 +78,12 @@ Tout n'est pas incompatible ... cf java/python/...
   - Utilisez la complétion automatique
 - Restez cohérent dans le style.
 - Utilisez des conventions de codage (<span class="label">Python</span> [PEP 8](https://www.python.org/dev/peps/pep-0008))
+  - [PEP8 Online Validator][]
 - Testez régulièrement votre code.
 - Commentez (et en anglais c’est mieux !)
 - Remplacez le copier/coller par le couper/coller
 
+[PEP8 Online Validator]: http://pep8online.com
 Note:
 Parlez le code
 C'est en programmant qu'on devient programmeron (e.g seule la pratique permet de s'améliorer)
