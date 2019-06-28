@@ -41,7 +41,7 @@ Correction == le code fait ce qu'il prétend faire
 ```python
 def join(lst, sep):
     """Concatène les éléments d'une liste avec un séparateur"""
-    result = lst.copy().pop(0)
+    result = lst.pop(0)
     for l in lst:
         result = result + sep + l
     return result
@@ -115,7 +115,7 @@ def join(lst, sep):
 
 - Faiblesse&nbsp;: les tests ne vérifient pas toutes les exécutions.
 
-"Testing shows the presence, not the absence of bugs"
+"Testing shows the presence, not the absence of bugs" -- Dijkstra
 
 --
 
@@ -135,3 +135,89 @@ def join(lst, sep):
 |||
 
 - C'est l'occasion de voir qu'elle ne gère pas les tableaux vides.
+
+--
+
+### Tests : exemples avec `join`
+
+
+Avec copie  <!-- .element: class="title" -->
+```python
+def join(lst, sep):
+    """Concatène les éléments d'une liste avec un séparateur"""
+    if len(lst) == 0:          # ou not lst
+        return ""
+    lstcpy = lst.copy()        # ou list(lst)
+    result = lstcpy.pop(0)
+    for l in lstcpy:
+        result = result + sep + l
+    return result
+```
+
+Avec itérateur  <!-- .element: class="title" -->
+```python
+def join(lst, sep):
+    """Concatène les éléments d'une liste avec un séparateur"""
+    if len(lst) == 0:
+        return ""
+    it = iter(lst)
+    result = next(it)
+    for l in it:
+        result = result + sep + l
+    return result
+```
+
+
+
+--
+
+### Tests : exemples avec `fact`
+
+- Exemple complet d'une fonction fournie avec ses tests&nbsp;:
+
+```python
+import minitest             # module défini au slide suivant
+
+def fact(n):
+    """Renvoie le produit des entiers de 1 à n"""
+    if n <= 1:
+        return 1
+    else:
+        return n * fact(n - 1)
+
+_fact_test_cases = [        # un ensemble de cas de test
+    ((2,), 2),              # fact(2) == 2
+    ((3,), 6),              # fact(3) == 6
+    ((3,), 7),              # fact(3) == 7, un test faux
+]
+
+if __name__ == '__main__':  # code exécuté quand on charge ce module seul
+    minitest.run(fact, _fact_test_cases)
+```
+
+--
+
+### Le module `minitest`
+
+- Exemple de module fournissant des fonctions pour les tests&nbsp;:
+
+```python
+def assertEquals(expected, actual, msg=None):
+    """Teste l'égalité de deux valeurs, affichant un message
+        si jamais elles sont différentes."""
+    result = (expected == actual)
+    if not result:
+        print("In %s, expecting '%s', found '%s'" % (msg, expected, actual))
+    return result
+
+def run(fun, test_cases):
+    """Etant donnée une fonction f et une liste de paires
+       (params, retour), vérifie que f(params) == retour et
+       renvoie la liste des paires pour lesquelles c'est faux."""
+    return [ params
+             for (params, expected) in test_cases
+             if not assertEquals(expected, fun.__call__(*params),
+                                 "%s%s" % (fun.__name__, params))]
+```
+
+- Note : à sauver dans un fichier `minitest.py`

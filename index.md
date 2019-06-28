@@ -3,17 +3,21 @@ layout: article
 title: Représentation des données et programmation
 ---
 
+- [Didactique](./didactique/didactique.html)
 - [TP de bienvenue](./welcome.html)
-- [Représentation de l'information](./prog/data.html)
-- [Programmation](./prog/prog.html)
+- [Représentation de l'information](./prog/data.html) - version [imprimable](./prog/data.html?print-pdf)
+- [Programmation](./prog/prog.html) - version [imprimable](./prog/prog.html?print-pdf)
 - [Web](./web)
 
+*Remarque: Les version imprimables rendent mieux sous chrome. Elles sont plus
+longues à charger. Pour les imprimer ou générer un `pdf`, utilisez la fonction
+imprimer dans un `pdf` de votre navigateur.*
 
 ## Suggestion de thématiques pour le projet
 
 ### Représentation de l'information
 - Compression de données
-- Echantillonnage
+- Échantillonnage
 - Nombres flottants (_e.g_, visualisation des erreurs)
 - Chaînes de caractères 
 
@@ -23,7 +27,7 @@ title: Représentation des données et programmation
 - Interface graphique (simple)
 
 ### Web
-- Persistence des données côté client (_e.g., cookies_) 
+- Persistance des données côté client (_e.g., cookies_) 
 - Mécanismes de caches
 - Envoie de données au serveur (_e.g., formulaires, paramètres_)
 - Validation des données d'un formulaire

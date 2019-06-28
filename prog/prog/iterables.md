@@ -47,7 +47,7 @@ Faire un dessin avec une pile d'appel.
 
 ```python
 with expr as var:
-    doSomeStruffsThatMayRaiseAnExpetion
+    doSomeStuffThatMayRaiseAnException
 ```
 
 </div><div class='half'>
@@ -56,7 +56,7 @@ with expr as var:
 temp = expr
 try:
   var = temp.__enter__()
-  doSomeStruffsThatMayRaiseAnExpetion
+  doSomeStuffThatMayRaiseAnException
 finally:
   temp.__exit__()
 ```
