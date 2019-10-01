@@ -65,7 +65,8 @@ Ne pas préparer un booléen de retour au départ.
   l'exécution de `f` dans laquelle le paramètre a été initialisé à la
   valeur de `x`.
 
-> Essayer le débuggueur sur l'expression `fact(2)`.
+> Essayer le débuggueur de Thonny sur
+l'<a href="#" class="navigate-down">expression</a> `factorial(2)`.
 
 Note:
 A propos du passage par valeur/référence, ici pas de soucis tout est reference.
@@ -89,6 +90,48 @@ Préparation : évaluation des paramètres
 Activation : binding paramètre variables
 Exécution : ...
 Retour : remplir la case de retour
+
+
+--
+
+### Fonction : exemple récursif
+
+```python
+def factorial(n) :
+  """Retourne le produit des entiers de 1 à n"""
+  if n <= 1:
+    return 1
+  else:
+    return n * factorial(n - 1)
+```
+
+<div class="half">
+
+en C  <!-- .element: class="title" -->
+```c
+// Retourne le produit des entiers
+int factorial(int n) {
+  int f;
+  for (f = 1; n > 1; n --)
+    f *= n;
+  return f;
+}
+```
+
+</div>
+
+<div class="half">
+
+en Scheme  <!-- .element: class="title" -->
+```scheme
+;; Retourne le produit des entiers
+(define (factorial n)
+  (if (<= n 0)
+      1
+      (* n (factorial (- n 1)))))
+```
+
+</div>
 
 
 --
@@ -140,47 +183,6 @@ en Scheme  <!-- .element: class="title" -->
 Note:
     pgcd(4,6)
 Dans pgcd, on peut en profiter pour montrer le swap (et dire que c'est pas top)
-
---
-
-### Fonction : exemple récursif
-
-```python
-def factorial(n) :
-  """Retourne le produit des entiers de 1 à n"""
-  if n <= 1:
-    return 1
-  else:
-    return n * factorial(n - 1)
-```
-
-<div class="half">
-
-en C  <!-- .element: class="title" -->
-```c
-// Retourne le produit des entiers
-int factorial(int n) {
-  int f;
-  for (f = 1; n > 1; n --)
-    f *= n;
-  return f;
-}
-```
-
-</div>
-
-<div class="half">
-
-en Scheme  <!-- .element: class="title" -->
-```scheme
-;; Retourne le produit des entiers
-(define (factorial n)
-  (if (<= n 0)
-      1
-      (* n (factorial (- n 1)))))
-```
-
-</div>
 
 
 --

@@ -2,7 +2,7 @@
 
 - **Valeur / Type**
   - Toute valeur à un type
-  - Forme/taille de la [représentation mémoire](http://)
+  - Forme/taille de la représentation mémoire
   - Exemple : `42` de type **int**, `"abc"` de type **str**
 
 - **Expression**

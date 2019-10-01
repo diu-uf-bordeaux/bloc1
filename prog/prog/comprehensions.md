@@ -13,8 +13,8 @@ plus = lambda a, b: a + b
 plus(1, 2)                                     # -> 3
 list(filter(lambda x: x % 2 == 0, range(10)))  # -> [0 2 4 6 8]
 sorted(range(8), key=lambda x: abs(4 - x))     # -> [4 3 5 2 6 1 7 0]
-any(map(lambda x: x < 0, l))
-any([ e < 0 for e in l ])
+any(map(lambda x: x < 0, range(5)))            # -> False
+any([ e > 0 for e in range(5) ])               # -> True
 ```
 
 - Facilite les techniques de programmation fonctionnelle :

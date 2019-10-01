@@ -3,7 +3,7 @@
 - Une **collection** est un type de données permettant de regrouper
   des données.
 
-- <span class="label">Python</span> <a href="#/3">Exemples</a> :
+- <span class="label">Python</span> <a href="#/expression">Exemples</a> :
   **listes**, **tuples**, **dictionnaires**, **ensembles** ...
 
 - Les collections sont itérables.
@@ -66,8 +66,8 @@ Et non, on n'a pas dit que les listes étaient hétérogènes avant.
 
 ### Les listes Python sont des tableaux
 
-- Accès **aléatoire** ou **direct** à n'importe quel élément du
-  tableau (en lecture et écriture) :
+- Accès **aléatoire** (ou aussi **direct**) à n'importe quel élément
+  du tableau (en lecture et écriture) :
 
 ```python
 tab = [3, 1, 4, 1, 5, 92]
@@ -108,34 +108,34 @@ permettent d'écrire des algorithmes plus facilement.
 
 ## Listes : constructions possibles
 
-- explicite :
+- De manière explicite :
 
 ```python
 l1 = [3, 1, 4, 1, 5, 92]
 ```
 
-- extension par concaténation
+- En étendant par concaténation :
 
 ```python
-l1 = l1 + [17]		# équivalent à l1.append(17), à l1 += [17]?
-l1 = l1 + [20, 2] 	# équivalent à l1.extend([20, 2])?
+l1 = l1 + [17]      # équivalent à l1.append(17), à l1 += [17]?
+l1 = l1 + [20, 2]   # équivalent à l1.extend([20, 2])?
 l2 = [0]*10
 ```
 
-- extension par insertion
+- En étendant par insertion :
 
 ```python
 l1.insert(4, 12)
 l1[3:3] = [10, 10, 10]
 ```
 
-- comme sous-liste
+- En tant que sous-liste :
 
 ```python
 l3 = l1[5:10]
 ```
 
-- compréhension de liste
+- Comme une <a href="#/comprehensions">compréhension de liste</a>.
 
 --
 

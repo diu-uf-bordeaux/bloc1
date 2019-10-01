@@ -26,7 +26,7 @@ foo = 2 * 3          # foo contient 6
 
 #### En Python, tout est référence
 
-- L'**aliasing** consister à donner plusieurs noms à un même objet.
+- L'**aliasing** consiste à donner plusieurs noms à un même objet.
   Après `x = y`, `x` et `y` représentent le même objet (même id).
 
 - Après `x = y + z`, on crée un nouvel objet `x` de valeur `y + z`
@@ -64,7 +64,7 @@ x = "Une bien mauvaise idée"
 ```
 
 ```python
-m = [[0]*2]*2        # -> [[1 , 0] , [1 , 0]]
+m = [[0]*2]*2        # -> [[0 , 0] , [0 , 0]]
 id(m[0]) == id(m[1]) # -> True (c'est une copie !)
 m[0][0] = 1          #
 m                    # -> [[1 , 0] , [1 , 0]]
