@@ -34,6 +34,11 @@ Modifier le script pour permettre à l'utilisateur d'échanger la position de de
 
 ### Correction
 
+
+<button onclick="toggleVisible()">Afficher</button>
+
+<div id="correctionDIV" style="display:none">
+
 Dans `script.js` modifiez la fonction `ajouterCarte` comme suit :
 
 ```javascript 
@@ -68,3 +73,16 @@ function drop(ev) {
     srcElt.src = filename;
 }
 ```
+
+</div>
+
+<script>
+function toggleVisible() {
+  var x = document.getElementById("correctionDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
