@@ -37,7 +37,7 @@ Modifier le script pour permettre à l'utilisateur d'échanger la position de de
 
 <button onclick="toggleVisible()">Afficher</button>
 
-<div id="correctionDIV" style="display:none">
+<div id="correctionDIV" style="display:none" markdown="1">
 
 Dans `script.js` modifiez la fonction `ajouterCarte` comme suit :
 
