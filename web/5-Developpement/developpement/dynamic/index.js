@@ -1,15 +1,13 @@
 const PORT = 3000;
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded());
+app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'));
 
 app.post('/cartes',function(req, res) {
     res.status(200).send(generateHTML(req.body.nom));
 });
-
 
 
 app.listen(PORT, function () {
@@ -36,6 +34,5 @@ function generateHTML(nom) {
             </div>
             <button id="boutton-ajout-carte">Nouvelle carte !</button>
         </body>
-    
     </html>`;
 }
