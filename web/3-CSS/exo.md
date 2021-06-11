@@ -17,12 +17,12 @@ L'objectif est de changer un style CSS.
 
 ## CSS avec les outils de développement
 
-L'objectif est de changer le style CSS avec les outils de développement de Chrome.
+L'objectif est de changer le style CSS avec les outils de développement du navigateur web (Chrome ou Firefox).
 
-1. Utilisez les outils de développement de Chrome pour observer les styles mis en oeuvre lors de l'affichage de la page, et changez les dynamiquement. Un exemple de résultat est [ici](./result.png).
+1. Utilisez les outils de développement pour observer les styles mis en oeuvre lors de l'affichage de la page, et changez les dynamiquement. Un exemple de résultat est [ici](./result.png).
 
-    1. Modifiez la couleur du bouton en bleu.
-    2. Modifier la couleur du texte "Vos cartes" en vert.
-    3. Ajoutez un fond gris autour de l'image de la carte. Pour cela, vous pouvez utiliser les propriétés   _padding_ et _margin_.
+    - Modifiez la couleur du bouton en bleu.
+    - Modifier la couleur du texte "Vos cartes" en vert.
+    - Ajoutez un fond gris autour de l'image de la carte. Pour cela, vous pouvez utiliser les propriétés   _padding_ et _margin_.
 
 2. Ouvrez une page _Youtube_ ou _Facebook_. Modifiez-la dynamiquement pour changer son style et son contenu.

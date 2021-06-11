@@ -35,7 +35,7 @@ Modifier le script pour permettre à l'utilisateur d'échanger la position de de
 ### Correction
 
 
-<button onclick="toggleVisible()">Afficher</button>
+<button id="btAfficher" onclick="toggleVisible()" style="background-color: white; color: black; border: black;border-radius: 4px;">Afficher</button>
 
 <div id="correctionDIV" style="display:none" markdown="1">
 
@@ -79,10 +79,13 @@ function drop(ev) {
 <script>
 function toggleVisible() {
   var x = document.getElementById("correctionDIV");
+  var bt = document.getElementById("btAfficher");
   if (x.style.display === "none") {
     x.style.display = "block";
+    bt.textContent = "Masquer"
   } else {
     x.style.display = "none";
+    bt.textContent = "Afficher"
   }
 }
 </script>
