@@ -34,8 +34,8 @@ int('101010', 2)     # -> 42 (conversion depuis une chaîne en base 2)
   être représentés sur 8, 16, 32, 64 bits ... \
   Ex. de noms de types&nbsp;: `char`, `int`, `unsigned int`, `long` ...
 
-- Particularité Python : les entiers sont de longueurs
-  arbitraires.
+- Particularité <span class="label">Python</span> : les entiers sont
+  de longueurs arbitraires.
 
 ```python
 2 ** 100 # -> 1267650600228229401496703205376 (== 2 puissance 100)
