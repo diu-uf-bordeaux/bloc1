@@ -92,7 +92,7 @@ i = i + 1               # 4294967296 (i est devenu un np.int64)
 
 - Opérations `+`, `-` et `*` sont exactes modulo $2^n$.
 
-- La division `//` effectue des arrondis&nbsp;: `7 // 3 == 2`  \
+- La division `//` est la division euclidienne&nbsp;: `7 // 3 == 2`  \
   <span class="label">Python</span> Attention avec les négatifs &nbsp;: `(-7) // 3 == -3 `
 
 Note:
