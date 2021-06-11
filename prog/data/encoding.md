@@ -257,7 +257,7 @@ Note:
     - Ça ne sert à rien de re-compresser.
   - Avec perte : Signal (image, son, vidéo ...)
 
-- Exemple d'algorithmes : RLE, Huffman, Lempel-Ziv ...
+- Exemple d'algorithmes : [RLE](https://fr.wikipedia.org/wiki/Run-length_encoding), [Huffman](https://fr.wikipedia.org/wiki/Codage_de_Huffman), [Lempel-Ziv]( https://fr.wikipedia.org/wiki/Lempel-Ziv-Welch) ...
 
 Note:
 On peut remarquer un cas hybride du jpeg
