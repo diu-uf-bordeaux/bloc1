@@ -35,7 +35,8 @@ Modifier le script pour permettre à l'utilisateur d'échanger la position de de
 ### Correction
 
 
-<button id="btAfficher" onclick="toggleVisible()" style="background-color: white; color: black; border: black;border-radius: 4px;">Afficher</button>
+<button id="btAfficher" onclick="toggleVisible()" style="background-color: white; color: black; border-width: 1px;
+border-radius: 4px; padding-left: 5px; border-color: black; padding-right: 5px;">Afficher</button>
 
 <div id="correctionDIV" style="display:none" markdown="1">
 
