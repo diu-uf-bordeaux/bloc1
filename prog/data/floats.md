@@ -1,6 +1,6 @@
 ### Nombres flottants
 
-- Représentation normalisée : [IEEE754](norme IEEE754)
+- Représentation normalisée : [norme IEEE754](https://fr.wikipedia.org/wiki/IEEE_754)
 
 (historique, permet de transposer des calculs \
 indépendamment des machines qui les font)
