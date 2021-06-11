@@ -9,15 +9,15 @@ $$d_n \times b^n + \dots + d_1 \times b^1 + d_0 \times b^0 \qquad \forall i, d_i
 - Il peut s'écrire et s'afficher dans une base quelconque.
 
 ```python
-bin(42)              # -> '0b101010' (conversion en base 2)
-np.base_repr(42, 2)  # -> '101010'   (conversion en base b == 2)
+bin(42)              # -> '0b101010' (représentation en base 2)
+np.base_repr(42, 2)  # -> '101010'   (représentation en base b == 2)
 ```
 
 - Ou s'écrire directement depuis une autre base que $10$.
 
 ```python
-0x2a                 # -> 42 (conversion depuis la base 16)
-int('101010', 2)     # -> 42 (conversion depuis une chaine en base 2)
+0x2a                 # -> 42 (représentation en base 16)
+int('101010', 2)     # -> 42 (conversion depuis une chaîne en base 2)
 ```
 
 --
