@@ -36,13 +36,13 @@ Vérifiez, à l'inverse, que votre voisin parvient bien à accèder à votre ser
 
 Nous avons codé un serveur de page dynamique.
 
-Lancez ce serveur en allant dans le répertoire `dynamic` et en exécutant les deux commandes suivantes:
+Lancez ce serveur en allant dans le répertoire `dynamic` et en exécutant les deux commandes suivantes :
 
 ```javascript
   npm install
   node index.js
 ```
 
-Modifiez la page `index.html` afin que le formulaire envoie une requête POST vers l'URL `/cartes` avec une donnée `nom` contenant le nom saisi par le joueur.
+Modifiez la page `index.html` dans le répertoire `public` afin que le formulaire envoie une requête POST vers l'URL `/cartes` avec une donnée `nom` contenant le nom saisi par le joueur.
 
 Ajoutez une validation des données saisies dans le formulaire à l'aide du _middleware_ [express-validator](https://express-validator.github.io/docs/).

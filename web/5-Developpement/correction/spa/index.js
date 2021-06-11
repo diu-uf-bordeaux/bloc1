@@ -1,12 +1,11 @@
 const PORT = 80;
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 
 const mainsDesJoueurMap = new Map();
 
+app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'));
-app.use(bodyParser.json());
 
 app.post('/nouvelle-donne',function(req, res) {
     mainsDesJoueurMap.set(req.body.nom, nouvelleMain())

@@ -7,7 +7,7 @@ const { body, validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 
 
-app.use(bodyParser.urlencoded());
+app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
 app.use(express.static('public'));
 
