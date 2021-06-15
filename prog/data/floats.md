@@ -1,6 +1,6 @@
 ### Nombres flottants
 
-- Représentation normalisée : norme IEEE754
+- Représentation normalisée : [norme IEEE754](https://fr.wikipedia.org/wiki/IEEE_754)
 
 (historique, permet de transposer des calculs \
 indépendamment des machines qui les font)
@@ -12,6 +12,8 @@ indépendamment des machines qui les font)
 Sur 32 bits : ![IEEE754](data/images/ieee754_bits.png) <!-- .element: class="stretch" style="max-width: 90%;vertical-align: middle; margin:0px" -->
 
 - La représentation d'un flottant donné est [calculée ici](https://baseconvert.com/ieee-754-floating-point).
+
+[IEEE754]: https://fr.wikipedia.org/wiki/IEEE_754
 
 Note:
 

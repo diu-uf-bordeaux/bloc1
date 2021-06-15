@@ -1,25 +1,4 @@
 ### Objets complexes
-#### Fichiers
-
-- Un fichier associe un **chemin** (un nom) à son contenu concret. \
-  Il est encore une fois question de représentation des données.
-
-- Acquisition d'un pointeur sur le contenu du fichier : `open`.
-- Restitution et nettoyage : `close`
-- Entre les deux, appels à `read`/`write` qui font avancer le pointeur
-  sur le contenu.
-
-```python
-file = open("poem.py", mode="r")       # acquisition (mode lecture)
-print(file.read(9))                    # '\ndef read'
-print(file.read(9))                    # '_file(fil'
-file.close()                           # restitution
-```
-
-- Pour obtenir des bytes, lire en [mode](https://docs.python.org/3/library/functions.html#open) binaire (`mode="rb"`).
-
-Note:
-Bon moment pour parler/introduire de la compression ?
 
 --
 
@@ -48,9 +27,10 @@ Note:
 
 - Si on considère un octet comme indivisible, la question du comment est-il
   vraiment en mémoire (au niveau du transistor) importe peu.
-- A partir des `short` (16 bit), la question se pose. Poids fort, ou poids faible
-  devant. L'un est-il mieux que l'autre ? (C'est très subjectif). Chaque fondeur
-  a fait son choix.
+
+- A partir des `short` (16 bit), la question se pose. Poids fort, ou
+  poids faible devant. L'un est-il mieux que l'autre ? (C'est très
+  subjectif). Chaque fondeur a fait son choix.
 
 - Tant qu'on est sur une même machine, finalement pas de problème. A partir du
   moment ou on communique (a commencer par soi même, cas de la disquette), il
@@ -182,6 +162,31 @@ open(filename, mode="r", encoding="utf-8")
 
 --
 
+#### Fichiers
+
+- Un fichier associe un **chemin** (un nom) à son contenu concret. \
+  Il est encore une fois question de représentation des données.
+
+- Acquisition d'un pointeur sur le contenu du fichier : `open`.
+- Restitution et nettoyage : `close`
+- Entre les deux, appels à `read`/`write` qui font avancer le pointeur
+  sur le contenu.
+
+```python
+file = open("poem.py", mode="r")       # acquisition (mode lecture)
+print(file.read(9))                    # '\ndef read'
+print(file.read(9))                    # '_file(fil'
+file.close()                           # restitution
+```
+
+- Pour obtenir des bytes, lire en [mode](https://docs.python.org/3/library/functions.html#open) binaire (`mode="rb"`).
+
+Note:
+Bon moment pour parler/introduire de la compression ?
+
+
+--
+
 ###  Identifier le type d'un fichier
 
 - L'extension du fichier n'est pas significative
@@ -252,7 +257,7 @@ Note:
     - Ça ne sert à rien de re-compresser.
   - Avec perte : Signal (image, son, vidéo ...)
 
-- Exemple d'algorithmes : RLE, Huffman, Lempel-Ziv ...
+- Exemple d'algorithmes : [RLE](https://fr.wikipedia.org/wiki/Run-length_encoding), [Huffman](https://fr.wikipedia.org/wiki/Codage_de_Huffman), [Lempel-Ziv]( https://fr.wikipedia.org/wiki/Lempel-Ziv-Welch) ...
 
 Note:
 On peut remarquer un cas hybride du jpeg
