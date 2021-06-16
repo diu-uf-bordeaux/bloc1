@@ -51,7 +51,7 @@ with expr as var:
 ```
 
 ```python
-with open("myfile.txt", 'rt') as file:
+with open("file.txt", 'rt') as file:
   puts(file.readline())
 ```
 

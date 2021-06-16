@@ -52,4 +52,4 @@ data_filtered_dot = [data[i]
 mp.plot(data_filtered_dot[:100])
 
 # On peut maintenant voir le travail du filtre
-smp.show()
+mp.show()
