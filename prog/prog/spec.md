@@ -188,6 +188,7 @@ def fact(n):
 _fact_test_cases = [        # un ensemble de cas de test
     ((2,), 2),              # fact(2) == 2
     ((3,), 6),              # fact(3) == 6
+    ((0,), 1, "out of bound"),
     ((3,), 7),              # fact(3) == 7, un test faux
 ]
 
@@ -214,10 +215,10 @@ def run(fun, test_cases):
     """Etant donnée une fonction f et une liste de paires
        (params, retour), vérifie que f(params) == retour et
        renvoie la liste des paires pour lesquelles c'est faux."""
-    return [ params
-             for (params, expected) in test_cases
-             if not assertEquals(expected, fun.__call__(*params),
-                                 "%s%s" % (fun.__name__, params))]
+    return [params
+            for (params, expected, *mesg) in test_cases
+            if not assertEquals(expected, fun.__call__(*params),
+                                "%s%s" % (fun.__name__, params))]
 ```
 
 - Note : à sauver dans un fichier `minitest.py`

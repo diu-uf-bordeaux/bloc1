@@ -64,8 +64,8 @@ import fact from fact
 
 def binomial(n, k):
     """Retourne le coéfficient binomial de n et k"""
-    if n > k:
-        k, n = n, k
+    if k > n:
+        k, n = n, k  # Mais qui à laissé ce swap
     return fact(n) / (fact(n)*fact(n - k))
 
 if __name__ == '__main__'

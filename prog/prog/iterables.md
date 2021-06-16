@@ -50,6 +50,11 @@ with expr as var:
     doSomeStuffThatMayRaiseAnException
 ```
 
+```python
+with open("myfile.txt", 'rt') as file:
+  puts(file.readline())
+```
+
 </div><div class='half'>
 
 ```python
@@ -77,7 +82,7 @@ Tout ce qui est ouvert doit être fermé.
   itérable est possible.
 
 - Au moment du `for` est construit à partir de l'itérable un objet
-  qui répond à la méthode `__next__`.
+  qui répond à la méthode `__iter__`.
 
 - À chaque appel, cette méthode `__next__`&nbsp;:
   - retourne l'élément suivant de la séquence, si possible,
@@ -149,9 +154,9 @@ Utile pour les listes infinies
 <div class="half">
 
 ```python
-def my_range(start, stop, step=1):
+def inclusive_range(start, stop, step=1):
     value = start
-    while value != stop:
+    while value <= stop:
         yield value
         value += step
 ```

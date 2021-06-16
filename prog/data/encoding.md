@@ -1,5 +1,27 @@
 ### Objets complexes
 
+#### Fichiers
+
+- Un fichier associe un **chemin** (un nom) à son contenu concret. \
+  Il est encore une fois question de représentation des données.
+
+- Acquisition d'un pointeur sur le contenu du fichier : `open`.
+- Restitution et nettoyage : `close`
+- Entre les deux, appels à `read`/`write` qui font avancer le pointeur
+  sur le contenu.
+
+```python
+file = open("poem.py", mode="r")       # acquisition (mode lecture)
+print(file.read(9))                    # '\ndef read'
+print(file.read(9))                    # '_file(fil'
+file.close()                           # restitution
+```
+
+- Pour obtenir des bytes, lire en [mode](https://docs.python.org/3/library/functions.html#open) binaire (`mode="rb"`).
+
+Note:
+Bon moment pour parler/introduire de la compression ?
+
 --
 
 ### Endianness
@@ -159,31 +181,6 @@ open(filename, mode="r", encoding="utf-8")
 ```
 
 > Exercice: [poem](data/poem).
-
---
-
-#### Fichiers
-
-- Un fichier associe un **chemin** (un nom) à son contenu concret. \
-  Il est encore une fois question de représentation des données.
-
-- Acquisition d'un pointeur sur le contenu du fichier : `open`.
-- Restitution et nettoyage : `close`
-- Entre les deux, appels à `read`/`write` qui font avancer le pointeur
-  sur le contenu.
-
-```python
-file = open("poem.py", mode="r")       # acquisition (mode lecture)
-print(file.read(9))                    # '\ndef read'
-print(file.read(9))                    # '_file(fil'
-file.close()                           # restitution
-```
-
-- Pour obtenir des bytes, lire en [mode](https://docs.python.org/3/library/functions.html#open) binaire (`mode="rb"`).
-
-Note:
-Bon moment pour parler/introduire de la compression ?
-
 
 --
 

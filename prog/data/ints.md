@@ -216,3 +216,23 @@ arr is [2]       # False (deux tableaux différents)
 1 << 10          # -> 2**10 == 1024
 x | (1 << 10)    # Force le 10ème bit de x à `1`
 ```
+
+--
+
+### Recettes de cuisines sur les bits
+
+|||
+|--|--|--|
+| `&` | sélectionner un bit | `x & READ`
+| `\|` | Forcer des bits à 1 | `READ \| WRITE`
+| `&~` | Forcer des bits à 0 | `x &~ WRITE`
+| `^` | Inversion partielle | `x ^ (READ|WRITE)`
+| `1 <<` | Placer un bits à p | `1 << (p - 1)`
+|      | Fabriquer `n` 1 | `1 << (n - 1)`
+| `&-` | trouver le bit de poids le plus faible | `x &- x`
+
+Note:
+- != 0 droit de lecture
+- Lecture ET écriture
+- Enlever WRITE
+- Inverser read et write en même temps (ex vraiment stupide :))

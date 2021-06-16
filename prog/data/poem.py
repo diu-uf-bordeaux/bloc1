@@ -1,3 +1,4 @@
+# coding=utf-8
 
 def read_file(file_name, encoding='utf-8'):
     """
@@ -7,6 +8,7 @@ def read_file(file_name, encoding='utf-8'):
     with open(file_name, mode="r", encoding=encoding) as file:
         return file.readlines()
 
+
 def print_binary(string, encoding='utf-8'):
     """
     Affiche la chaine `string` puis sa representation en base 2
@@ -14,6 +16,7 @@ def print_binary(string, encoding='utf-8'):
     """
     print(string)
     print(" ".join(bit_string(string, encoding)))
+
 
 def bit_string(string, encoding="utf-8"):
     """
@@ -24,8 +27,9 @@ def bit_string(string, encoding="utf-8"):
     for c in string.encode(encoding):
         lst.append(format(c, '08b'))  # Alternative: bin(c)[2:]
     return lst
-    ## La même chose en comphension de liste
-    return [ format(c, '08b') for c in string.encode(encoding) ]
+
+    # La même chose en comphension de liste
+    return [format(c, '08b') for c in string.encode(encoding)]
 
 
 def utf8_decode(char):
@@ -36,14 +40,18 @@ def utf8_decode(char):
     print('ord("', char, '") = ', ord(char))
 
     bytes_in_bits = bit_string(char)
-    print("Nombre d'octets : ", bytes_in_bits[0].find('0')) # Nombre de `1` consécutifs
+    first_zero = bytes_in_bits[0].find('0')
+    print("Nombre d'octets : ", first_zero)  # Nombre de `1` consécutifs
 
-    val = ""
-    for byte in bytes_in_bits:
-        val += byte[(byte.find('0') + 1):] # Le zéro ne fait pas partie de la payload
+    val = bytes_in_bits[0][first_zero+1:]   # Le zéro ne fait pas partie de la
+                                            # payload
+    for byte in bytes_in_bits[1:]:  # Le premier à déjà été traité
+        assert(byte[:2] == '10')
+        val += byte[2:]  # Saute les 2 bits de continuations
 
     print("Nombre de bits significatifs extraits: ", len(val))
     print("Valeur extraite : ", int(val, 2))
+
 
 if __name__ == '__main__':
 

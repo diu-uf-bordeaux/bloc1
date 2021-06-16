@@ -14,7 +14,7 @@ plus(1, 2)                                     # -> 3
 list(filter(lambda x: x % 2 == 0, range(10)))  # -> [0 2 4 6 8]
 sorted(range(8), key=lambda x: abs(4 - x))     # -> [4 3 5 2 6 1 7 0]
 any(map(lambda x: x < 0, range(5)))            # -> False
-any([ e > 0 for e in range(5) ])               # -> True
+any([e > 0 for e in range(5)])                 # -> True
 ```
 
 - Facilite les techniques de programmation fonctionnelle :
@@ -31,7 +31,7 @@ any([ e > 0 for e in range(5) ])               # -> True
   de construire et de transformer des listes.
 
 ```python
-[ expression(name) for name in iterable ]
+[expression(name) for name in iterable]
 
 ```
 
@@ -41,8 +41,8 @@ any([ e > 0 for e in range(5) ])               # -> True
 <div class="half" style="width:55%">
 
 ```python
-[ x*x for x in range(6) ]
-[ x for x in range(6) if x%2 == 0 ]
+[x*x for x in range(6)]
+[x for x in range(6) if x%2 == 0]
 ```
 
 </div>
@@ -70,23 +70,26 @@ people = [("Thalès",  -625, -547), ("Archimède", -287, -212),
 - Quelle est la liste des âges de ces illustres personnes ?
 
 ```python
-ages = [ p[2] - p[1] for p in people ]
+ages = [p[2] - p[1] for p in people]
 ```
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
 - Quels sont ceux dont le nom commence par un "P" ?
 
 ```python
-p_people = [ p for p in people if p[0].startswith("P") ]
+p_people = [p for p in people if p[0].startswith("P")]
 ```
 <!-- .element: class="fragment" data-fragment-index="2" -->
 
 - Quel est le plus vieux d'entre eux à sa mort ?
 
 ```python
-oldest = max([ (p, p[2]-p[1]) for p in people ], key=lambda d: d[1])[0]
+oldest = max([(p, p[2]-p[1]) for p in people], key=lambda d: d[1])[0]
 ```
 <!-- .element: class="fragment" data-fragment-index="3" -->
+
+Note:
+- le dernier est candidat au refactor *Extract Function*
 
 --
 
