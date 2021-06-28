@@ -154,7 +154,7 @@ Utile pour les listes infinies
 <div class="half">
 
 ```python
-def inclusive_range(start, stop, step=1):
+def irange(start, stop, step=1):
     value = start
     while value <= stop:
         yield value
